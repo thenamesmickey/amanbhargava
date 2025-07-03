@@ -878,6 +878,30 @@ main {
   line-height: 1.6;
 }
 
+.timeline-text ul {
+  list-style-type: disc;         
+  margin-left: 1.5em;            
+  padding-left: 0;              
+}
+
+.timeline-text li {
+  list-style-type: disc !important;  
+  margin-bottom: 0.5em;              
+}
+
+.credential-link {
+  display: inline-block;
+  margin-top: 0.3em;
+  font-size: 0.9em;
+  color: #007BFF; 
+  text-decoration: underline;
+}
+
+.credential-link:hover {
+  color: #0056b3;
+}
+
+
 /*-----------------------------------*\
   #CONTACT
 \*-----------------------------------*/

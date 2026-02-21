@@ -1,0 +1,766 @@
+/*
+ * case-study.css
+ * Styles for individual case study pages
+ * Layout mirrors the homepage: sticky TOC sidebar + article card, same dark tokens.
+ */
+
+:root {
+  --cs-accent: hsl(45, 100%, 72%);
+  --cs-bg: hsl(240, 2%, 12%);
+  /* same as --eerie-black-2 */
+  --cs-surface: hsl(240, 2%, 12%);
+  --cs-surface-2: hsl(240, 2%, 13%);
+  --cs-border: hsl(0, 0%, 22%);
+  --cs-text: hsl(0, 0%, 84%);
+  --cs-text-muted: hsla(0, 0%, 84%, 0.7);
+  --cs-white: hsl(0, 0%, 100%);
+}
+
+/* ─── Base ─────────────────────────────────────────────────────── */
+.cs-body {
+  background: var(--smoky-black);
+  color: var(--cs-text);
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  font-weight: 300;
+  min-height: 100vh;
+}
+
+/* ─── Root container — mirrors homepage <main> ─────────────────── */
+.cs-root {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 20px 15px 30px;
+}
+
+@media (min-width: 580px) {
+  .cs-root {
+    padding: 30px 30px 40px;
+  }
+}
+
+@media (min-width: 1250px) {
+  .cs-root {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    padding: 40px 30px 50px;
+  }
+}
+
+/* ─── TOC Sidebar — mirrors .sidebar ──────────────────────────── */
+.cs-sidenav {
+  background: var(--eerie-black-2);
+  border: 1px solid var(--jet);
+  border-radius: 20px;
+  box-shadow: var(--shadow-1);
+  padding: 20px 20px;
+  margin-bottom: 25px;
+  overflow: hidden;
+}
+
+@media (min-width: 1250px) {
+  .cs-sidenav {
+    position: sticky;
+    top: 40px;
+    max-height: max-content;
+    height: 100%;
+    flex-shrink: 0;
+    width: 220px;
+    margin-bottom: 0;
+    padding: 28px 20px;
+  }
+}
+
+/* Mobile toggle header */
+.cs-sidenav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+}
+
+
+@media (max-width: 579px) {
+  .cs-toc {
+    display: none;
+  }
+
+  .cs-sidenav.open .cs-toc {
+    display: block;
+    margin-top: 16px;
+  }
+}
+
+@media (min-width: 580px) {
+  .cs-sidenav-header {
+    cursor: default;
+  }
+
+  .cs-toc {
+    display: block;
+  }
+
+  .cs-sidenav-toggle {
+    display: none;
+  }
+}
+
+.cs-sidenav-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--orange-yellow-crayola);
+}
+
+.cs-sidenav-toggle {
+  color: var(--cs-text-muted);
+  font-size: 18px;
+  transition: transform 0.3s;
+}
+
+.cs-sidenav.open .cs-sidenav-toggle {
+  transform: rotate(180deg);
+}
+
+/* back link inside sidebar */
+.cs-back-side {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--cs-text-muted);
+  font-size: 12px;
+  text-decoration: none;
+  margin-bottom: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--jet);
+  transition: color 0.2s;
+}
+
+.cs-back-side:hover {
+  color: var(--orange-yellow-crayola);
+}
+
+.cs-back-side ion-icon {
+  font-size: 14px;
+}
+
+/* TOC list */
+.cs-toc {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.cs-toc li {
+  margin-bottom: 2px;
+}
+
+.cs-toc-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--cs-text-muted);
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  line-height: 1.3;
+}
+
+.cs-toc-link:hover {
+  background: hsla(45, 100%, 72%, 0.06);
+  color: var(--cs-text);
+}
+
+.cs-toc-link.active {
+  background: hsla(45, 100%, 72%, 0.1);
+  color: var(--orange-yellow-crayola);
+  font-weight: 500;
+}
+
+.cs-toc-num {
+  flex-shrink: 0;
+  font-size: 9px;
+  font-weight: 700;
+  opacity: 0.5;
+  width: 18px;
+}
+
+/* ─── Main article card — mirrors article / .main-content ──────── */
+.cs-main {
+  background: var(--eerie-black-2);
+  border: 1px solid var(--jet);
+  border-radius: 20px;
+  box-shadow: var(--shadow-1);
+  padding: 24px;
+  width: 100%;
+}
+
+@media (min-width: 580px) {
+  .cs-main {
+    padding: 30px;
+  }
+}
+
+@media (min-width: 1250px) {
+  .cs-main {
+    flex: 1;
+    min-width: 0;
+    padding: 40px 44px;
+  }
+}
+
+/* ─── Back button (mobile / top of article card) ──────────────── */
+.cs-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--orange-yellow-crayola);
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 7px 14px;
+  border: 1px solid hsla(45, 100%, 72%, 0.3);
+  border-radius: 8px;
+  transition: background 0.25s, border-color 0.25s;
+  margin-bottom: 30px;
+}
+
+.cs-back-btn:hover {
+  background: hsla(45, 100%, 72%, 0.08);
+  border-color: var(--orange-yellow-crayola);
+}
+
+.cs-back-btn ion-icon {
+  font-size: 16px;
+}
+
+
+/* ─── Hero ─────────────────────────────────────────────────────── */
+.cs-hero {
+  margin-bottom: 36px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--jet);
+}
+
+.cs-hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.cs-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--orange-yellow-crayola);
+  background: hsla(45, 100%, 72%, 0.1);
+  border: 1px solid hsla(45, 100%, 72%, 0.25);
+  padding: 3px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cs-title {
+  font-size: clamp(22px, 4vw, 32px);
+  font-weight: 600;
+  color: var(--white-2);
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.cs-accent {
+  color: var(--orange-yellow-crayola);
+}
+
+.cs-subtitle {
+  font-size: 15px;
+  color: var(--cs-text-muted);
+  font-weight: 300;
+}
+
+/* ─── Section ──────────────────────────────────────────────────── */
+.cs-section {
+  margin-bottom: 36px;
+  scroll-margin-top: 24px;
+}
+
+.cs-section-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--white-2);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.cs-num {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--orange-yellow-crayola);
+  background: hsla(45, 100%, 72%, 0.1);
+  border: 1px solid hsla(45, 100%, 72%, 0.25);
+  padding: 2px 8px;
+  border-radius: 6px;
+  letter-spacing: 1px;
+  flex-shrink: 0;
+}
+
+/* ─── Card ─────────────────────────────────────────────────────── */
+.cs-card {
+  background: var(--border-gradient-onyx);
+  border-radius: 14px;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+  box-shadow: var(--shadow-2);
+}
+
+.cs-card::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.cs-highlight-card {
+  position: relative;
+  padding-left: 24px;
+}
+
+.cs-highlight-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--orange-yellow-crayola);
+  border-radius: 3px 0 0 3px;
+}
+
+.cs-highlight-icon {
+  font-size: 22px;
+  color: var(--orange-yellow-crayola);
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* ─── Card label ────────────────────────────────────────────────── */
+.cs-card-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--orange-yellow-crayola);
+  margin-bottom: 8px;
+}
+
+/* ─── Row / Col grid ────────────────────────────────────────────── */
+.cs-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+@media (min-width: 600px) {
+  .cs-row {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+}
+
+.cs-col p {
+  font-size: 14px;
+  color: var(--cs-text);
+}
+
+/* ─── List ──────────────────────────────────────────────────────── */
+.cs-list {
+  padding-left: 18px;
+  color: var(--cs-text);
+  font-size: 14px;
+}
+
+.cs-list li {
+  list-style: disc;
+  margin-bottom: 6px;
+}
+
+/* ─── Personas ──────────────────────────────────────────────────── */
+.cs-persona-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-bottom: 4px;
+}
+
+@media (min-width: 520px) {
+  .cs-persona-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.cs-persona {
+  background: hsl(240, 2%, 13%);
+  border: 1px solid var(--jet);
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.cs-persona ion-icon {
+  font-size: 20px;
+  color: var(--orange-yellow-crayola);
+  margin-bottom: 8px;
+}
+
+.cs-persona h4 {
+  color: var(--white-2);
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.cs-persona p {
+  font-size: 12px;
+  color: var(--cs-text);
+}
+
+.cs-pain {
+  color: var(--cs-text-muted) !important;
+}
+
+/* ─── Table ─────────────────────────────────────────────────────── */
+.cs-table-wrap {
+  overflow-x: auto;
+}
+
+.cs-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.cs-table th,
+.cs-table td {
+  text-align: left;
+  padding: 9px 11px;
+  border-bottom: 1px solid var(--jet);
+}
+
+.cs-table th {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--orange-yellow-crayola);
+}
+
+.cs-table td {
+  color: var(--cs-text);
+}
+
+.cs-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* ─── JTBD Quote ────────────────────────────────────────────────── */
+.cs-jtbd {
+  font-size: 14px;
+  font-style: italic;
+  color: var(--white-2);
+  font-weight: 300;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* ─── Stats ─────────────────────────────────────────────────────── */
+.cs-stat-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--orange-yellow-crayola);
+  margin-bottom: 10px;
+}
+
+.cs-stat-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.cs-stat {
+  flex: 1;
+  min-width: 140px;
+  background: hsl(240, 2%, 13%);
+  border: 1px solid var(--jet);
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.cs-stat-num {
+  display: block;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--orange-yellow-crayola);
+  margin-bottom: 6px;
+  line-height: 1;
+}
+
+.cs-stat-desc {
+  display: block;
+  font-size: 12px;
+  color: var(--cs-text-muted);
+  line-height: 1.5;
+}
+
+/* ─── Positioning quote ─────────────────────────────────────────── */
+.cs-positioning {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-top: 18px;
+  background: hsl(240, 2%, 13%);
+  border-left: 3px solid var(--orange-yellow-crayola);
+  border-radius: 0 8px 8px 0;
+  padding: 14px;
+}
+
+.cs-positioning ion-icon {
+  color: var(--orange-yellow-crayola);
+  font-size: 18px;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.cs-positioning p {
+  font-style: italic;
+  color: var(--white-2);
+  font-size: 13px;
+}
+
+/* ─── Roadmap Timeline ──────────────────────────────────────────── */
+.cs-timeline {
+  display: flex;
+  flex-direction: column;
+  padding-left: 8px;
+  margin-top: 14px;
+}
+
+.cs-tl-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 10px 0 10px 18px;
+  position: relative;
+}
+
+.cs-tl-item::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 17px;
+  width: 12px;
+  height: 12px;
+  background: var(--orange-yellow-crayola);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px var(--eerie-black-2);
+}
+
+.cs-tl-q {
+  flex-shrink: 0;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--orange-yellow-crayola);
+  background: hsla(45, 100%, 72%, 0.1);
+  border: 1px solid hsla(45, 100%, 72%, 0.25);
+  padding: 2px 9px;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  margin-top: 2px;
+}
+
+.cs-tl-item p {
+  font-size: 13px;
+  color: var(--cs-text);
+  margin: 0;
+}
+
+/* ─── Stakeholder / KPI Grid ────────────────────────────────────── */
+.cs-stakeholder-grid,
+.cs-kpi-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+@media (min-width: 520px) {
+
+  .cs-stakeholder-grid,
+  .cs-kpi-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.cs-stakeholder,
+.cs-kpi {
+  text-align: center;
+  background: hsl(240, 2%, 13%);
+  border: 1px solid var(--jet);
+  border-radius: 10px;
+  padding: 16px 12px;
+}
+
+.cs-stakeholder ion-icon,
+.cs-kpi ion-icon {
+  font-size: 22px;
+  color: var(--orange-yellow-crayola);
+  margin-bottom: 8px;
+}
+
+.cs-stakeholder h4,
+.cs-kpi h4 {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--white-2);
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cs-stakeholder p,
+.cs-kpi p {
+  font-size: 12px;
+  color: var(--cs-text);
+}
+
+/* ─── Accent text ────────────────────────────────────────────────── */
+.cs-accent-text {
+  color: var(--orange-yellow-crayola);
+}
+
+/* ─── Appendix Accordion ────────────────────────────────────────── */
+.cs-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cs-accordion-item {
+  background: hsl(240, 2%, 13%);
+  border: 1px solid var(--jet);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.25s;
+}
+
+.cs-accordion-item.active {
+  border-color: hsla(45, 100%, 72%, 0.4);
+}
+
+.cs-accordion-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-align: left;
+  color: var(--white-2);
+}
+
+.cs-accordion-header-content {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.cs-accordion-icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  background: hsla(45, 100%, 72%, 0.08);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: var(--orange-yellow-crayola);
+}
+
+.cs-accordion-info {
+  flex: 1;
+}
+
+.cs-accordion-info h4 {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.cs-accordion-info p {
+  font-size: 12px;
+  color: var(--cs-text-muted);
+}
+
+.cs-accordion-chevron {
+  font-size: 18px;
+  color: var(--cs-text-muted);
+  transition: transform 0.3s;
+}
+
+.cs-accordion-item.active .cs-accordion-chevron {
+  transform: rotate(180deg);
+}
+
+.cs-accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.cs-accordion-item.active .cs-accordion-content {
+  max-height: 3000px;
+  /* high enough to fit PRD */
+  padding: 0 20px 24px;
+}
+
+.cs-appendix-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--orange-yellow-crayola);
+  border: 1px solid hsla(45, 100%, 72%, 0.3);
+  padding: 4px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s;
+  margin-top: 15px;
+}
+
+.cs-appendix-link:hover {
+  background: hsla(45, 100%, 72%, 0.08);
+}
+
+/* ─── Footer ─────────────────────────────────────────────────────── */
+.cs-footer {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--jet);
+}

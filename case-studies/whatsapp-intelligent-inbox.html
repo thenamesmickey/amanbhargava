@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WhatsApp Intelligent Inbox — Aman Bhargava</title>
+    <meta name="description"
+        content="Case Study: WhatsApp Intelligent Inbox — Solving Information Overload for 2 Billion Users by Aman Bhargava." />
+
+    <link rel="shortcut icon" href="../assets/images/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/case-study.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+
+<body class="cs-body">
+
+    <div class="cs-root">
+
+        <!-- ═══ TOC SIDEBAR ═══════════════════════════════════════════ -->
+        <aside class="cs-sidenav" id="cs-sidenav">
+
+            <!-- Back link -->
+            <a href="../index.html" class="cs-back-side">
+                <ion-icon name="arrow-back-outline"></ion-icon>
+                Back to Portfolio
+            </a>
+
+            <!-- Mobile toggle header -->
+            <div class="cs-sidenav-header" id="cs-toc-toggle">
+                <span class="cs-sidenav-label">Contents</span>
+                <ion-icon name="chevron-down-outline" class="cs-sidenav-toggle"></ion-icon>
+            </div>
+
+            <nav>
+                <ol class="cs-toc">
+                    <li><a href="#intro" class="cs-toc-link"><span class="cs-toc-num">01</span>Introduction</a></li>
+                    <li><a href="#background" class="cs-toc-link"><span class="cs-toc-num">02</span>Background</a></li>
+                    <li><a href="#market" class="cs-toc-link"><span class="cs-toc-num">03</span>Market Analysis</a></li>
+                    <li><a href="#problem" class="cs-toc-link"><span class="cs-toc-num">04</span>Problem Statement</a>
+                    </li>
+                    <li><a href="#strategy" class="cs-toc-link"><span class="cs-toc-num">05</span>Product Strategy</a>
+                    </li>
+                    <li><a href="#dev" class="cs-toc-link"><span class="cs-toc-num">06</span>Development</a></li>
+                    <li><a href="#stakeholders" class="cs-toc-link"><span class="cs-toc-num">07</span>Stakeholders</a>
+                    </li>
+                    <li><a href="#research" class="cs-toc-link"><span class="cs-toc-num">08</span>User Research</a></li>
+                    <li><a href="#gtm" class="cs-toc-link"><span class="cs-toc-num">09</span>Go-To-Market</a></li>
+                    <li><a href="#kpis" class="cs-toc-link"><span class="cs-toc-num">10</span>KPIs</a></li>
+                    <li><a href="#results" class="cs-toc-link"><span class="cs-toc-num">11</span>Results</a></li>
+                    <li><a href="#lessons" class="cs-toc-link"><span class="cs-toc-num">12</span>Lessons</a></li>
+                    <li><a href="#conclusion" class="cs-toc-link"><span class="cs-toc-num">13</span>Conclusion</a></li>
+                    <li><a href="#prd" class="cs-toc-link"><span class="cs-toc-num">14</span>Appendices</a></li>
+                </ol>
+            </nav>
+        </aside>
+
+        <!-- ═══ MAIN ARTICLE CARD ════════════════════════════════════ -->
+        <div class="cs-main">
+
+            <!-- Hero -->
+            <header class="cs-hero">
+                <div class="cs-hero-meta">
+                    <span class="cs-tag">0-to-1 Feature</span>
+                    <span class="cs-tag">On-Device AI</span>
+                    <span class="cs-tag">Privacy-First</span>
+                    <span class="cs-tag">Agile-Scrumban</span>
+                </div>
+                <h1 class="cs-title">WhatsApp <span class="cs-accent">"Intelligent Inbox"</span></h1>
+                <p class="cs-subtitle">Solving Information Overload for 2 Billion Users</p>
+            </header>
+
+            <div class="cs-content">
+
+                <!-- 1. Introduction -->
+                <section id="intro" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">01</span> Introduction</h2>
+                    <div class="cs-card">
+                        <div class="cs-row">
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">The Hook</h3>
+                                <p>A zero-effort communication hub that uses on-device intelligence to prioritize human
+                                    connection over digital noise.</p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Market Context</h3>
+                                <p>In an era of "notification fatigue," WhatsApp is transitioning from a chronological
+                                    messaging "firehose" to a curated communication platform.</p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Study Objectives</h3>
+                                <p>To demonstrate end-to-end execution of a 0-to-1 feature, balancing high-scale UI
+                                    simplicity with stringent privacy constraints.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 2. Background -->
+                <section id="background" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">02</span> Background Information</h2>
+                    <div class="cs-card">
+                        <div class="cs-row">
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Company Profile</h3>
+                                <p>Meta's mission is to build community. WhatsApp's core value is <strong>"Simple,
+                                        Reliable, Private."</strong></p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Product Evolution</h3>
+                                <p>Since 2009, the WhatsApp inbox has been strictly chronological. While effective for
+                                    low volumes, the rise of WhatsApp Business and massive community groups has rendered
+                                    the "flat" list unmanageable for power users.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 3. Market Analysis -->
+                <section id="market" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">03</span> Market Analysis</h2>
+                    <div class="cs-card">
+                        <h3 class="cs-card-label">Target Personas</h3>
+                        <div class="cs-persona-grid">
+                            <div class="cs-persona">
+                                <ion-icon name="briefcase-outline"></ion-icon>
+                                <h4>The "Hustler" (Freelancer)</h4>
+                                <p class="cs-pain">Needs to see client leads immediately — buried under group noise.</p>
+                            </div>
+                            <div class="cs-persona">
+                                <ion-icon name="people-outline"></ion-icon>
+                                <h4>The "Community Lead"</h4>
+                                <p class="cs-pain">Managing 20+ active groups; needs to filter out "Good Morning" spam
+                                    to see actionable queries.</p>
+                            </div>
+                        </div>
+
+                        <h3 class="cs-card-label" style="margin-top:22px;">Competitive Landscape</h3>
+                        <div class="cs-table-wrap">
+                            <table class="cs-table">
+                                <thead>
+                                    <tr>
+                                        <th>Product</th>
+                                        <th>Approach</th>
+                                        <th>Strength</th>
+                                        <th>Weakness</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Telegram</td>
+                                        <td>Manual folders</td>
+                                        <td>Powerful customization</td>
+                                        <td>High friction to set up</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gmail</td>
+                                        <td>Auto-sorting tabs</td>
+                                        <td>Excellent organization</td>
+                                        <td>Lacks "instant" urgency of chat</td>
+                                    </tr>
+                                    <tr>
+                                        <td>WhatsApp (proposed)</td>
+                                        <td>On-device AI priority</td>
+                                        <td>Privacy-first, zero friction</td>
+                                        <td>New ML infrastructure required</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h3 class="cs-card-label" style="margin-top:22px;">Trends</h3>
+                        <ul class="cs-list">
+                            <li>A shift toward Digital Well-being</li>
+                            <li>On-Device AI (Edge Computing) to preserve user privacy</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- 4. Problem Statement -->
+                <section id="problem" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">04</span> Problem Statement</h2>
+                    <div class="cs-card cs-highlight-card">
+                        <ion-icon name="alert-circle-outline" class="cs-highlight-icon"></ion-icon>
+                        <h3 class="cs-card-label">The Core Conflict (JTBD)</h3>
+                        <blockquote class="cs-jtbd">
+                            "When I am overwhelmed with messages, I want to automatically surface work-critical chats,
+                            so that I can respond to clients faster without getting distracted by social groups."
+                        </blockquote>
+                        <p class="cs-stat-label">Quantifying the Pain</p>
+                        <div class="cs-stat-row">
+                            <div class="cs-stat">
+                                <span class="cs-stat-num">22%</span>
+                                <span class="cs-stat-desc">"Ghosting" rate — users ignoring the app entirely due to the
+                                    psychological weight of 99+ notifications</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 5. Product Strategy -->
+                <section id="strategy" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">05</span> Product Strategy</h2>
+                    <div class="cs-card">
+                        <div class="cs-row">
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">The Vision</h3>
+                                <p>An inbox that cleans itself, ensuring critical connections are never buried.</p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">USP</h3>
+                                <p><strong>Privacy-First Prioritization.</strong> Classification happens entirely
+                                    on-device, maintaining End-to-End Encryption (E2EE).</p>
+                            </div>
+                        </div>
+                        <div class="cs-positioning">
+                            <ion-icon name="megaphone-outline"></ion-icon>
+                            <p>"For power users, Intelligent Inbox is the only messaging assistant that organizes your
+                                life without ever reading your private data."</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 6. Development Process -->
+                <section id="dev" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">06</span> Development Process</h2>
+                    <div class="cs-card">
+                        <h3 class="cs-card-label">Methodology: Agile-Scrumban</h3>
+                        <p style="font-size:14px;">This allowed for "Research Spikes" in ML model development while
+                            maintaining a rigid two-week cadence for UI/UX iterations.</p>
+                        <h3 class="cs-card-label" style="margin-top:20px;">The Roadmap</h3>
+                        <div class="cs-timeline">
+                            <div class="cs-tl-item">
+                                <span class="cs-tl-q">Phase 1</span>
+                                <p>On-device heuristic model training (Reciprocity / Frequency)</p>
+                            </div>
+                            <div class="cs-tl-item">
+                                <span class="cs-tl-q">Phase 2</span>
+                                <p>Low-fidelity testing of the "Later Bundle" UI</p>
+                            </div>
+                            <div class="cs-tl-item">
+                                <span class="cs-tl-q">Phase 3</span>
+                                <p>Beta rollout to 1% of DAUs in India / Brazil</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 7. Stakeholder Engagement -->
+                <section id="stakeholders" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">07</span> Stakeholder Engagement</h2>
+                    <div class="cs-card">
+                        <h3 class="cs-card-label">Internal Alignment</h3>
+                        <div class="cs-stakeholder-grid">
+                            <div class="cs-stakeholder">
+                                <ion-icon name="code-slash-outline"></ion-icon>
+                                <h4>Engineering</h4>
+                                <p>Negotiated a "battery-budget" to ensure ML scanning didn't drain device life.</p>
+                            </div>
+                            <div class="cs-stakeholder">
+                                <ion-icon name="shield-checkmark-outline"></ion-icon>
+                                <h4>Legal / Privacy</h4>
+                                <p>Conducted a Privacy Impact Assessment (PIA); verified no metadata leaked during
+                                    classification.</p>
+                            </div>
+                            <div class="cs-stakeholder">
+                                <ion-icon name="git-branch-outline"></ion-icon>
+                                <h4>Eng + Design</h4>
+                                <p>"Decision Log" in Notion to align on edge cases like blocked-contact priority
+                                    triggers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 8. User Research & Testing -->
+                <section id="research" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">08</span> User Research &amp; Testing</h2>
+                    <div class="cs-card">
+                        <div class="cs-row">
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Discovery</h3>
+                                <p>Diary studies with 12 freelancers revealed users spend an average of <strong
+                                        class="cs-accent-text">14 seconds</strong> scrolling to find a specific chat.
+                                </p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Validation</h3>
+                                <p>A "Painted Door" test showed a <strong class="cs-accent-text">40% CTR</strong> on a
+                                    mock "Sort by Focus" button — confirming demand before any production code was
+                                    written.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 9. GTM -->
+                <section id="gtm" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">09</span> Marketing &amp; Go-To-Market</h2>
+                    <div class="cs-card">
+                        <div class="cs-row">
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Launch Strategy</h3>
+                                <p><strong>"The Silent Rollout."</strong> Introduced as an opt-in "Focus Toggle" to
+                                    gather sentiment without disrupting classic-view users.</p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Channels</h3>
+                                <p>In-app status updates and a targeted campaign for "WhatsApp Business" users.</p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Pricing</h3>
+                                <p>Core prioritization free for all. Custom "Rule-Based Folders" reserved for Business
+                                    Premium subscribers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 10. KPIs -->
+                <section id="kpis" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">10</span> Performance Metrics (KPIs)</h2>
+                    <div class="cs-card">
+                        <div class="cs-kpi-grid">
+                            <div class="cs-kpi">
+                                <ion-icon name="star-outline"></ion-icon>
+                                <h4>North Star</h4>
+                                <p>TTR (Time to Reply) for "Priority" messages</p>
+                            </div>
+                            <div class="cs-kpi">
+                                <ion-icon name="repeat-outline"></ion-icon>
+                                <h4>Secondary</h4>
+                                <p>Stickiness — % of users keeping the Focus toggle active</p>
+                            </div>
+                            <div class="cs-kpi">
+                                <ion-icon name="analytics-outline"></ion-icon>
+                                <h4>Tracking</h4>
+                                <p>Privacy-compliant internal telemetry (similar to Amplitude)</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 11. Results -->
+                <section id="results" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">11</span> Results &amp; Impact</h2>
+                    <div class="cs-card">
+                        <div class="cs-stat-row">
+                            <div class="cs-stat">
+                                <span class="cs-stat-num">14s → 3s</span>
+                                <span class="cs-stat-desc">Avg. scroll time to find a chat — a 78% improvement</span>
+                            </div>
+                            <div class="cs-stat">
+                                <span class="cs-stat-num">+12%</span>
+                                <span class="cs-stat-desc">App Retention among users with 20+ active groups, reducing
+                                    "Notification Churn"</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 12. Lessons Learned -->
+                <section id="lessons" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">12</span> Lessons Learned</h2>
+                    <div class="cs-card">
+                        <div class="cs-row">
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Retrospective</h3>
+                                <p>Cultural context matters. In some regions, "Family" is always priority #1; elsewhere,
+                                    "Work" is. The model needed a "Culture Weight" adjustment.</p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Growth Insight</h3>
+                                <p>Simplicity wins. Four categories simplified to two ("Focused" vs. "Other") after
+                                    users said more categories felt like "work."</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 13. Conclusion -->
+                <section id="conclusion" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">13</span> Conclusion</h2>
+                    <div class="cs-card cs-highlight-card">
+                        <ion-icon name="ribbon-outline" class="cs-highlight-icon"></ion-icon>
+                        <p><strong>Summary:</strong> We successfully solved the notification crisis by moving from a
+                            chronological list to a value-based hierarchy.</p>
+                        <p style="margin-top:10px;"><strong>Reflections:</strong> This project proved that AI can be a
+                            "Privacy-First" feature, reinforcing WhatsApp's brand as the world's most trusted messaging
+                            tool.</p>
+                    </div>
+                </section>
+
+                <!-- 14. Appendices (Accordion) -->
+                <section id="prd" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">14</span> Appendices — The Evidence</h2>
+                    <div class="cs-accordion">
+
+                        <!-- Appendix A -->
+                        <div class="cs-accordion-item" data-accordion>
+                            <button class="cs-accordion-header" data-accordion-btn>
+                                <div class="cs-accordion-header-content">
+                                    <div class="cs-accordion-icon"><ion-icon name="document-text-outline"></ion-icon>
+                                    </div>
+                                    <div class="cs-accordion-info">
+                                        <h4>Appendix A — PRD &amp; Logic Flowchart</h4>
+                                        <p>The "How-to" for Engineers</p>
+                                    </div>
+                                </div>
+                                <ion-icon name="chevron-down-outline" class="cs-accordion-chevron"></ion-icon>
+                            </button>
+                            <div class="cs-accordion-content">
+                                <div class="cs-card"
+                                    style="border: none; box-shadow: none; background: transparent; padding: 0;">
+                                    <div class="cs-hero-meta" style="margin-bottom: 20px; margin-top: 20px;">
+                                        <span class="cs-tag">Status: Draft / For Review</span>
+                                        <span class="cs-tag">Author: Aman Bhargava</span>
+                                    </div>
+
+                                    <h3 class="cs-card-label">1. Executive Summary</h3>
+                                    <p style="margin-bottom: 24px;">The Intelligent Inbox aims to solve the
+                                        "Chronological Chaos" of the current WhatsApp interface by introducing an
+                                        automated, on-device classification system that separates high-signal
+                                        conversations from low-priority noise.</p>
+
+                                    <h3 class="cs-card-label">2. User Stories</h3>
+                                    <div class="cs-table-wrap" style="margin-bottom: 24px;">
+                                        <table class="cs-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>User Role</th>
+                                                    <th>Requirement</th>
+                                                    <th>Goal/Benefit</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>US.1</td>
+                                                    <td>Power User</td>
+                                                    <td>I want the app to automatically identify my most frequent
+                                                        contacts.</td>
+                                                    <td>To ensure I never miss an urgent message from a key stakeholder.
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>US.2</td>
+                                                    <td>Group Member</td>
+                                                    <td>I want non-mention group notifications to be bundled.</td>
+                                                    <td>To reduce cognitive load during work hours without leaving the
+                                                        group.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>US.3</td>
+                                                    <td>Privacy-Conscious</td>
+                                                    <td>I want all message analysis to happen on my phone.</td>
+                                                    <td>To maintain the integrity of End-to-End Encryption (E2EE).</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <h3 class="cs-card-label">3. Functional Specifications</h3>
+                                    <div style="margin-bottom: 24px;">
+                                        <h4 style="font-size: 14px; color: var(--white-2); margin-bottom: 10px;">3.1 The
+                                            "Priority Score" Algorithm (On-Device)</h4>
+                                        <p style="font-size: 13px; margin-bottom: 10px;">System assigns a hidden
+                                            "Weight" to each thread based on heuristics:</p>
+                                        <ul class="cs-list">
+                                            <li><strong>Reciprocity:</strong> Do both parties respond within a &lt;1
+                                                hour window frequently? (+5 points)</li>
+                                            <li><strong>Mentions:</strong> Does the user's @name appear in a group? (+10
+                                                points)</li>
+                                            <li><strong>Interaction Depth:</strong> Does the thread contain media
+                                                (images/voice notes) or just text? (+2 points)</li>
+                                            <li><strong>Manual Override:</strong> If a user "Pins" a chat, it is
+                                                automatically Tier 1.</li>
+                                        </ul>
+                                    </div>
+
+                                    <div style="margin-bottom: 24px;">
+                                        <h4 style="font-size: 14px; color: var(--white-2); margin-bottom: 10px;">3.2 UI
+                                            Components</h4>
+                                        <ul class="cs-list">
+                                            <li><strong>The Focus Toggle:</strong> A sliding pill at the top of the chat
+                                                list: [ All ] [ Focused ].</li>
+                                            <li><strong>The "Later" Bundle:</strong> A single row at the bottom of the
+                                                "Focused" view that aggregates all low-scoring group chats (e.g.,
+                                                "Social: 12 new messages").</li>
+                                        </ul>
+                                    </div>
+
+                                    <h3 class="cs-card-label">3.3 Priority Classification Logic Flow</h3>
+                                    <div class="cs-timeline" style="margin-bottom: 24px;">
+                                        <div class="cs-tl-item">
+                                            <span class="cs-tl-q">Step 1</span>
+                                            <div>
+                                                <p><strong>Entry Point:</strong> New message packet is received and
+                                                    decrypted on-device.</p>
+                                            </div>
+                                        </div>
+                                        <div class="cs-tl-item">
+                                            <span class="cs-tl-q">Step 2</span>
+                                            <div>
+                                                <p><strong>Level 1: The "Identity" Check</strong></p>
+                                                <p style="font-size: 12px; color: var(--cs-text-muted);">Is sender a
+                                                    "Pinned" contact? → YES: Focused Tab. <br>In Contact List? → NO:
+                                                    Keyword Scan.</p>
+                                            </div>
+                                        </div>
+                                        <div class="cs-tl-item">
+                                            <span class="cs-tl-q">Step 3</span>
+                                            <div>
+                                                <p><strong>Level 2: The "Urgency" Keyword Scan (NLP Lite)</strong></p>
+                                                <p style="font-size: 12px; color: var(--cs-text-muted);">High-intent
+                                                    strings (e.g., "Where are you?", "Emergency", "ASAP"). <br>→ YES:
+                                                    High Priority.</p>
+                                            </div>
+                                        </div>
+                                        <div class="cs-tl-item">
+                                            <span class="cs-tl-q">Step 4</span>
+                                            <div>
+                                                <p><strong>Level 3: The "Behavioral" Heuristic</strong></p>
+                                                <p style="font-size: 12px; color: var(--cs-text-muted);">Reciprocity
+                                                    Check: 3+ replies in last 48 hours? <br>Group Relevance: @mention or
+                                                    direct reply?</p>
+                                            </div>
+                                        </div>
+                                        <div class="cs-tl-item">
+                                            <span class="cs-tl-q">Step 5</span>
+                                            <div>
+                                                <p><strong>Level 4: The "Noise" Filter</strong></p>
+                                                <p style="font-size: 12px; color: var(--cs-text-muted);">Muted Groups? →
+                                                    Later Bundle. <br>Promotional Business? → Later Bundle.</p>
+                                            </div>
+                                        </div>
+                                        <div class="cs-tl-item">
+                                            <span class="cs-tl-q">Final</span>
+                                            <div>
+                                                <p><strong>Default State:</strong> Defaults to Focused to prevent data
+                                                    loss. Prompt user after 24h: "Move to Later?"</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="cs-row" style="margin-bottom: 24px;">
+                                        <div class="cs-col">
+                                            <h3 class="cs-card-label">4. Technical Constraints</h3>
+                                            <p><strong>Zero-Server Scanning:</strong> Light model (&lt; 2% battery
+                                                drain).
+                                                <br>
+                                                <strong>E2EE Integrity:</strong> Analysis happens localized
+                                                after
+                                                decryption.
+                                            </p>
+                                        </div>
+                                        <div class="cs-col">
+                                            <h3 class="cs-card-label">5. Edge Cases</h3>
+                                            <p><strong>False Negatives:</strong> Escalates non-contacts with "Urgent"
+                                                keywords for 24h.
+                                                <br>
+                                                <strong>Low Storage:</strong> Reverts to
+                                                chronological
+                                                view if space is low.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <h3 class="cs-card-label">6. Success Metrics (KPIs)</h3>
+                                    <ul class="cs-list">
+                                        <li><strong>Primary:</strong> Reduction in average TTR (Time to Reply) for
+                                            priority contacts.</li>
+                                        <li><strong>Secondary:</strong> % of users staying opt-in for &gt;7 days.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Appendix B -->
+                        <div class="cs-accordion-item" data-accordion>
+                            <button class="cs-accordion-header" data-accordion-btn>
+                                <div class="cs-accordion-header-content">
+                                    <div class="cs-accordion-icon"><ion-icon name="map-outline"></ion-icon></div>
+                                    <div class="cs-accordion-info">
+                                        <h4>Appendix B — User Journey Map</h4>
+                                        <p>The "Why" based on user pain</p>
+                                    </div>
+                                </div>
+                                <ion-icon name="chevron-down-outline" class="cs-accordion-chevron"></ion-icon>
+                            </button>
+                            <div class="cs-accordion-content">
+                                <div class="cs-card"
+                                    style="border: none; box-shadow: none; background: transparent; padding: 0;">
+                                    <div class="cs-hero-meta" style="margin-bottom: 20px; margin-top: 20px;">
+                                        <span class="cs-tag">Methodology: Mixed-methods</span>
+                                        <span class="cs-tag">12 Interviews</span>
+                                        <span class="cs-tag">500+ Surveys</span>
+                                    </div>
+
+                                    <h3 class="cs-card-label">1. User Research Synthesis</h3>
+                                    <p style="margin-bottom: 16px; font-size: 14px;">We conducted 1-on-1 "Deep Dive"
+                                        interviews with power users and surveyed 500+ daily active users to identify the
+                                        root causes of notification fatigue.</p>
+
+                                    <div class="cs-table-wrap" style="margin-bottom: 24px;">
+                                        <table class="cs-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>What We Heard (Quote)</th>
+                                                    <th>Root Pain Point</th>
+                                                    <th>PM Insight (The "So What?")</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td style="font-style: italic;">"I have 40 unread messages, but I'm
+                                                        afraid to open the app because I don't have time to reply to
+                                                        everyone."</td>
+                                                    <td><strong>Notification Anxiety</strong></td>
+                                                    <td>The "Unread" count is a source of stress, not a helpful
+                                                        indicator.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="font-style: italic;">"I missed a client's deposit
+                                                        confirmation because it was buried under my family's 'Good
+                                                        Morning' GIFs."</td>
+                                                    <td><strong>Signal-to-Noise Ratio</strong></td>
+                                                    <td>Chronological sorting is failing professional users who use
+                                                        WhatsApp for business.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="font-style: italic;">"I mute all my groups, but then I
+                                                        miss the one time someone actually mentions me or asks a
+                                                        question."</td>
+                                                    <td><strong>Binary Control Deficit</strong></td>
+                                                    <td>Users only have two options: "All Noise" or "Total Silence."
+                                                        They need a middle ground.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <h3 class="cs-card-label">2. User Personas: "The Hustler"</h3>
+                                    <div class="cs-row" style="margin-bottom: 24px;">
+                                        <div class="cs-col"
+                                            style="background: hsla(240, 2%, 18%, 0.5); padding: 20px; border-radius: 12px; border: 1px solid var(--jet);">
+                                            <div
+                                                style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+                                                <div
+                                                    style="width: 40px; height: 40px; background: var(--orange-yellow-crayola); border-radius: 50%; display: flex; justify-content: center; align-items: center; color: var(--eerie-black-1); font-weight: bold;">
+                                                    H</div>
+                                                <div>
+                                                    <h4 style="font-size: 16px; color: var(--white-2);">Freelancer /
+                                                        Small Biz</h4>
+                                                    <p style="font-size: 12px; color: var(--cs-text-muted);">The
+                                                        Professional Growth Segment</p>
+                                                </div>
+                                            </div>
+                                            <ul class="cs-list" style="font-size: 13px;">
+                                                <li><strong>Goal:</strong> Respond to potential leads within 15 minutes.
+                                                </li>
+                                                <li><strong>Need:</strong> Separate "Revenue-Generating" chats from
+                                                    "Social" noise.</li>
+                                                <li><strong>Behavior:</strong> Checks WhatsApp 50+ times a day; feels
+                                                    "always on" but "never productive."</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <h3 class="cs-card-label">3. Current State: "The Inbox Hunt"</h3>
+                                    <div class="cs-table-wrap" style="margin-bottom: 24px;">
+                                        <table class="cs-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Phase</th>
+                                                    <th>User Action</th>
+                                                    <th>Emotional State</th>
+                                                    <th>Friction Point</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><strong>Trigger</strong></td>
+                                                    <td>Receives 15 notifications while in a meeting.</td>
+                                                    <td>😟 Anxious</td>
+                                                    <td>Can't tell which ping is "The Big One."</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Opening</strong></td>
+                                                    <td>Unlocks phone, opens WhatsApp.</td>
+                                                    <td>😵 Overwhelmed</td>
+                                                    <td>Sees 150+ unread messages across 12 threads.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Search</strong></td>
+                                                    <td>Scrolls past 3 family groups and 1 "Sale" alert.</td>
+                                                    <td>😠 Frustrated</td>
+                                                    <td>Visual clutter makes scanning difficult.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Discovery</strong></td>
+                                                    <td>Finds the client message from 2 hours ago.</td>
+                                                    <td>😰 Guilty</td>
+                                                    <td>Delayed response time potentially lost the deal.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Exit</strong></td>
+                                                    <td>Replies and quickly closes the app.</td>
+                                                    <td>😮‍💨 Drained</td>
+                                                    <td>User views the app as a "task" rather than a "tool."</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <h3 class="cs-card-label">4. The Shift: Ideal State</h3>
+                                    <div
+                                        style="background: hsla(45, 100%, 72%, 0.05); padding: 15px; border-radius: 10px; border-left: 3px solid var(--orange-yellow-crayola); margin-bottom: 10px;">
+                                        <p style="font-size: 14px; color: var(--white-2); line-height: 1.6;">
+                                            With the <strong>Intelligent Inbox</strong>, the user immediately sees the
+                                            Focused Tab. The client message is pinned to the top, and social noise is
+                                            bundled silently.
+                                        </p>
+                                        <p
+                                            style="font-size: 14px; color: var(--orange-yellow-crayola); font-weight: 500; margin-top: 8px;">
+                                            Result: Transition from Anxiety to Efficiency.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Appendix C -->
+                        <div class="cs-accordion-item" data-accordion>
+                            <button class="cs-accordion-header" data-accordion-btn>
+                                <div class="cs-accordion-header-content">
+                                    <div class="cs-accordion-icon"><ion-icon name="color-wand-outline"></ion-icon></div>
+                                    <div class="cs-accordion-info">
+                                        <h4>Appendix C — Figma Wireframes</h4>
+                                        <p>The "Look" of the Focused UI</p>
+                                    </div>
+                                </div>
+                                <ion-icon name="chevron-down-outline" class="cs-accordion-chevron"></ion-icon>
+                            </button>
+                            <div class="cs-accordion-content">
+                                <div class="cs-card"
+                                    style="border: none; box-shadow: none; background: transparent; padding: 0;">
+                                    <div class="cs-hero-meta" style="margin-bottom: 20px; margin-top: 20px;">
+                                        <span class="cs-tag">Principle: Familiar but Filtered</span>
+                                        <span class="cs-tag">Low-Fidelity</span>
+                                        <span class="cs-tag">High-Fidelity</span>
+                                    </div>
+
+                                    <p style="margin-bottom: 24px; font-size: 14px; color: var(--cs-text-muted);">
+                                        Maintaining WhatsApp's core DNA while introducing organizational layers to
+                                        reduce cognitive load.</p>
+
+                                    <h3 class="cs-card-label">1. Low-Fidelity Wireframes (The Blueprint)</h3>
+                                    <div class="cs-row" style="margin-bottom: 24px; gap: 20px;">
+                                        <div class="cs-col"
+                                            style="background: hsla(240, 2%, 15%, 0.8); padding: 15px; border-radius: 10px; border: 1px dashed var(--jet);">
+                                            <h4 style="font-size: 13px; color: var(--white-2); margin-bottom: 8px;">View
+                                                1: Chronological (Standard)</h4>
+                                            <p style="font-size: 12px; line-height: 1.5;">Vertical list of 10 chats. 4
+                                                groups w/ 20+ msgs, 3 unknown businesses. <strong
+                                                    style="color: #ff4d4d;">Result:</strong> Critical client buried at
+                                                #8.</p>
+                                        </div>
+                                        <div class="cs-col"
+                                            style="background: hsla(240, 2%, 15%, 0.8); padding: 15px; border-radius: 10px; border: 1px solid var(--orange-yellow-crayola);">
+                                            <h4
+                                                style="font-size: 13px; color: var(--orange-yellow-crayola); margin-bottom: 8px;">
+                                                View 2: Focused (New)</h4>
+                                            <p style="font-size: 12px; line-height: 1.5;">Dual-Tab Header introduced.
+                                                Bulk messages hidden in collapsed <strong>"Later" Bundle</strong> at the
+                                                bottom. <strong style="color: #4CAF50;">Result:</strong> Instant
+                                                relevance.</p>
+                                        </div>
+                                    </div>
+
+                                    <h3 class="cs-card-label">2. High-Fidelity UI Concepts</h3>
+                                    <div class="cs-row" style="margin-bottom: 24px; gap: 20px;">
+                                        <div class="cs-col">
+                                            <h4 style="font-size: 14px; color: var(--white-2); margin-bottom: 10px;">
+                                                Component A: Priority Toggle</h4>
+                                            <p style="font-size: 12px; margin-bottom: 10px;">Subtle "Pill Toggle" at the
+                                                top of the chat list, optimized for thumb-reach.</p>
+                                            <ul class="cs-list" style="font-size: 11px;">
+                                                <li><strong>Interaction:</strong> Tapping "Focused" triggers sliding
+                                                    animation.</li>
+                                                <li><strong>Visual:</strong> Non-priority threads dissolve into the
+                                                    "Later" bundle.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="cs-col">
+                                            <h4 style="font-size: 14px; color: var(--white-2); margin-bottom: 10px;">
+                                                Component B: "Later" Bundle</h4>
+                                            <p style="font-size: 12px; margin-bottom: 10px;">Single clean row acting as
+                                                a container for low-signal threads.</p>
+                                            <ul class="cs-list" style="font-size: 11px;">
+                                                <li><strong>Smart Preview:</strong> Shows "Active in: Family, Soccer"
+                                                    instead of last message.</li>
+                                                <li><strong>Micro-Interaction:</strong> Long-press to "Mark all as read"
+                                                    (Fixes Red Dot Anxiety).</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <h3 class="cs-card-label">3. UI Flow: "The Promotional Escalation"</h3>
+                                    <div
+                                        style="background: hsl(240, 2%, 13%); padding: 15px; border-radius: 12px; border: 1px solid var(--jet); margin-bottom: 24px;">
+                                        <div class="cs-timeline" style="margin-bottom: 0;">
+                                            <div class="cs-tl-item">
+                                                <span class="cs-tl-q"
+                                                    style="background: var(--orange-yellow-crayola); color: var(--eerie-black-1);">Trigger</span>
+                                                <p style="font-size: 12px;"><strong>Incoming Message:</strong> Unknown
+                                                    number but contains "Urgent" keywords.</p>
+                                            </div>
+                                            <div class="cs-tl-item">
+                                                <span class="cs-tl-q">Visual Cue</span>
+                                                <p style="font-size: 12px;"><strong>"Focused" tab glows</strong> with a
+                                                    blue dot indicator.</p>
+                                            </div>
+                                            <div class="cs-tl-item">
+                                                <span class="cs-tl-q">Bridge UX</span>
+                                                <p style="font-size: 12px;">Appears in Focus with badge: <strong>"New
+                                                        Priority Detected."</strong></p>
+                                            </div>
+                                            <div class="cs-tl-item">
+                                                <span class="cs-tl-q">Choice</span>
+                                                <p style="font-size: 12px;">User selects <strong>"Keep in
+                                                        Focus"</strong> or <strong>"Move to Later."</strong></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h3 class="cs-card-label">4. Accessibility &amp; Dark Mode</h3>
+                                    <div class="cs-row" style="gap: 20px; align-items: stretch;">
+                                        <div class="cs-col"
+                                            style="border-left: 2px solid var(--orange-yellow-crayola); padding-left: 15px;">
+                                            <h4 style="font-size: 13px; color: var(--white-2); margin-bottom: 5px;">
+                                                Contrast</h4>
+                                            <p style="font-size: 12px;">Focused tab uses higher contrast ratio for
+                                                sender names to improve scan-speed for low-vision users.</p>
+                                        </div>
+                                        <div class="cs-col"
+                                            style="border-left: 2px solid var(--jet); padding-left: 15px;">
+                                            <h4 style="font-size: 13px; color: var(--white-2); margin-bottom: 5px;">Dark
+                                                Mode</h4>
+                                            <p style="font-size: 12px;">"Later" bundle is dimmed by 15% more than
+                                                standard rows to visually signal its secondary status.</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- <a href="YOUR_FIGMA_LINK_HERE" target="_blank" class="cs-appendix-link"
+                                        style="margin-top: 25px;">
+                                        <ion-icon name="logo-figma"></ion-icon> View Prototype
+                                    </a> -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Appendix D -->
+                        <div class="cs-accordion-item" data-accordion>
+                            <button class="cs-accordion-header" data-accordion-btn>
+                                <div class="cs-accordion-header-content">
+                                    <div class="cs-accordion-icon"><ion-icon name="bar-chart-outline"></ion-icon></div>
+                                    <div class="cs-accordion-info">
+                                        <h4>Appendix D — GTM Dashboard</h4>
+                                        <p>The "Impact" through data</p>
+                                    </div>
+                                </div>
+                                <ion-icon name="chevron-down-outline" class="cs-accordion-chevron"></ion-icon>
+                            </button>
+                            <div class="cs-accordion-content">
+                                <div class="cs-card"
+                                    style="border: none; box-shadow: none; background: transparent; padding: 0;">
+                                    <div class="cs-hero-meta" style="margin-bottom: 20px; margin-top: 20px;">
+                                        <span class="cs-tag">Focus: Scalability</span>
+                                        <span class="cs-tag">Risk Mitigation</span>
+                                        <span class="cs-tag">Data-Driven Validation</span>
+                                    </div>
+
+                                    <h3 class="cs-card-label">1. The Rollout Strategy: "The Ripple Effect"</h3>
+                                    <p style="margin-bottom: 16px; font-size: 14px;">Because WhatsApp is a utility, any
+                                        major UI change carries high disruption risk. We use a tiered release to monitor
+                                        sentiment and performance.</p>
+
+                                    <div class="cs-row" style="margin-bottom: 24px; gap: 15px;">
+                                        <div class="cs-col"
+                                            style="background: hsl(240, 2%, 13%); padding: 15px; border-radius: 12px; border: 1px solid var(--jet);">
+                                            <h4
+                                                style="font-size: 13px; color: var(--orange-yellow-crayola); margin-bottom: 5px;">
+                                                Phase 1: Alpha</h4>
+                                            <p style="font-size: 11px;">Internal only testing for ML battery drain on
+                                                5,000 Meta employees.</p>
+                                        </div>
+                                        <div class="cs-col"
+                                            style="background: hsl(240, 2%, 13%); padding: 15px; border-radius: 12px; border: 1px solid var(--jet);">
+                                            <h4
+                                                style="font-size: 13px; color: var(--orange-yellow-crayola); margin-bottom: 5px;">
+                                                Phase 2: Beta</h4>
+                                            <p style="font-size: 11px;">Relased to 1% of users in high-volume markets
+                                                (India, Brazil). Feedback enabled.</p>
+                                        </div>
+                                        <div class="cs-col"
+                                            style="background: hsl(240, 2%, 13%); padding: 15px; border-radius: 12px; border: 1px solid var(--jet);">
+                                            <h4
+                                                style="font-size: 13px; color: var(--orange-yellow-crayola); margin-bottom: 5px;">
+                                                Phase 3: Dark</h4>
+                                            <p style="font-size: 11px;">ML runs in background for 10% of users. Measure
+                                                "Shadow TTR" to check AI accuracy.</p>
+                                        </div>
+                                        <div class="cs-col"
+                                            style="background: hsl(240, 2%, 13%); padding: 15px; border-radius: 12px; border: 1px solid var(--jet);">
+                                            <h4
+                                                style="font-size: 13px; color: var(--orange-yellow-crayola); margin-bottom: 5px;">
+                                                Phase 4: Global</h4>
+                                            <p style="font-size: 11px;">Full rollout with onboarding "Spotlight"
+                                                walkthrough for 2B users.</p>
+                                        </div>
+                                    </div>
+
+                                    <h3 class="cs-card-label">2. Success Metrics (The North Star)</h3>
+                                    <div class="cs-row" style="margin-bottom: 24px; gap: 20px;">
+                                        <div class="cs-col">
+                                            <div
+                                                style="background: hsla(45, 100%, 72%, 0.05); padding: 15px; border-radius: 10px; border-top: 2px solid var(--orange-yellow-crayola);">
+                                                <h4 style="font-size: 13px; color: var(--white-2); margin-bottom: 4px;">
+                                                    Primary: Focus TTR</h4>
+                                                <p
+                                                    style="font-size: 11px; color: var(--cs-text-muted); margin-bottom: 8px;">
+                                                    Time to Reply for Priority messages.</p>
+                                                <span
+                                                    style="font-size: 12px; color: var(--orange-yellow-crayola); font-weight: bold;">Goal:
+                                                    15-20% Reduction</span>
+                                            </div>
+                                        </div>
+                                        <div class="cs-col">
+                                            <div
+                                                style="background: hsla(240, 2%, 20%, 0.5); padding: 15px; border-radius: 10px; border-top: 2px solid var(--jet);">
+                                                <h4 style="font-size: 13px; color: var(--white-2); margin-bottom: 4px;">
+                                                    Secondary: Bundle Ratio</h4>
+                                                <p
+                                                    style="font-size: 11px; color: var(--cs-text-muted); margin-bottom: 8px;">
+                                                    % of messages remaining in "Later".</p>
+                                                <span
+                                                    style="font-size: 12px; color: var(--white-2); font-weight: bold;">Goal:
+                                                    >85% ML Accuracy</span>
+                                            </div>
+                                        </div>
+                                        <div class="cs-col">
+                                            <div
+                                                style="background: hsla(240, 2%, 20%, 0.5); padding: 15px; border-radius: 10px; border-top: 2px solid var(--jet);">
+                                                <h4 style="font-size: 13px; color: var(--white-2); margin-bottom: 4px;">
+                                                    Health: Battery & Latency</h4>
+                                                <p
+                                                    style="font-size: 11px; color: var(--cs-text-muted); margin-bottom: 8px;">
+                                                    On-device processing impact.</p>
+                                                <span
+                                                    style="font-size: 12px; color: var(--white-2); font-weight: bold;">Goal:
+                                                    <1.5% Drain</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h3 class="cs-card-label">3. Success Dashboard (Mock-up Breakdown)</h3>
+                                    <ul class="cs-list" style="font-size: 13px; margin-bottom: 24px;">
+                                        <li><strong>User Sentiment Trend:</strong> Monitoring Net Promoter Score (NPS)
+                                            trajectory post-launch.</li>
+                                        <li><strong>Weekly Active Users (WAU):</strong> Tracking adoption of the
+                                            "Focused" toggle vs. Classic view.</li>
+                                        <li><strong>Retention Heatmap:</strong> Comparing churn rates of power users
+                                            before and after feature integration.</li>
+                                    </ul>
+
+                                    <h3 class="cs-card-label">4. Risk Mitigation &amp; Support</h3>
+                                    <div class="cs-table-wrap" style="margin-bottom: 24px;">
+                                        <table class="cs-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Potential Risk</th>
+                                                    <th>Mitigation Strategy</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><strong>Privacy Backlash</strong></td>
+                                                    <td>Clear "How it Works" splash screen explaining on-device privacy.
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Feature Creep</strong></td>
+                                                    <td>Resisting "Auto-Reply" in V1 to maintain core UX simplicity.
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>User Confusion</strong></td>
+                                                    <td>Including a one-tap "Restore Classic View" button in settings.
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <!-- <a href="YOUR_GTM_DASHBOARD_LINK_HERE" target="_blank" class="cs-appendix-link">
+                                        <ion-icon name="stats-chart-outline"></ion-icon> View Internal Telemetry
+                                    </a> -->
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+            </div><!-- /.cs-content -->
+
+            <footer class="cs-footer">
+                <a href="../index.html" class="cs-back-btn">
+                    <ion-icon name="arrow-back-outline"></ion-icon>
+                    Back to Portfolio
+                </a>
+            </footer>
+
+        </div><!-- /.cs-main -->
+
+    </div><!-- /.cs-root -->
+
+    <script>
+        // ── Mobile TOC toggle ─────────────────────────────────────────
+        const sidenav = document.getElementById('cs-sidenav');
+        const tocToggle = document.getElementById('cs-toc-toggle');
+
+        tocToggle.addEventListener('click', () => {
+            sidenav.classList.toggle('open');
+        });
+
+        // ── Smooth scroll on TOC click ────────────────────────────────
+        document.querySelectorAll('.cs-toc-link').forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                sidenav.classList.remove('open'); // close on mobile after click
+                const href = link.getAttribute('href');
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+                    // Auto-open Appendix A if scrolling to #prd
+                    if (href === '#prd') {
+                        const appA = document.querySelector('[data-accordion]');
+                        if (appA) {
+                            document.querySelectorAll('[data-accordion]').forEach(el => el.classList.remove('active'));
+                            appA.classList.add('active');
+                        }
+                    }
+                }
+            });
+        });
+
+        // ── Appendix Accordion logic ──────────────────────────────────
+        document.querySelectorAll('[data-accordion-btn]').forEach(btn => {
+            btn.addEventListener('click', function () {
+                const item = this.parentElement;
+                const isActive = item.classList.contains('active');
+
+                // Optional: close other items
+                document.querySelectorAll('[data-accordion]').forEach(el => el.classList.remove('active'));
+
+                if (!isActive) item.classList.add('active');
+            });
+        });
+
+        // ── Scroll-spy: highlight active section ─────────────────────
+        const sections = document.querySelectorAll('.cs-section[id]');
+        const tocLinks = document.querySelectorAll('.cs-toc-link');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    tocLinks.forEach(l => l.classList.remove('active'));
+                    const active = document.querySelector(`.cs-toc-link[href="#${entry.target.id}"]`);
+                    if (active) active.classList.add('active');
+                }
+            });
+        }, { rootMargin: '-20% 0px -70% 0px' });
+
+        sections.forEach(s => observer.observe(s));
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

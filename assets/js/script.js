@@ -42,17 +42,47 @@ async function init() {
   const navigationLinks = document.querySelectorAll('[data-nav-link]');
   const pages = document.querySelectorAll('[data-page]');
 
+  /**
+   * Updates UI state (active classes) based on the provided page name.
+   * @param {string} pageName - The name of the page to navigate to.
+   */
+  function navigateTo(pageName) {
+    let found = false;
+    for (let i = 0; i < pages.length; i++) {
+      if (pages[i].dataset.page === pageName) {
+        pages[i].classList.add('active');
+        navigationLinks[i].classList.add('active');
+        found = true;
+      } else {
+        pages[i].classList.remove('active');
+        navigationLinks[i].classList.remove('active');
+      }
+    }
+    if (found) window.scrollTo(0, 0);
+  }
+
+  // Initial load: handle hash in URL
+  const initialHash = window.location.hash.replace('#', '').toLowerCase();
+  if (initialHash) {
+    navigateTo(initialHash);
+  } else {
+    // Default to the first page if no hash
+    navigateTo('about');
+  }
+
+  // Handle hash changes (back/forward buttons or direct navigation)
+  window.addEventListener('hashchange', () => {
+    const pageName = window.location.hash.replace('#', '').toLowerCase();
+    if (pageName) navigateTo(pageName);
+  });
+
+  // Attach click listeners to update the hash
   for (let i = 0; i < navigationLinks.length; i++) {
     navigationLinks[i].addEventListener('click', function () {
-      for (let j = 0; j < pages.length; j++) {
-        if (this.innerHTML.toLowerCase() === pages[j].dataset.page) {
-          pages[j].classList.add('active');
-          navigationLinks[j].classList.add('active');
-          window.scrollTo(0, 0);
-        } else {
-          pages[j].classList.remove('active');
-          navigationLinks[j].classList.remove('active');
-        }
+      const pageName = this.innerHTML.toLowerCase().trim();
+      // Skip specialized buttons like "Download CV" if they exist
+      if (pageName !== 'download cv') {
+        window.location.hash = pageName;
       }
     });
   }

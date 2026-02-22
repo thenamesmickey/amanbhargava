@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Socio-Vox: Unified Global Distribution Engine — Aman Bhargava</title>
+    <meta name="description"
+        content="Case Study: Socio-Vox — A centralized AI-native hub for localized content distribution across social platforms by Aman Bhargava." />
+
+    <link rel="shortcut icon" href="../assets/images/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/case-study.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+
+<body class="cs-body">
+
+    <div class="cs-root">
+
+        <!-- ═══ TOC SIDEBAR ═══════════════════════════════════════════ -->
+        <aside class="cs-sidenav" id="cs-sidenav">
+            <!-- Back link -->
+            <a href="../#portfolio" class="cs-back-side">
+                <ion-icon name="arrow-back-outline"></ion-icon>
+                Back to Portfolio
+            </a>
+
+            <!-- Mobile toggle header -->
+            <div class="cs-sidenav-header" id="cs-toc-toggle">
+                <span class="cs-sidenav-label">Contents</span>
+                <ion-icon name="chevron-down-outline" class="cs-sidenav-toggle"></ion-icon>
+            </div>
+
+            <nav>
+                <ol class="cs-toc">
+                    <li><a href="#intro" class="cs-toc-link"><span class="cs-toc-num">01</span>Introduction</a></li>
+                    <li><a href="#background" class="cs-toc-link"><span class="cs-toc-num">02</span>Background</a></li>
+                    <li><a href="#market" class="cs-toc-link"><span class="cs-toc-num">03</span>Market Analysis</a></li>
+                    <li><a href="#problem" class="cs-toc-link"><span class="cs-toc-num">04</span>Problem Statement</a>
+                    </li>
+                    <li><a href="#strategy" class="cs-toc-link"><span class="cs-toc-num">05</span>Product Strategy</a>
+                    </li>
+                    <li><a href="#dev" class="cs-toc-link"><span class="cs-toc-num">06</span>Development</a></li>
+                    <li><a href="#stakeholders" class="cs-toc-link"><span class="cs-toc-num">07</span>Stakeholders</a>
+                    </li>
+                    <li><a href="#research" class="cs-toc-link"><span class="cs-toc-num">08</span>User Research</a></li>
+                    <li><a href="#gtm" class="cs-toc-link"><span class="cs-toc-num">09</span>Go-To-Market</a></li>
+                    <li><a href="#kpis" class="cs-toc-link"><span class="cs-toc-num">10</span>Key Metrics</a></li>
+                    <li><a href="#results" class="cs-toc-link"><span class="cs-toc-num">11</span>Results & Impact</a>
+                    </li>
+                    <li><a href="#lessons" class="cs-toc-link"><span class="cs-toc-num">12</span>Lessons Learned</a>
+                    </li>
+                    <li><a href="#conclusion" class="cs-toc-link"><span class="cs-toc-num">13</span>Conclusion</a></li>
+                    <li><a href="#appendices" class="cs-toc-link"><span class="cs-toc-num">14</span>Appendices</a></li>
+                </ol>
+            </nav>
+        </aside>
+
+        <!-- ═══ MAIN ARTICLE CARD ════════════════════════════════════ -->
+        <div class="cs-main">
+
+            <!-- Hero -->
+            <header class="cs-hero">
+                <div class="cs-hero-meta">
+                    <span class="cs-tag">Unified Pipeline</span>
+                    <span class="cs-tag">Generative AI</span>
+                    <span class="cs-tag">Multi-Platform APIs</span>
+                    <span class="cs-tag">Creator Economy</span>
+                </div>
+                <h1 class="cs-title">Socio-Vox: <span class="cs-accent">The Global Distribution Engine</span></h1>
+                <p class="cs-subtitle">"Create Once. Go Global Everywhere."</p>
+            </header>
+
+            <div class="cs-content">
+
+                <!-- 1. Introduction -->
+                <section id="intro" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">01</span> Introduction</h2>
+                    <div class="cs-card">
+                        <div class="cs-row">
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">The Hook</h3>
+                                <p>A centralized AI-native hub that allows creators to localize and distribute content
+                                    across every major social platform (YouTube, IG, TikTok) with a single click.</p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Market Context</h3>
+                                <p>In the 2026 creator economy, audience fragmentation is at an all-time high. Creators
+                                    spend 60% of their time on manual formatting and translation rather than content
+                                    strategy.</p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Study Objectives</h3>
+                                <p>To demonstrate end-to-end execution of a "Unified Pipeline" that integrates
+                                    Generative AI with Social Graph APIs to solve the global distribution gap.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 2. Background -->
+                <section id="background" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">02</span> Background Information</h2>
+                    <div class="cs-card">
+                        <div class="cs-row">
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Company Profile</h3>
+                                <p>An enterprise-ready SaaS prototype built to stress-test the integration of advanced
+                                    GenAI APIs (ElevenLabs, Sync.so) within a high-volume social media workflow.</p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Product Evolution</h3>
+                                <p>What began as a technical experiment in lip-syncing evolved into a Productivity &
+                                    Distribution Engine designed to eliminate manual content re-uploading.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 3. Market Analysis -->
+                <section id="market" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">03</span> Market Analysis</h2>
+                    <div class="cs-card">
+                        <h3 class="cs-card-label">Target Personas</h3>
+                        <div class="cs-persona-grid">
+                            <div class="cs-persona">
+                                <ion-icon name="videocam-outline"></ion-icon>
+                                <h4>The Scalable Creator</h4>
+                                <p class="cs-pain">Influencers looking to launch "International Handles" without a
+                                    localized team.</p>
+                            </div>
+                            <div class="cs-persona">
+                                <ion-icon name="business-outline"></ion-icon>
+                                <h4>The Growth Marketer</h4>
+                                <p class="cs-pain">Enterprise teams needing to maintain global brand consistency with
+                                    localized audio.</p>
+                            </div>
+                        </div>
+
+                        <h3 class="cs-card-label" style="margin-top: 22px;">The Gap</h3>
+                        <div class="cs-card cs-highlight-card">
+                            <p>Most existing tools are <strong>"Point Solutions"</strong> (editing only). Socio-Vox is
+                                an <strong>Integrated Workflow Suite</strong> that manages the entire lifecycle:
+                                <strong>Fetch &rarr; Transform &rarr; Distribute</strong>.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 4. Problem Statement -->
+                <section id="problem" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">04</span> Problem Statement</h2>
+                    <div class="cs-card cs-highlight-card">
+                        <ion-icon name="alert-circle-outline" class="cs-highlight-icon"></ion-icon>
+                        <h3 class="cs-card-label">The Core Conflict (JTBD)</h3>
+                        <blockquote class="cs-jtbd">
+                            "When I create a viral Reel, I want to publish it to all my global channels instantly, but I
+                            am blocked by the high cost of dubbing and the manual friction of platform-specific
+                            uploading."
+                        </blockquote>
+                        <p class="cs-stat-label">The "One-Click" Solution</p>
+                        <div class="cs-stat-row">
+                            <div class="cs-stat">
+                                <span class="cs-stat-num">5 hrs &rarr; 60s</span>
+                                <span class="cs-stat-desc">Reducing a multi-platform workflow to an automated
+                                    trigger</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 5. Product Strategy -->
+                <section id="strategy" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">05</span> Product Strategy</h2>
+                    <div class="cs-card">
+                        <div class="cs-row">
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">The Vision</h3>
+                                <p>To build the "Command Center" for global content, where language is no longer a
+                                    barrier to reach.</p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Unique Selling Proposition</h3>
+                                <p><strong>The "Unified Pipeline."</strong> Socio-Vox combines high-fidelity voice
+                                    cloning/lip-sync with direct-to-platform 1-click publishing.</p>
+                            </div>
+                        </div>
+                        <div class="cs-positioning">
+                            <ion-icon name="megaphone-outline"></ion-icon>
+                            <p>"The distribution engine that multiplies reach without multiplying headcount."</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 6. Development Process -->
+                <section id="dev" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">06</span> Development Process</h2>
+                    <div class="cs-card">
+                        <div class="cs-row">
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Methodology</h3>
+                                <p><strong>API-First & Agile:</strong> Prioritized building stable "handshakes" between
+                                    disparate AI and Social APIs before refining the UI.</p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">MVP Execution</h3>
+                                <p>Developed via <strong>Lovable</strong> to confirm technical feasibility and UX flow,
+                                    allowing for rapid iteration on the "1-Click" logic.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 7. Stakeholder Engagement -->
+                <section id="stakeholders" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">07</span> Stakeholder Engagement</h2>
+                    <div class="cs-card">
+                        <div class="cs-row">
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Cross-Functional Alignment</h3>
+                                <p>Managed trade-offs between <strong>AI Latency</strong> (high-quality rendering) and
+                                    <strong>Market Urgency</strong> (near-real-time posting).
+                                </p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">API Compliance</h3>
+                                <p>Coordinated with <strong>Meta, ByteDance, and Google</strong> developer policies to
+                                    ensure automated logic remains within "Safe-Use" guidelines.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 8. User Research & Testing -->
+                <section id="research" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">08</span> User Research & Testing</h2>
+                    <div class="cs-card">
+                        <div class="cs-row">
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">The "Friction" Insight</h3>
+                                <p>Beta testers loved the dubbing but stopped using the app because "downloading and
+                                    re-uploading" was still too slow.</p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">The Pivot</h3>
+                                <p>This feedback directly led to the <strong>"1-Click Publish"</strong> feature, which
+                                    moved from a "nice-to-have" to the Core Value Proposition.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 9. Marketing & GTM -->
+                <section id="gtm" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">09</span> Marketing & Go-To-Market</h2>
+                    <div class="cs-card">
+                        <div class="cs-row">
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Strategy</h3>
+                                <p><strong>Product-Led Growth (PLG):</strong> A freemium model where every video
+                                    includes a watermark, creating a self-sustaining viral loop.</p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Monetization</h3>
+                                <p>Value-based tiers (Free, Pro, Agency) centered on AI dubbing minutes and connected
+                                    channels.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 10. Key Metrics -->
+                <section id="kpis" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">10</span> Performance Metrics (KPIs)</h2>
+                    <div class="cs-card">
+                        <div class="cs-kpi-grid">
+                            <div class="cs-kpi">
+                                <ion-icon name="rocket-outline"></ion-icon>
+                                <h4>Publish Success</h4>
+                                <p>99.9% Target for automated social hand-offs</p>
+                            </div>
+                            <div class="cs-kpi">
+                                <ion-icon name="timer-outline"></ion-icon>
+                                <h4>Efficiency</h4>
+                                <p>Delta between original & localized post (Time-to-Global)</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 11. Results & Impact -->
+                <section id="results" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">11</span> Results & Impact</h2>
+                    <div class="cs-card">
+                        <div class="cs-stat-row">
+                            <div class="cs-stat">
+                                <span class="cs-stat-num">85%</span>
+                                <span class="cs-stat-desc">Reduction in time-to-publish for localized content</span>
+                            </div>
+                            <div class="cs-stat">
+                                <span class="cs-stat-num">100+</span>
+                                <span class="cs-stat-desc">Videos processed in beta with tone & lip-sync
+                                    retention</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 12. Lessons Learned -->
+                <section id="lessons" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">12</span> Lessons Learned</h2>
+                    <div class="cs-card">
+                        <div class="cs-row">
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Technical Retrospective</h3>
+                                <p>In AI, "Quality" gets users in, but "Distribution Utility" keeps them paying.</p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Cost Management</h3>
+                                <p>Optimizing "Unit Economics" (API costs) is as vital as AI output for sustainability.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 13. Conclusion -->
+                <section id="conclusion" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">13</span> Conclusion</h2>
+                    <div class="cs-card cs-highlight-card">
+                        <ion-icon name="checkmark-done-circle-outline" class="cs-highlight-icon"></ion-icon>
+                        <p><strong>Summary:</strong> Socio-Vox transformed a complex creative hurdle into a simple,
+                            scalable distribution utility.</p>
+                        <p style="margin-top: 10px;"><strong>Reflections:</strong> This project demonstrates the ability
+                            to solve a multi-billion dollar "Friction Problem" using a disciplined, API-driven product
+                            approach.</p>
+                    </div>
+                </section>
+
+                <!-- 14. Appendices (Accordion) -->
+                <section id="appendices" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">14</span> Appendices — The Evidence</h2>
+                    <div class="cs-accordion">
+
+                        <!-- Appendix A -->
+                        <div class="cs-accordion-item" data-accordion>
+                            <button class="cs-accordion-header" data-accordion-btn>
+                                <div class="cs-accordion-header-content">
+                                    <div class="cs-accordion-icon"><ion-icon name="git-network-outline"></ion-icon>
+                                    </div>
+                                    <div class="cs-accordion-info">
+                                        <h4>Appendix A: The Technical Pipeline</h4>
+                                        <p>Fetch &rarr; Dub &rarr; Sync &rarr; Post</p>
+                                    </div>
+                                </div>
+                                <ion-icon name="chevron-down-outline" class="cs-accordion-chevron"></ion-icon>
+                            </button>
+                            <div class="cs-accordion-content">
+                                <div class="cs-card" style="background: none; box-shadow: none; padding: 0;">
+
+                                    <!-- 1. Fetch & Map -->
+                                    <h3 class="cs-card-label" style="margin-bottom: 12px; margin-top: 10px;">1. The
+                                        Bidirectional Fetch-and-Map Logic</h3>
+                                    <p style="margin-bottom: 14px; font-size: 13px;">Socio-Vox is a
+                                        <strong>Platform-Agnostic Bridge</strong> designed to handle different aspect
+                                        ratios and metadata requirements dynamically.
+                                    </p>
+                                    <ul class="cs-list" style="margin-bottom: 20px;">
+                                        <li><strong>Source Fetching:</strong> Uses OAuth-authenticated listeners to
+                                            "Fetch" new uploads from YouTube, IG, or TikTok.</li>
+                                        <li><strong>Media Context Extraction:</strong>
+                                            <ul style="padding-left: 20px; margin-top: 5px; list-style-type: circle;">
+                                                <li style="margin-bottom: 4px;"><strong>Visuals:</strong> Automatic
+                                                    identification of aspect ratio (9:16 vs 16:9).</li>
+                                                <li style="margin-bottom: 4px;"><strong>Audio:</strong> Extraction of
+                                                    the primary vocal track while isolating background ambiance using a
+                                                    Demucs-style audio splitter.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                    <!-- 2. Transformation Stack -->
+                                    <h3 class="cs-card-label" style="margin-bottom: 12px;">2. The GenAI Transformation
+                                        Stack</h3>
+                                    <p style="margin-bottom: 14px; font-size: 13px;">Once the "clean" vocal track is
+                                        extracted, it enters the global <strong>AI Transformation Loop</strong> for
+                                        translation, cloning, and visual synchronization.</p>
+                                    <div class="cs-card cs-highlight-card" style="margin-bottom: 20px;">
+                                        <p style="font-size: 13px;"><strong>The Loop:</strong> Transcription &rarr;
+                                            Translation &rarr; Voice Cloning (ElevenLabs) &rarr; Lip-Sync (Sync.so)
+                                            &rarr; QC Verification.</p>
+                                    </div>
+
+                                    <!-- 3. Assembly Phase -->
+                                    <h3 class="cs-card-label" style="margin-bottom: 12px;">3. The "Assembly" Phase
+                                        (FFmpeg Logic)</h3>
+                                    <p style="margin-bottom: 14px; font-size: 13px;">Socio-Vox uses a cloud-based video
+                                        engine to reassemble the localized asset:</p>
+                                    <ul class="cs-list" style="margin-bottom: 20px;">
+                                        <li><strong>Ambiance Mix:</strong> Overlays the new localized vocal track onto
+                                            the original background ambiance.</li>
+                                        <li><strong>Transcoding:</strong> Optimizes bitrate/containers (H.264/AAC) for
+                                            specific target platform requirements.</li>
+                                        <li><strong>Safe-Zone Check:</strong> Ensures generated captions don't overlap
+                                            with platform-specific UI elements (IG’s buttons vs. YouTube Shorts’ UI).
+                                        </li>
+                                    </ul>
+
+                                    <!-- 4. Hand-off -->
+                                    <h3 class="cs-card-label" style="margin-bottom: 12px;">4. The 1-Click "Hand-off"
+                                    </h3>
+                                    <div class="cs-card cs-highlight-card" style="margin-bottom: 20px;">
+                                        <p style="font-size: 13px;">Triggers an API POST request to the target
+                                            platform’s "Upload" endpoint with a <strong>Feedback Loop</strong> via
+                                            webhooks to monitor "Live" status.</p>
+                                    </div>
+                                    <p style="font-size: 13px; margin-bottom: 10px;"><strong>Cross-Platform
+                                            Logic:</strong> Moving from YouTube (16:9) to Instagram (9:16) triggers
+                                        "Smart-Crop" or "Blurred Background" fillers to ensure the video looks native.
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Appendix B -->
+                        <div class="cs-accordion-item" data-accordion>
+                            <button class="cs-accordion-header" data-accordion-btn>
+                                <div class="cs-accordion-header-content">
+                                    <div class="cs-accordion-icon"><ion-icon name="document-text-outline"></ion-icon>
+                                    </div>
+                                    <div class="cs-accordion-info">
+                                        <h4>Appendix B: Detailed PRD</h4>
+                                        <p>The Lovable Blueprint</p>
+                                    </div>
+                                </div>
+                                <ion-icon name="chevron-down-outline" class="cs-accordion-chevron"></ion-icon>
+                            </button>
+                            <div class="cs-accordion-content">
+                                <div class="cs-card" style="background: none; box-shadow: none; padding: 0;">
+
+                                    <!-- 1. Executive Summary -->
+                                    <h3 class="cs-card-label" style="margin-bottom: 12px; margin-top: 10px;">1.
+                                        Executive Summary</h3>
+                                    <p style="margin-bottom: 20px; font-size: 13px;">Eliminating the friction between
+                                        content creation and global distribution through a <strong>Unified
+                                            Pipeline</strong> that automates video fetching, high-fidelity AI dubbing,
+                                        and 1-click publishing.</p>
+
+                                    <!-- 2. Target Personas -->
+                                    <h3 class="cs-card-label" style="margin-bottom: 12px;">2. Target Personas</h3>
+                                    <ul class="cs-list" style="margin-bottom: 20px;">
+                                        <li><strong>The Global Solopreneur:</strong> Maintain "International Channels"
+                                            without a production team.</li>
+                                        <li><strong>The Content Agency:</strong> Managing 10+ clients; multiple reach
+                                            with minimal manual overhead.</li>
+                                    </ul>
+
+                                    <!-- 3. Functional Requirements -->
+                                    <h3 class="cs-card-label" style="margin-bottom: 12px;">3. Functional Requirements
+                                    </h3>
+
+                                    <div
+                                        style="margin-left: 10px; border-left: 2px solid var(--accent); padding-left: 15px; margin-bottom: 20px;">
+                                        <h4 style="font-size: 14px; color: var(--accent); margin-bottom: 8px;">3.1
+                                            Content Ingestion (Fetch)</h4>
+                                        <p style="font-size: 12px;">Support for URL-based fetching (YouTube/IG/TikTok)
+                                            and automatic aspect-ratio detection (9:16 vs 16:9).</p>
+                                    </div>
+
+                                    <div
+                                        style="margin-left: 10px; border-left: 2px solid var(--accent); padding-left: 15px; margin-bottom: 20px;">
+                                        <h4 style="font-size: 14px; color: var(--accent); margin-bottom: 8px;">3.2 AI
+                                            Dubbing (ElevenLabs)</h4>
+                                        <p style="font-size: 12px;">Zero-shot voice cloning with <strong>emotional
+                                                prosody retention</strong>. Priority support for 29+ languages.</p>
+                                    </div>
+
+                                    <div
+                                        style="margin-left: 10px; border-left: 2px solid var(--accent); padding-left: 15px; margin-bottom: 20px;">
+                                        <h4 style="font-size: 14px; color: var(--accent); margin-bottom: 8px;">3.3
+                                            Visual Lip-Syncing</h4>
+                                        <p style="font-size: 12px;">Sync.so integration with a technical threshold of
+                                            <strong>&lt; 50ms</strong> lip-to-audio deviation.
+                                        </p>
+                                    </div>
+
+                                    <div
+                                        style="margin-left: 10px; border-left: 2px solid var(--accent); padding-left: 15px; margin-bottom: 25px;">
+                                        <h4 style="font-size: 14px; color: var(--accent); margin-bottom: 8px;">3.4
+                                            One-Click Distribution</h4>
+                                        <p style="font-size: 12px;">Direct-to-platform OAuth publishing with automated
+                                            "Smart-Crop" logic and AI-generated metadata.</p>
+                                    </div>
+
+                                    <!-- 4. Edge Cases -->
+                                    <h3 class="cs-card-label" style="margin-bottom: 12px;">4. Edge Case Handling</h3>
+                                    <div class="cs-card cs-highlight-card" style="margin-bottom: 20px;">
+                                        <ul class="cs-list" style="margin-bottom: 0;">
+                                            <li style="font-size: 12px;"><strong>Multi-Speaker:</strong> Automatic
+                                                primary speaker detection.</li>
+                                            <li style="font-size: 12px;"><strong>Audio Stems:</strong> Separation to
+                                                ensure dub preserves original background music.</li>
+                                            <li style="font-size: 12px;"><strong>API Fallback:</strong> Revert to
+                                                captions if Visual AI fails.</li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- 5. Success Metrics -->
+                                    <h3 class="cs-card-label" style="margin-bottom: 12px;">5. Success Metrics (KPIs)
+                                    </h3>
+                                    <div class="cs-row" style="margin-bottom: 10px;">
+                                        <div class="cs-col">
+                                            <div class="cs-stat">
+                                                <span class="cs-stat-num" style="font-size: 1.2rem;">&lt; 8 min</span>
+                                                <span class="cs-stat-desc" style="font-size: 10px;">Fetch-to-Live
+                                                    Target</span>
+                                            </div>
+                                        </div>
+                                        <div class="cs-col">
+                                            <div class="cs-stat">
+                                                <span class="cs-stat-num" style="font-size: 1.2rem;">Viral Lift</span>
+                                                <span class="cs-stat-desc" style="font-size: 10px;">% Increase in Global
+                                                    Reach</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Appendix C -->
+                        <div class="cs-accordion-item" data-accordion>
+                            <button class="cs-accordion-header" data-accordion-btn>
+                                <div class="cs-accordion-header-content">
+                                    <div class="cs-accordion-icon"><ion-icon name="bar-chart-outline"></ion-icon></div>
+                                    <div class="cs-accordion-info">
+                                        <h4>Appendix C: Competitive Analysis Matrix</h4>
+                                        <p>Socio-Vox vs. Rask vs. HeyGen</p>
+                                    </div>
+                                </div>
+                                <ion-icon name="chevron-down-outline" class="cs-accordion-chevron"></ion-icon>
+                            </button>
+                            <div class="cs-accordion-content">
+                                <div class="cs-card" style="background: none; box-shadow: none; padding: 0;">
+
+                                    <!-- 1. Strategic Positioning -->
+                                    <h3 class="cs-card-label" style="margin-bottom: 12px; margin-top: 10px;">The
+                                        Strategic Moat: Workflow vs. Utility</h3>
+                                    <p style="margin-bottom: 14px; font-size: 13px;">While competitors treat dubbing as
+                                        a standalone <strong>"Utility"</strong> (file conversion), Socio-Vox is an
+                                        <strong>"Integrated Suite"</strong> that connects the dots between creation and
+                                        consumption.
+                                    </p>
+
+                                    <div class="cs-card cs-highlight-card" style="margin-bottom: 20px;">
+                                        <p style="font-size: 13px;"><strong>The Utility Trap:</strong> Competitors like
+                                            Rask/HeyGen leave users with a "Manual Friction Gap" &mdash; requiring
+                                            multiple manual downloads and uploads. Socio-Vox owns the
+                                            <strong>Fetch</strong> and the <strong>Post</strong>, becoming the creator's
+                                            default OS.
+                                        </p>
+                                    </div>
+
+                                    <!-- 2. Comparative Advantage -->
+                                    <h3 class="cs-card-label" style="margin-bottom: 12px;">Comparative Advantage
+                                        Analysis</h3>
+                                    <div class="cs-row" style="margin-bottom: 15px;">
+                                        <div class="cs-col">
+                                            <h4 style="font-size: 13px; color: var(--accent); margin-bottom: 5px;">The
+                                                "Frictionless" Factor</h4>
+                                            <p style="font-size: 12px;">Optimizing for <strong>"Speed to
+                                                    Market"</strong> rather than just pure avatar quality, allowing
+                                                creators to react to global trends in minutes.</p>
+                                        </div>
+                                        <div class="cs-col">
+                                            <h4 style="font-size: 13px; color: var(--accent); margin-bottom: 5px;">Unit
+                                                Economics</h4>
+                                            <p style="font-size: 12px;">Leveraging ElevenLabs API to provide
+                                                best-in-class audio without the R&D overhead of building in-house
+                                                models.</p>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        style="margin-left: 10px; border-left: 2px solid var(--accent); padding-left: 15px; margin-bottom: 20px;">
+                                        <h4 style="font-size: 14px; color: var(--accent); margin-bottom: 8px;">Platform
+                                            Native Logic</h4>
+                                        <p style="font-size: 12px;">Solving the #1 pain point: <strong>Aspect Ratio
+                                                Mapping</strong>. Auto-formatting a YouTube (16:9) video for TikTok
+                                            (9:16) with smart-crops.</p>
+                                    </div>
+
+                                    <!-- 3. Vulnerability & Mitigation -->
+                                    <h3 class="cs-card-label" style="margin-bottom: 12px;">Vulnerability & Mitigation
+                                    </h3>
+                                    <div class="cs-card"
+                                        style="background: rgba(255,255,255,0.03); margin-bottom: 20px; padding: 15px;">
+                                        <p style="font-size: 12px; margin-bottom: 8px;"><strong>Vulnerability:</strong>
+                                            Competitors have larger R&D budgets for in-house AI models.</p>
+                                        <p style="font-size: 12px;"><strong>The "Modular" Strategy:</strong> By using a
+                                            modular API approach, Socio-Vox remains <strong>"Future-Proof."</strong> We
+                                            can swap underlying models (ElevenLabs &rarr; Newer AI) as soon as
+                                            better/cheaper ones emerge, remaining more agile than model-locked
+                                            competitors.</p>
+                                    </div>
+
+                                    <div class="cs-positioning" style="margin-top: 10px;">
+                                        <ion-icon name="shield-checkmark-outline"></ion-icon>
+                                        <p>Moving from a DISCRETIONARY TOOL to an ESSENTIAL INFRASTRUCTURE for global
+                                            brands.</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Appendix D -->
+                        <div class="cs-accordion-item" data-accordion>
+                            <button class="cs-accordion-header" data-accordion-btn>
+                                <div class="cs-accordion-header-content">
+                                    <div class="cs-accordion-icon"><ion-icon name="map-outline"></ion-icon></div>
+                                    <div class="cs-accordion-info">
+                                        <h4>Appendix D: User Story Map</h4>
+                                        <p>The Path to V3</p>
+                                    </div>
+                                </div>
+                                <ion-icon name="chevron-down-outline" class="cs-accordion-chevron"></ion-icon>
+                            </button>
+                            <div class="cs-accordion-content">
+                                <div class="cs-card" style="background: none; box-shadow: none; padding: 0;">
+
+                                    <!-- 1. The Backbone -->
+                                    <h3 class="cs-card-label" style="margin-bottom: 12px; margin-top: 10px;">The Path to
+                                        V3: Strategic Evolution</h3>
+                                    <p style="margin-bottom: 14px; font-size: 13px;">Dividing the product lifecycle into
+                                        three horizontal releases, moving from a basic utility to an autonomous content
+                                        agent.</p>
+
+                                    <!-- Release 1 -->
+                                    <div style="margin-bottom: 25px;">
+                                        <h4 style="font-size: 14px; color: var(--accent); margin-bottom: 10px;">Release
+                                            1: The "Utility" MVP (V1)</h4>
+                                        <div class="cs-card cs-highlight-card"
+                                            style="margin-bottom: 10px; padding: 12px;">
+                                            <p style="font-size: 12px;"><strong>Goal:</strong> Technical feasibility
+                                                proof of the dubbing stack.</p>
+                                        </div>
+                                        <ul class="cs-list" style="font-size: 12px;">
+                                            <li>"As a creator, I want to upload a file and select a language."</li>
+                                            <li>"As a user, I want to download a dubbed version of my video."</li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Release 2 -->
+                                    <div style="margin-bottom: 25px;">
+                                        <h4 style="font-size: 14px; color: var(--accent); margin-bottom: 10px;">Release
+                                            2: The Distribution Engine (Current - V2)</h4>
+                                        <div class="cs-card cs-highlight-card"
+                                            style="margin-bottom: 10px; padding: 12px;">
+                                            <p style="font-size: 12px;"><strong>Goal:</strong> Solving the manual
+                                                friction of cross-platform posting.</p>
+                                        </div>
+                                        <ul class="cs-list" style="font-size: 12px;">
+                                            <li>"As a creator, I want to paste a YouTube URL for auto-fetching."</li>
+                                            <li>"As a user, I want to click 1-button to publish directly to IG/TikTok."
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Release 3 -->
+                                    <div style="margin-bottom: 25px;">
+                                        <h4 style="font-size: 14px; color: var(--accent); margin-bottom: 10px;">Release
+                                            3: The Autonomous Agent (Future - V3)</h4>
+                                        <div class="cs-card cs-highlight-card"
+                                            style="margin-bottom: 10px; padding: 12px;">
+                                            <p style="font-size: 12px;"><strong>Goal:</strong> Removing the
+                                                "Human-in-the-loop" for repetitive scaling.</p>
+                                        </div>
+                                        <ul class="cs-list" style="font-size: 12px;">
+                                            <li><strong>Auto-Discovery:</strong> Trigger dubbing when a video hits a
+                                                "Viral Threshold."</li>
+                                            <li><strong>Agent Scheduling:</strong> AI determines the optimal posting
+                                                time for each specific region.</li>
+                                            <li><strong>Localized Engagement:</strong> AI-generated localized captions
+                                                and first-comments.</li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Optimization Story -->
+                                    <div class="cs-positioning"
+                                        style="margin-top: 15px; border-top: 1px solid rgba(255,221,102,0.1); padding-top: 15px;">
+                                        <ion-icon name="analytics-outline"></ion-icon>
+                                        <p style="font-size: 11px;"><strong>Optimization Story:</strong> "As a PM, I
+                                            want to analyze which languages have the highest 'Edit Rate' to tune
+                                            translation prompts for specific cultures."</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Appendix E -->
+                        <div class="cs-accordion-item" data-accordion>
+                            <button class="cs-accordion-header" data-accordion-btn>
+                                <div class="cs-accordion-header-content">
+                                    <div class="cs-accordion-icon"><ion-icon name="cash-outline"></ion-icon></div>
+                                    <div class="cs-accordion-info">
+                                        <h4>Appendix E: Unit Economics & GTM Strategy</h4>
+                                        <p>Monetization & Growth</p>
+                                    </div>
+                                </div>
+                                <ion-icon name="chevron-down-outline" class="cs-accordion-chevron"></ion-icon>
+                            </button>
+                            <div class="cs-accordion-content">
+                                <div class="cs-card" style="background: none; box-shadow: none; padding: 0;">
+
+                                    <!-- 1. The Unit Economics -->
+                                    <h3 class="cs-card-label" style="margin-bottom: 12px; margin-top: 10px;">1. The Unit
+                                        Economics (COGS)</h3>
+                                    <p style="margin-bottom: 14px; font-size: 13px;">Protecting margins by calculating
+                                        the <strong>Cost Per Minute (CPM)</strong> for high-fidelity dubbing and
+                                        lip-sync rendering.</p>
+                                    <div class="cs-card cs-highlight-card" style="margin-bottom: 20px; padding: 15px;">
+                                        <p style="font-size: 12px;"><strong>Optimization Strategy:</strong> Using
+                                            cheaper TTS models for "Draft" previews and only triggering ElevenLabs for
+                                            final distribution-ready renders (reducing COGS by ~30%).</p>
+                                    </div>
+
+                                    <!-- 2. Tiered Pricing -->
+                                    <h3 class="cs-card-label" style="margin-bottom: 12px;">2. Monetization & Pricing
+                                        Levers</h3>
+                                    <div class="cs-persona-grid" style="margin-bottom: 20px;">
+                                        <div class="cs-persona" style="padding: 12px;">
+                                            <h4 style="color: var(--accent);">Free</h4>
+                                            <p style="font-size: 11px;">3 Min / Watermarked</p>
+                                        </div>
+                                        <div class="cs-persona" style="padding: 12px;">
+                                            <h4 style="color: var(--accent);">$25/mo</h4>
+                                            <p style="font-size: 11px;">30 Min / No Watermark</p>
+                                        </div>
+                                        <div class="cs-persona" style="padding: 12px;">
+                                            <h4 style="color: var(--accent);">$150/mo</h4>
+                                            <p style="font-size: 11px;">200 Min / Agency Tier</p>
+                                        </div>
+                                    </div>
+
+                                    <ul class="cs-list" style="margin-bottom: 20px; font-size: 12px;">
+                                        <li><strong>Expansion:</strong> Credit Top-ups for viral surges (High-margin
+                                            revenue).</li>
+                                        <li><strong>Premium Service:</strong> "Pro-Review" ($5/vid) human-in-the-loop
+                                            verification for enterprise clients.</li>
+                                        <li><strong>B2B Lever:</strong> Headless API for third-party "Translation as a
+                                            Service."</li>
+                                    </ul>
+
+                                    <!-- 3. GTM & Viral Loop -->
+                                    <h3 class="cs-card-label" style="margin-bottom: 12px;">3. GTM & The Viral Flywheel
+                                    </h3>
+                                    <div
+                                        style="margin-left: 10px; border-left: 2px solid var(--accent); padding-left: 15px; margin-bottom: 20px;">
+                                        <h4 style="font-size: 14px; color: var(--accent); margin-bottom: 8px;">The
+                                            Watermark Billboard</h4>
+                                        <p style="font-size: 12px;">Every free localized video acts as a high-intent ad.
+                                            Viral Reels drive creators back to the Socio-Vox landing page at
+                                            <strong>Zero CAC</strong>.
+                                        </p>
+                                    </div>
+
+                                    <!-- 4. Retention -->
+                                    <h3 class="cs-card-label" style="margin-bottom: 12px;">4. Churn Mitigation</h3>
+                                    <p style="margin-bottom: 14px; font-size: 13px;">Moving from a discretionary tool to
+                                        <strong>Essential Infrastructure</strong>.
+                                    </p>
+                                    <ul class="cs-list" style="margin-bottom: 20px; font-size: 12px;">
+                                        <li><strong>Channel Lock-in:</strong> Centralized dashboard for global analytics
+                                            across YouTube, IG, and TikTok.</li>
+                                        <li><strong>Annual Discounting:</strong> Offset high initial API costs while
+                                            locking in upfront capital.</li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Appendix F -->
+                        <div class="cs-accordion-item" data-accordion>
+                            <button class="cs-accordion-header" data-accordion-btn>
+                                <div class="cs-accordion-header-content">
+                                    <div class="cs-accordion-icon"><ion-icon name="server-outline"></ion-icon></div>
+                                    <div class="cs-accordion-info">
+                                        <h4>Appendix F: System Architecture</h4>
+                                        <p>Scaling for Volume</p>
+                                    </div>
+                                </div>
+                                <ion-icon name="chevron-down-outline" class="cs-accordion-chevron"></ion-icon>
+                            </button>
+                            <div class="cs-accordion-content">
+                                <div class="cs-card" style="background: none; box-shadow: none; padding: 0;">
+
+                                    <!-- 1. High-Level Architecture -->
+                                    <h3 class="cs-card-label" style="margin-bottom: 12px; margin-top: 10px;">1.
+                                        Decoupled Architecture</h3>
+                                    <p style="margin-bottom: 14px; font-size: 13px;">Socio-Vox utilizes an asynchronous
+                                        background environment to handle heavy GenAI renders, keeping the frontend
+                                        snappy and responsive.</p>
+                                    <div class="cs-card cs-highlight-card" style="margin-bottom: 20px;">
+                                        <p style="font-size: 13px;"><strong>The Brain:</strong> Message Broker (Redis +
+                                            BullMQ) handles job queuing to prevent browser timeouts and manage traffic
+                                            spikes gracefully.</p>
+                                    </div>
+
+                                    <!-- 2. State Machine Logic -->
+                                    <h3 class="cs-card-label" style="margin-bottom: 12px;">2. Worker Nodes & State
+                                        Machine</h3>
+                                    <p style="margin-bottom: 14px; font-size: 13px;">Rendering is managed via
+                                        checkpointed state machines to ensure cost-efficiency.</p>
+                                    <ul class="cs-list" style="margin-bottom: 20px; font-size: 12px;">
+                                        <li><strong>Checkpointing:</strong> If Lip-Sync fails, the system retries only
+                                            that node, saving on ElevenLabs API costs.</li>
+                                        <li><strong>Stateless Scaling:</strong> Docker-containerized worker nodes spin
+                                            up automatically based on Redis queue depth.</li>
+                                    </ul>
+
+                                    <!-- 3. Observer Layer -->
+                                    <h3 class="cs-card-label" style="margin-bottom: 12px;">3. The "Observer" Layer</h3>
+                                    <div
+                                        style="margin-left: 10px; border-left: 2px solid var(--accent); padding-left: 15px; margin-bottom: 20px;">
+                                        <h4 style="font-size: 14px; color: var(--accent); margin-bottom: 8px;">Quality
+                                            Gates</h4>
+                                        <p style="font-size: 12px;">Confidence tracking for translations. Jobs below a
+                                            0.85 threshold pause for manual review, preventing expensive "bad" renders.
+                                        </p>
+                                    </div>
+
+                                    <!-- 4. Storage Strategy -->
+                                    <h3 class="cs-card-label" style="margin-bottom: 12px;">4. Storage & CDN Strategy
+                                    </h3>
+                                    <div class="cs-row" style="margin-bottom: 15px;">
+                                        <div class="cs-col">
+                                            <h4 style="font-size: 13px; color: var(--accent); margin-bottom: 5px;">S3
+                                                Vault</h4>
+                                            <p style="font-size: 12px;">Pre-signed URLs for secure, temporary file
+                                                access.</p>
+                                        </div>
+                                        <div class="cs-col">
+                                            <h4 style="font-size: 13px; color: var(--accent); margin-bottom: 5px;">CDN
+                                                Edge</h4>
+                                            <p style="font-size: 12px;">Zero-buffering globally for dubbed previews.</p>
+                                        </div>
+                                    </div>
+                                    <p style="font-size: 11px; opacity: 0.8;"><strong>Lifecycle Policy:</strong>
+                                        Auto-purge 24h after publishing to maintain privacy and minimize storage costs.
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Appendix G -->
+                        <div class="cs-accordion-item" data-accordion>
+                            <button class="cs-accordion-header" data-accordion-btn>
+                                <div class="cs-accordion-header-content">
+                                    <div class="cs-accordion-icon"><ion-icon name="shield-outline"></ion-icon></div>
+                                    <div class="cs-accordion-info">
+                                        <h4>Appendix G: Risk & Mitigation</h4>
+                                        <p>The Stability Framework</p>
+                                    </div>
+                                </div>
+                                <ion-icon name="chevron-down-outline" class="cs-accordion-chevron"></ion-icon>
+                            </button>
+                            <div class="cs-accordion-content">
+                                <div class="cs-card" style="background: none; box-shadow: none; padding: 0;">
+
+                                    <!-- 1. Regulatory Compliance -->
+                                    <h3 class="cs-card-label" style="margin-bottom: 12px; margin-top: 10px;">1.
+                                        Regulatory Compliance (SGI Mandate)</h3>
+                                    <p style="margin-bottom: 14px; font-size: 13px;">Addressing 2026 laws (e.g., India's
+                                        IT Rules) regarding Synthetically Generated Information (SGI).</p>
+                                    <ul class="cs-list" style="margin-bottom: 20px; font-size: 11px;">
+                                        <li><strong>Automated Disclosure:</strong> Mandatory "Synthetically Generated"
+                                            overlay on the first 10% of every video.</li>
+                                        <li><strong>C2PA Metadata:</strong> Embedding non-removable "Digital DNA" to
+                                            verify source and date, preventing deepfake misuse.</li>
+                                    </ul>
+
+                                    <!-- 2. API Dependency -->
+                                    <h3 class="cs-card-label" style="margin-bottom: 12px;">2. Dependency & Model Lock-in
+                                    </h3>
+                                    <div class="cs-card cs-highlight-card" style="margin-bottom: 20px; padding: 15px;">
+                                        <p style="font-size: 12px;"><strong>Mitigation:</strong> Vendor-Agnostic
+                                            architecture with hot-standby fallbacks to OpenAI TTS and HeyGen to prevent
+                                            single points of failure.</p>
+                                    </div>
+
+                                    <!-- 3. Ethical AI -->
+                                    <h3 class="cs-card-label" style="margin-bottom: 12px;">3. Ethical AI & Biometric
+                                        Privacy</h3>
+                                    <ul class="cs-list" style="margin-bottom: 20px; font-size: 11px;">
+                                        <li><strong>Liveness Verification:</strong> Script-based owner verification for
+                                            all voice cloning.</li>
+                                        <li><strong>Transient Data:</strong> AES-256 encryption at rest with 24h
+                                            auto-purge for non-persistent voice prints.</li>
+                                    </ul>
+
+                                    <!-- 4. Platform Shadowban -->
+                                    <h3 class="cs-card-label" style="margin-bottom: 12px;">4. Algorithm & Shadowban
+                                        Protection</h3>
+                                    <p style="margin-bottom: 14px; font-size: 13px;">Preventing platforms from flagging
+                                        content as "Low-value Spam."</p>
+                                    <ul class="cs-list" style="margin-bottom: 20px; font-size: 11px;">
+                                        <li><strong>Originality Hybrid:</strong> Workflow for adding "AI-free" custom
+                                            intros/outros to signal human value.</li>
+                                        <li><strong>Contextual Metadata:</strong> Unique, LLM-generated captions for
+                                            every region to avoid "Coordinated Spam" flags.</li>
+                                    </ul>
+
+                                    <!-- 5. Technical Scale -->
+                                    <h3 class="cs-card-label" style="margin-bottom: 12px;">5. Technical Debt & Scaling
+                                        Risk</h3>
+                                    <div class="cs-card"
+                                        style="background: rgba(255,255,255,0.03); margin-bottom: 10px; padding: 12px;">
+                                        <p style="font-size: 12px;"><strong>Dead Letter Queues (DLQ):</strong> Isolating
+                                            failed renders to prevent production logjams during viral surges.</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+            </div><!-- /.cs-content -->
+
+            <footer class="cs-footer">
+                <a href="../#portfolio" class="cs-back-btn">
+                    <ion-icon name="arrow-back-outline"></ion-icon>
+                    Back to Portfolio
+                </a>
+            </footer>
+
+        </div><!-- /.cs-main -->
+
+    </div><!-- /.cs-root -->
+
+    <!-- IonIcons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- Custom Script -->
+    <script src="../assets/js/script.js"></script>
+    <script>
+        // ── Mobile TOC toggle ─────────────────────────────────────────
+        const sidenav = document.getElementById('cs-sidenav');
+        const tocToggle = document.getElementById('cs-toc-toggle');
+
+        tocToggle.addEventListener('click', () => {
+            sidenav.classList.toggle('active');
+        });
+
+        // ── Smooth scroll on TOC click ────────────────────────────────
+        document.querySelectorAll('.cs-toc-link').forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                sidenav.classList.remove('active'); // close on mobile after click
+                const href = link.getAttribute('href');
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+                    // Auto-open Appendix A if scrolling to #appendices
+                    if (href === '#appendices') {
+                        const appA = document.querySelector('[data-accordion]');
+                        if (appA) {
+                            document.querySelectorAll('[data-accordion]').forEach(el => el.classList.remove('active'));
+                            appA.classList.add('active');
+                        }
+                    }
+                }
+            });
+        });
+
+        // ── Appendix Accordion logic ──────────────────────────────────
+        document.querySelectorAll('[data-accordion-btn]').forEach(btn => {
+            btn.addEventListener('click', function () {
+                const item = this.parentElement;
+                const isActive = item.classList.contains('active');
+
+                // Optional: close other items
+                document.querySelectorAll('[data-accordion]').forEach(el => el.classList.remove('active'));
+
+                if (!isActive) item.classList.add('active');
+            });
+        });
+
+        // ── Scroll-spy: highlight active section ─────────────────────
+        const sections = document.querySelectorAll('.cs-section[id]');
+        const tocLinks = document.querySelectorAll('.cs-toc-link');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    tocLinks.forEach(l => l.classList.remove('active'));
+                    const active = document.querySelector(`.cs-toc-link[href="#${entry.target.id}"]`);
+                    if (active) active.classList.add('active');
+                }
+            });
+        }, { rootMargin: '-20% 0px -70% 0px' });
+
+        sections.forEach(s => observer.observe(s));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sociovox: Unified Global Distribution Engine — Aman Bhargava</title>
+    <meta name="description"
+        content="Case Study: Sociovox — A centralized AI-native hub for localized content distribution across social platforms by Aman Bhargava." />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+    <link rel="icon" href="../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/case-study.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <script src="../assets/js/components.js"></script>
+</head>
+
+<body class="cs-body">
+
+    <global-navbar base-path="../"></global-navbar>
+
+    <div class="cs-root">
+
+        <!-- ═══ TOC SIDEBAR ═══════════════════════════════════════════ -->
+        <aside class="cs-sidenav" id="cs-sidenav">
+            <!-- Back link -->
+            <a href="../#Case-studies" class="cs-back-side">
+                <ion-icon name="arrow-back-outline"></ion-icon>
+                Back to Case-studies
+            </a>
+
+            <!-- Mobile toggle header -->
+            <div class="cs-sidenav-header" id="cs-toc-toggle">
+                <span class="cs-sidenav-label">Contents</span>
+                <ion-icon name="chevron-down-outline" class="cs-sidenav-toggle"></ion-icon>
+            </div>
+
+            <nav>
+                <ol class="cs-toc">
+                    <li><a href="#intro" class="cs-toc-link"><span class="cs-toc-num">01</span>Introduction</a></li>
+                    <li><a href="#background" class="cs-toc-link"><span class="cs-toc-num">02</span>Background</a></li>
+                    <li><a href="#market" class="cs-toc-link"><span class="cs-toc-num">03</span>Market Analysis</a></li>
+                    <li><a href="#problem" class="cs-toc-link"><span class="cs-toc-num">04</span>Problem Statement</a>
+                    </li>
+                    <li><a href="#strategy" class="cs-toc-link"><span class="cs-toc-num">05</span>Product Strategy</a>
+                    </li>
+                    <li><a href="#dev" class="cs-toc-link"><span class="cs-toc-num">06</span>Development</a></li>
+                    <li><a href="#modules" class="cs-toc-link"><span class="cs-toc-num">07</span>Core Modules</a></li>
+                    <li><a href="#research" class="cs-toc-link"><span class="cs-toc-num">08</span>User Research</a></li>
+                    <li><a href="#gtm" class="cs-toc-link"><span class="cs-toc-num">09</span>Go-To-Market</a></li>
+                    <li><a href="#metrics" class="cs-toc-link"><span class="cs-toc-num">10</span>Key Metrics</a></li>
+                    <li><a href="#results" class="cs-toc-link"><span class="cs-toc-num">11</span>Results & Impact</a>
+                    </li>
+                    <li><a href="#lessons" class="cs-toc-link"><span class="cs-toc-num">12</span>Lessons Learned</a>
+                    </li>
+                    <li><a href="#conclusion" class="cs-toc-link"><span class="cs-toc-num">13</span>Conclusion</a></li>
+                    <li><a href="#appendices" class="cs-toc-link"><span class="cs-toc-num">14</span>Appendices</a></li>
+                </ol>
+            </nav>
+        </aside>
+
+        <!-- ═══ MAIN ARTICLE CARD ════════════════════════════════════ -->
+        <div class="cs-main">
+
+            <!-- Hero -->
+            <header class="cs-hero">
+                <div class="cs-hero-meta">
+                    <span class="cs-tag">Founder & PM</span>
+                    <span class="cs-tag">0-to-1 SaaS</span>
+                    <span class="cs-tag">Creator Economy</span>
+                    <span class="cs-tag">Next.js 14</span>
+                </div>
+                <h1 class="cs-title">Sociovox: <span class="cs-accent">Creator Management Platform</span></h1>
+                <p class="cs-subtitle">From a blank repo to a live, billing SaaS in 90 days - solo.</p>
+            </header>
+
+            <div class="cs-content">
+
+                <!-- 1. Introduction -->
+                <section id="intro" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">01</span> Introduction</h2>
+                    <div class="cs-card">
+                        <div class="cs-row">
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">The Product</h3>
+                                <p>Sociovox is a full-stack SaaS platform for independent content creators and creator
+                                    management agencies - combining a content calendar, brand deal CRM, Gmail-powered
+                                    brand inbox, auto-republish workflows, and Stripe billing under one dashboard.</p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">My Role</h3>
+                                <p>Sole founder and PM. Owned the entire product surface: discovery, roadmap, UX
+                                    decisions, feature specs, and release sequencing. Used an AI-assisted coding tool
+                                    (Antigravity) as the engineering execution layer - making every architectural and
+                                    product call myself.</p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Current Status</h3>
+                                <p>Live at sociovox.in with three billing tiers (Free, Pro, Agency) powered by Stripe.
+                                    All 6 core modules are feature-complete and deployed on Vercel.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 2. Background -->
+                <section id="background" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">02</span> Background</h2>
+                    <div class="cs-card">
+                        <div class="cs-row">
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">The Starting Point</h3>
+                                <p>While managing my own LinkedIn presence and tracking brand outreach manually across
+                                    spreadsheets and Gmail threads, I realized the same problem was universal for any
+                                    creator or agency at scale: the operational overhead of content management is
+                                    invisible until it breaks.</p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Why I Built It</h3>
+                                <p>Existing tools solve one piece - scheduling, or CRM, or analytics - but force
+                                    creators to stitch 4-5 products together. The context-switching cost and data
+                                    fragmentation across those tools is the actual productivity killer. Sociovox is the
+                                    single pane of glass.</p>
+                                <br>
+                                <p>This wasn't a spec exercise. Every feature decision had a direct cost consequence -
+                                    API bills, Vercel limits, Stripe fees - which meant prioritisation was forced, not
+                                    academic.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 3. Market Analysis -->
+                <section id="market" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">03</span> Market Analysis</h2>
+                    <div class="cs-card">
+                        <h3 class="cs-card-label">Target Personas</h3>
+                        <div class="cs-persona-grid">
+                            <div class="cs-persona">
+                                <ion-icon name="person-outline"></ion-icon>
+                                <h4>The Independent Creator</h4>
+                                <p class="cs-pain">Growing 10k-500k followers, juggling brand outreach via DMs and
+                                    emails, missing deals because of no system, posting inconsistently due to no
+                                    calendar.</p>
+                            </div>
+                            <div class="cs-persona">
+                                <ion-icon name="people-outline"></ion-icon>
+                                <h4>The Creator Management Agency</h4>
+                                <p class="cs-pain">Managing 10-50 creators simultaneously with no unified view of deal
+                                    status, content pipeline, or per-creator performance. Drowning in client WhatsApp
+                                    threads.</p>
+                            </div>
+                        </div>
+
+                        <h3 class="cs-card-label" style="margin-top: 22px;">The Competitive Gap</h3>
+                        <div class="cs-card cs-highlight-card">
+                            <p>Tools like Hootsuite solve scheduling. HubSpot solves CRM. Notion solves notes. None of
+                                them speak "creator" - no brand deal pipeline, no per-platform analytics mapped to deal
+                                ROI, no inbox purpose-built for inbound sponsorship. Sociovox is the first tool that
+                                connects content output to commercial outcome in one view.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 4. Problem Statement -->
+                <section id="problem" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">04</span> Problem Statement</h2>
+                    <div class="cs-card cs-highlight-card">
+                        <ion-icon name="alert-circle-outline" class="cs-highlight-icon"></ion-icon>
+                        <h3 class="cs-card-label">The Core Conflict (JTBD)</h3>
+                        <blockquote class="cs-jtbd">
+                            "When I get a brand collaboration inquiry in my Gmail, I want to track it from first contact
+                            to payment - but I'm stuck copy-pasting between Gmail, a spreadsheet, and my posting tool,
+                            losing deals in the chaos."
+                        </blockquote>
+                        <p class="cs-stat-label">The Workflow Cost</p>
+                        <div class="cs-stat-row">
+                            <div class="cs-stat">
+                                <span class="cs-stat-num">4-5 tools</span>
+                                <span class="cs-stat-desc">Average number of disconnected tools a creator uses to manage
+                                    their business - replaced by Sociovox's single dashboard</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 5. Product Strategy -->
+                <section id="strategy" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">05</span> Product Strategy</h2>
+                    <div class="cs-card">
+                        <div class="cs-row">
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">North Star</h3>
+                                <p>Every feature had to answer one question: does this help a creator earn more or spend
+                                    less time on admin? Features that didn't pass this test didn't ship in V1.</p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Sequencing Logic</h3>
+                                <p>Shipped in trust-building order: Calendar first (immediate value, low risk), then
+                                    Analytics (data confidence), then Brand CRM + Gmail Inbox (monetization-adjacent),
+                                    then Auto-Republish + Billing (retention and revenue).</p>
+                            </div>
+                        </div>
+                        <div class="cs-positioning">
+                            <ion-icon name="compass-outline"></ion-icon>
+                            <p>"The operating system for creator businesses - not another scheduling tool."</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 6. Development Process -->
+                <section id="dev" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">06</span> Development Process</h2>
+                    <div class="cs-card">
+                        <div class="cs-row">
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Stack Decisions</h3>
+                                <p>Next.js 14 App Router for SSR and route-level auth. Supabase for database and auth.
+                                    Stripe for billing with webhook-driven entitlement. Gmail API (OAuth) for the brand
+                                    inbox. Vercel for deployment.</p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">PM &harr; Build Loop</h3>
+                                <p>Each feature went through a micro-PRD (problem &rarr; acceptance criteria &rarr; edge
+                                    cases) before any code was written. This prevented the most common solo-founder
+                                    trap: building the wrong thing fast. Spec discipline over speed.</p>
+                            </div>
+                        </div>
+                        <div class="cs-row" style="margin-top: 24px;">
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Hardest Technical Decision</h3>
+                                <p>OAuth scope management for Gmail. Getting read-only inbox access without triggering
+                                    Google's security review required careful scope scoping - fetching only unread
+                                    threads tagged with sponsorship keywords rather than full inbox read. Took 3
+                                    iterations to pass OAuth verification.</p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Biggest PM Call</h3>
+                                <p>Deliberately cut the social scheduling (auto-post to Instagram/YouTube) feature from
+                                    V1 despite user demand - the API approval timelines from Meta and Google would have
+                                    delayed launch by 6+ weeks. Shipped the calendar as a planning tool first, with
+                                    publish integration queued for V2.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 7. Core Modules -->
+                <section id="modules" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">07</span> Core Modules Shipped</h2>
+                    <div class="cs-card">
+                        <div class="cs-row" style="margin-bottom: 24px;">
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Content Calendar</h3>
+                                <p>Drag-and-drop post planning with platform tags, status tracking (Draft &rarr;
+                                    Scheduled &rarr; Published), and per-creator views for agency accounts.</p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Analytics Dashboard</h3>
+                                <p>Aggregated performance metrics across platforms - engagement rate, reach, post
+                                    frequency - mapped to content type and publishing cadence.</p>
+                            </div>
+                        </div>
+                        <div class="cs-row" style="margin-bottom: 24px;">
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Brand Deal CRM</h3>
+                                <p>Kanban pipeline (Contacted &rarr; Negotiating &rarr; Contracted &rarr; Paid) for
+                                    tracking sponsorship deals from first contact to invoice. Per-deal notes, value, and
+                                    deadline tracking.</p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Gmail Brand Inbox</h3>
+                                <p>OAuth-connected inbox view filtered for brand outreach - surfaces unread sponsorship
+                                    threads without exposing personal email. One-click push from inbox to CRM pipeline.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cs-row">
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Auto-Republish</h3>
+                                <p>Workflow engine that re-queues evergreen content based on performance thresholds - if
+                                    a post hit above-average engagement, it auto-schedules a re-share at optimal timing.
+                                </p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Stripe Billing</h3>
+                                <p>Free / Pro / Agency tiers with Stripe Checkout and webhook-driven feature
+                                    entitlement. Upgrade prompts triggered contextually when a user hits a tier limit
+                                    mid-workflow.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 8. User Research -->
+                <section id="research" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">08</span> User Research & Key Pivots</h2>
+                    <div class="cs-card">
+                        <div class="cs-row" style="margin-bottom: 24px;">
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">How I Validated</h3>
+                                <p>Ran 15 async interviews with independent creators (5k-200k followers) and 4 small
+                                    creator agencies before writing a line of code. Used a Notion-based "painted door" -
+                                    a fake product page with a waitlist - to gauge interest before committing to the
+                                    build.</p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">The Surprise Finding</h3>
+                                <p>I assumed the calendar would be the most-requested feature. It wasn't. The brand
+                                    inbox was. Every creator I talked to described missing or losing brand deals in
+                                    their personal Gmail as their #1 pain point. This moved the Gmail integration from
+                                    "Phase 2" to a V1 core module.</p>
+                            </div>
+                        </div>
+                        <div class="cs-row">
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Pivot: CRM Over Content Tools</h3>
+                                <p>Early feedback showed creators didn't want another scheduling tool - they wanted
+                                    revenue clarity. This shifted the product's identity from a "content tool" to a
+                                    "creator business OS," which also changed how I wrote the landing page and pricing
+                                    positioning.</p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Agency Insight</h3>
+                                <p>Agency users needed a fundamentally different view - multi-creator dashboards, not
+                                    single-creator flows. This drove the Agency tier design: same modules but with a
+                                    "client switcher" layer on top rather than duplicating the entire product.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 9. Go-To-Market -->
+                <section id="gtm" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">09</span> Go-To-Market</h2>
+                    <div class="cs-card">
+                        <div class="cs-row" style="margin-bottom: 24px;">
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Distribution Strategy</h3>
+                                <p>Content-led, founder-driven: LinkedIn posts documenting the build journey drove the
+                                    waitlist. Positioning myself as a "Technical PM building for creators" attracted
+                                    both early users and PM community attention simultaneously.</p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Pricing Logic</h3>
+                                <p>Free tier is deliberately generous on the calendar and analytics - the features that
+                                    create habit. The paywall sits at Brand CRM and Gmail Inbox, which are the features
+                                    creators need once they start getting paid. Upgrade intent is highest at the moment
+                                    of deal arrival.</p>
+                            </div>
+                        </div>
+                        <div class="cs-row">
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Channel Insight</h3>
+                                <p>Creator communities on Discord and Reddit (r/NewTubers, r/CreatorEconomy) were
+                                    higher-intent than LinkedIn for product feedback. LinkedIn drove awareness; Discord
+                                    drove signups.</p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Retention Hook</h3>
+                                <p>The CRM Kanban creates a "deals in progress" state that makes churning
+                                    psychologically difficult - users with active deals in the pipeline have a strong
+                                    reason to stay even before they've paid.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 10. Key Metrics Tracked -->
+                <section id="metrics" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">10</span> Key Metrics Tracked</h2>
+                    <div class="cs-card">
+                        <div class="cs-row">
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Activation Rate</h3>
+                                <p>% of signups who connect Gmail and create their first CRM deal within 7 days - the
+                                    core activation event.</p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Free &rarr; Pro Conversion</h3>
+                                <p>Tracked by cohort. Triggered upgrade prompts at natural friction points (deal limit
+                                    reached, inbox quota hit).</p>
+                            </div>
+                        </div>
+                        <div class="cs-row" style="margin-top: 24px;">
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Time-to-First-Deal</h3>
+                                <p>How quickly a new user moves a brand deal from inbox to CRM pipeline - the single
+                                    metric that predicts retention.</p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Republish Rate</h3>
+                                <p>% of eligible posts that trigger the auto-republish workflow - signals that the
+                                    content engine is embedded in the creator's routine.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 11. Results -->
+                <section id="results" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">11</span> Results & Impact</h2>
+                    <div class="cs-card">
+                        <div class="cs-stat-row" style="margin-bottom: 24px;">
+                            <div class="cs-stat">
+                                <span class="cs-stat-num">90 days</span>
+                                <span class="cs-stat-desc">Zero to live product - blank repo to deployed SaaS with
+                                    billing</span>
+                            </div>
+                            <div class="cs-stat">
+                                <span class="cs-stat-num">6 Modules</span>
+                                <span class="cs-stat-desc">Shipped and feature-complete at launch</span>
+                            </div>
+                            <div class="cs-stat">
+                                <span class="cs-stat-num">3 Tiers</span>
+                                <span class="cs-stat-desc">Billing tiers live with Stripe (Free, Pro, Agency)</span>
+                            </div>
+                        </div>
+                        <div class="cs-highlight-card">
+                            <p>The product is live, billing is active, and the core loop (inbox &rarr; CRM &rarr;
+                                calendar &rarr; analytics) works end-to-end. Every technical and product decision was
+                                mine - this is the closest thing to proof-of-PM-execution I have.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 12. Lessons Learned -->
+                <section id="lessons" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">12</span> Lessons Learned</h2>
+                    <div class="cs-card">
+                        <div class="cs-row" style="margin-bottom: 24px;">
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Spec Before Code, Always</h3>
+                                <p>Every time I skipped the acceptance criteria step and went straight to building, I
+                                    ended up rebuilding. A 30-minute micro-PRD saved an average of 4 hours of rework.
+                                    This is the lesson I'll carry into every PM role - engineering time is the most
+                                    expensive resource, even when it's AI-assisted.</p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Sequencing Is Strategy</h3>
+                                <p>The order you ship modules changes user behavior permanently. Shipping calendar
+                                    before CRM meant users built a posting habit before a deal-tracking habit - which
+                                    created the right mental model. If I'd shipped CRM first, the product would have
+                                    felt like a business tool, not a creative one.</p>
+                            </div>
+                        </div>
+                        <div class="cs-row">
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Cut Scope Ruthlessly for V1</h3>
+                                <p>The social auto-publish feature (direct posting to Instagram/YouTube) was the
+                                    most-requested item. I cut it from V1 entirely. The right call - Meta API approval
+                                    alone would have taken 8+ weeks and stalled everything. A useful product that ships
+                                    beats a perfect product that doesn't.</p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">OAuth Is a PM Problem</h3>
+                                <p>Google's OAuth verification process is not just an engineering problem - it's a trust
+                                    and positioning problem. How you describe your app's use of Gmail data to Google is
+                                    essentially a product brief. Framing it wrong (even technically correctly) gets you
+                                    flagged for security review. Writing that brief taught me more about product clarity
+                                    than any PRD template.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 13. Conclusion -->
+                <section id="conclusion" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">13</span> Conclusion</h2>
+                    <div class="cs-card">
+                        <div class="cs-row">
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">What this proves</h3>
+                                <p>I can take a product from zero - no team, no funding, no existing codebase - to a
+                                    live, billing, multi-module SaaS with real users in 90 days. Every decision from
+                                    database schema to upgrade prompt copy was a product decision I owned.</p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">What it doesn't prove</h3>
+                                <p>Scale. Sociovox is early. The real test - retention past 30 days, paid conversion at
+                                    volume, agency expansion - is still being run. But the foundation is solid, the loop
+                                    works, and the product is live at sociovox.in.</p>
+                            </div>
+                        </div>
+                        <div class="cs-row" style="margin-top: 24px;">
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Why it matters for a PM role</h3>
+                                <p>This isn't a case study about a feature I helped ship inside a large company. This is
+                                    what happens when a PM has no one to hand off to - every tradeoff, every scope cut,
+                                    every user conversation, every technical constraint is navigated alone. That's the
+                                    sharpest PM training available.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 14. Appendices -->
+                <section id="appendices" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">14</span> Appendices - The Evidence</h2>
+
+                    <div class="cs-accordion">
+                        <!-- Appendix A -->
+                        <div class="cs-accordion-item" data-accordion>
+                            <button class="cs-accordion-header" data-accordion-btn>
+                                <div class="cs-accordion-header-content">
+                                    <div class="cs-accordion-icon"><ion-icon name="server-outline"></ion-icon></div>
+                                    <div class="cs-accordion-info">
+                                        <h4>Appendix A: Full Tech Stack</h4>
+                                        <p>Every tool, library, and service used</p>
+                                    </div>
+                                </div>
+                                <ion-icon name="chevron-down-outline" class="cs-accordion-chevron"></ion-icon>
+                            </button>
+                            <div class="cs-accordion-content">
+                                <div class="cs-card" style="border: none; box-shadow: none; background: transparent;">
+                                    <p style="margin-bottom: 16px; font-size: 13px; color: var(--cs-text-muted);">Every
+                                        tool, library, and service used</p>
+
+                                    <h4 style="font-size: 14px; color: var(--white-2); margin-bottom: 8px;">Frontend
+                                    </h4>
+                                    <ul class="cs-list" style="margin-bottom: 16px;">
+                                        <li><strong>Next.js 14 (App Router):</strong> Server components for fast initial
+                                            load, route-level auth guards, and API routes for backend logic without a
+                                            separate server.</li>
+                                        <li><strong>TypeScript:</strong> Strict typing across all components and API
+                                            contracts - reduced runtime errors significantly during rapid iteration.
+                                        </li>
+                                        <li><strong>Tailwind CSS:</strong> Utility-first styling. Every UI component
+                                            built from scratch - no component library dependencies to fight against.
+                                        </li>
+                                    </ul>
+
+                                    <h4 style="font-size: 14px; color: var(--white-2); margin-bottom: 8px;">Backend &
+                                        Data</h4>
+                                    <ul class="cs-list" style="margin-bottom: 16px;">
+                                        <li><strong>Supabase:</strong> PostgreSQL database with row-level security (RLS)
+                                            policies for multi-tenant data isolation between agency clients. Auth
+                                            handled via Supabase Auth with Google OAuth.</li>
+                                        <li><strong>Next.js API Routes:</strong> Server-side business logic - Stripe
+                                            webhook handling, Gmail API proxying, CRM state mutations.</li>
+                                        <li><strong>Gmail API (OAuth 2.0):</strong> Read-only scoped access to fetch
+                                            unread brand inquiry threads. Keyword-based filtering on the server side to
+                                            surface relevant emails without full inbox access.</li>
+                                    </ul>
+
+                                    <h4 style="font-size: 14px; color: var(--white-2); margin-bottom: 8px;">Billing &
+                                        Infra</h4>
+                                    <ul class="cs-list" style="margin-bottom: 16px;">
+                                        <li><strong>Stripe:</strong> Checkout Sessions for upgrade flows. Webhooks for
+                                            entitlement sync - when a user upgrades, a Supabase RPC call immediately
+                                            unlocks the relevant feature tier.</li>
+                                        <li><strong>Vercel:</strong> Deployment with automatic preview URLs per branch.
+                                            Edge functions for geographically fast API responses.</li>
+                                        <li><strong>Resend:</strong> Transactional email for welcome, upgrade
+                                            confirmation, and deal status notifications.</li>
+                                    </ul>
+
+                                    <p style="font-size: 13px; color: var(--cs-text-muted); font-style: italic;">Key
+                                        architectural decision: Keeping the entire backend inside Next.js API routes
+                                        (rather than spinning up a separate Express/FastAPI server) reduced deployment
+                                        complexity to zero - one Vercel project, one environment, one set of environment
+                                        variables.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Appendix B -->
+                        <div class="cs-accordion-item" data-accordion>
+                            <button class="cs-accordion-header" data-accordion-btn>
+                                <div class="cs-accordion-header-content">
+                                    <div class="cs-accordion-icon"><ion-icon name="document-text-outline"></ion-icon>
+                                    </div>
+                                    <div class="cs-accordion-info">
+                                        <h4>Appendix B: Sample Micro-PRD - Gmail Brand Inbox</h4>
+                                        <p>The spec that drove the most complex module</p>
+                                    </div>
+                                </div>
+                                <ion-icon name="chevron-down-outline" class="cs-accordion-chevron"></ion-icon>
+                            </button>
+                            <div class="cs-accordion-content">
+                                <div class="cs-card" style="border: none; box-shadow: none; background: transparent;">
+                                    <p style="margin-bottom: 16px; font-size: 13px; color: var(--cs-text-muted);">The
+                                        spec that drove the most complex module</p>
+
+                                    <h4 style="font-size: 14px; color: var(--white-2); margin-bottom: 8px;">Problem</h4>
+                                    <p style="margin-bottom: 16px; font-size: 13px;">Creators receive brand
+                                        collaboration inquiries via Gmail but have no way to separate them from personal
+                                        email, track their status, or move them into a deal pipeline without manual
+                                        copy-paste.</p>
+
+                                    <h4 style="font-size: 14px; color: var(--white-2); margin-bottom: 8px;">Acceptance
+                                        Criteria</h4>
+                                    <ul class="cs-list" style="margin-bottom: 16px;">
+                                        <li>User can connect their Gmail account via OAuth without granting full inbox
+                                            access (read-only, scoped).</li>
+                                        <li>System surfaces only unread threads containing brand inquiry keywords
+                                            (configurable list per user).</li>
+                                        <li>Each surfaced thread shows: sender, subject, snippet, and received date.
+                                        </li>
+                                        <li>User can click "Add to CRM" on any thread - this creates a new deal card in
+                                            the Brand CRM pre-filled with sender name, email, and thread link.</li>
+                                        <li>Inbox view refreshes on page load; no real-time sync required for V1.</li>
+                                        <li>If Gmail is not connected, show a clear CTA to connect - not an empty state
+                                            with no explanation.</li>
+                                    </ul>
+
+                                    <h4 style="font-size: 14px; color: var(--white-2); margin-bottom: 8px;">Edge Cases
+                                        Handled</h4>
+                                    <ul class="cs-list" style="margin-bottom: 16px;">
+                                        <li><strong>Expired OAuth token:</strong> Surface a reconnect prompt instead of
+                                            a silent failure.</li>
+                                        <li><strong>No matching threads:</strong> Show "No brand inquiries found" with
+                                            an option to update keywords - not a blank screen.</li>
+                                        <li><strong>Duplicate CRM entry:</strong> If the same thread has already been
+                                            added to CRM, show a "Already tracked" badge instead of allowing duplicate
+                                            deal creation.</li>
+                                        <li><strong>Google API quota:</strong> Cache the last fetch result for 15
+                                            minutes to avoid rate limit errors on repeated page loads.</li>
+                                    </ul>
+
+                                    <h4 style="font-size: 14px; color: var(--white-2); margin-bottom: 8px;">What I Cut
+                                        from V1</h4>
+                                    <ul class="cs-list">
+                                        <li>Reply to emails directly from Sociovox (too complex, scope risk)</li>
+                                        <li>Real-time Gmail push notifications (webhook setup requires additional Google
+                                            approval)</li>
+                                        <li>Auto-categorization by deal stage based on email content (AI feature, V2)
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Appendix C -->
+                        <div class="cs-accordion-item" data-accordion>
+                            <button class="cs-accordion-header" data-accordion-btn>
+                                <div class="cs-accordion-header-content">
+                                    <div class="cs-accordion-icon"><ion-icon name="stats-chart-outline"></ion-icon>
+                                    </div>
+                                    <div class="cs-accordion-info">
+                                        <h4>Appendix C: Competitive Positioning</h4>
+                                        <p>Where Sociovox sits vs. existing tools</p>
+                                    </div>
+                                </div>
+                                <ion-icon name="chevron-down-outline" class="cs-accordion-chevron"></ion-icon>
+                            </button>
+                            <div class="cs-accordion-content">
+                                <div class="cs-card" style="border: none; box-shadow: none; background: transparent;">
+                                    <p style="margin-bottom: 16px; font-size: 13px; color: var(--cs-text-muted);">Where
+                                        Sociovox sits vs. existing tools</p>
+
+                                    <h4 style="font-size: 14px; color: var(--white-2); margin-bottom: 8px;">Hootsuite /
+                                        Buffer / Later</h4>
+                                    <p style="margin-bottom: 16px; font-size: 13px;">Strong on scheduling. No brand deal
+                                        management. No Gmail integration. Priced for marketing teams, not individual
+                                        creators. The UX assumes you already know what you want to post - no help with
+                                        the business side of being a creator.</p>
+
+                                    <h4 style="font-size: 14px; color: var(--white-2); margin-bottom: 8px;">Grin /
+                                        Aspire (Influencer CRMs)</h4>
+                                    <p style="margin-bottom: 16px; font-size: 13px;">Built for brands to manage
+                                        creators, not for creators to manage their own business. Expensive,
+                                        enterprise-focused, and require the brand to onboard you - a creator can't
+                                        self-serve.</p>
+
+                                    <h4 style="font-size: 14px; color: var(--white-2); margin-bottom: 8px;">Notion /
+                                        Airtable</h4>
+                                    <p style="margin-bottom: 16px; font-size: 13px;">Flexible but blank-slate. High
+                                        setup cost for each creator. No Gmail connection. No analytics. No billing.
+                                        Creators use these as workarounds, not solutions - which means they're building
+                                        their own Sociovox manually, piece by piece, every month.</p>
+
+                                    <p style="font-size: 13px; color: var(--orange-yellow-crayola);"><strong>The gap
+                                            Sociovox fills:</strong> A tool built specifically for creators to manage
+                                        their own business - combining scheduling, deal tracking, inbox, and analytics
+                                        in one product, at creator-friendly pricing, with self-serve onboarding. No
+                                        brand sponsor required, no agency needed, no spreadsheet required.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Appendix D -->
+                        <div class="cs-accordion-item" data-accordion>
+                            <button class="cs-accordion-header" data-accordion-btn>
+                                <div class="cs-accordion-header-content">
+                                    <div class="cs-accordion-icon"><ion-icon name="rocket-outline"></ion-icon></div>
+                                    <div class="cs-accordion-info">
+                                        <h4>Appendix D: V2 Roadmap</h4>
+                                        <p>What ships next and why</p>
+                                    </div>
+                                </div>
+                                <ion-icon name="chevron-down-outline" class="cs-accordion-chevron"></ion-icon>
+                            </button>
+                            <div class="cs-accordion-content">
+                                <div class="cs-card" style="border: none; box-shadow: none; background: transparent;">
+                                    <p style="margin-bottom: 16px; font-size: 13px; color: var(--cs-text-muted);">What
+                                        ships next and why (ranked by user demand &times; retention impact)</p>
+
+                                    <h4 style="font-size: 14px; color: var(--white-2); margin-bottom: 8px;">1. Direct
+                                        Social Publishing (Instagram + YouTube)</h4>
+                                    <p style="margin-bottom: 8px; font-size: 13px;"><strong>Why:</strong> Most-requested
+                                        feature. Currently the calendar is planning-only. Closing the loop to actual
+                                        publish removes the last reason to keep a separate scheduling tool.</p>
+                                    <p style="margin-bottom: 16px; font-size: 13px;"><strong>Blocker:</strong> Meta API
+                                        approval. Already in application. ETA: Q2 2026.</p>
+
+                                    <h4 style="font-size: 14px; color: var(--white-2); margin-bottom: 8px;">2. AI Deal
+                                        Brief Generator</h4>
+                                    <p style="margin-bottom: 8px; font-size: 13px;"><strong>Why:</strong> When a creator
+                                        moves a Gmail thread to the CRM, they still have to write the pitch response
+                                        manually. An AI-generated deal brief (based on their niche, rates, and past deal
+                                        history) closes this gap.</p>
+                                    <p style="margin-bottom: 16px; font-size: 13px;"><strong>Approach:</strong> Prompt
+                                        templating via Anthropic API. No fine-tuning required for V2.</p>
+
+                                    <h4 style="font-size: 14px; color: var(--white-2); margin-bottom: 8px;">3.
+                                        Multi-Creator Agency View</h4>
+                                    <p style="margin-bottom: 8px; font-size: 13px;"><strong>Why:</strong> Agency tier
+                                        users need to manage 10+ creators in one dashboard. Currently each creator has a
+                                        separate account - there's no roll-up view across clients.</p>
+                                    <p style="margin-bottom: 16px; font-size: 13px;"><strong>Design approach:</strong>
+                                        Workspace model with client-switcher, not separate accounts. Same modules,
+                                        parent-level analytics aggregation.</p>
+
+                                    <p style="font-size: 13px; color: var(--cs-text-muted); font-style: italic;">
+                                        <strong>Decision rule for V2 scope:</strong> Any feature that reduces churn or
+                                        drives upgrade is in. Any feature that only improves activation for new users is
+                                        deferred until retention is solved.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Appendix E -->
+                        <div class="cs-accordion-item" data-accordion>
+                            <button class="cs-accordion-header" data-accordion-btn>
+                                <div class="cs-accordion-header-content">
+                                    <div class="cs-accordion-icon"><ion-icon name="card-outline"></ion-icon></div>
+                                    <div class="cs-accordion-info">
+                                        <h4>Appendix E: Pricing Design & Stripe Setup</h4>
+                                        <p>How the tiers were designed and why</p>
+                                    </div>
+                                </div>
+                                <ion-icon name="chevron-down-outline" class="cs-accordion-chevron"></ion-icon>
+                            </button>
+                            <div class="cs-accordion-content">
+                                <div class="cs-card" style="border: none; box-shadow: none; background: transparent;">
+                                    <p style="margin-bottom: 16px; font-size: 13px; color: var(--cs-text-muted);">How
+                                        the tiers were designed and why</p>
+
+                                    <h4 style="font-size: 14px; color: var(--white-2); margin-bottom: 8px;">Tier Design
+                                        Logic</h4>
+                                    <p style="margin-bottom: 16px; font-size: 13px;">The paywall was placed deliberately
+                                        at the features that creators use after they've built a habit - not at
+                                        onboarding. Free tier creates the habit. Pro tier serves the creator who's
+                                        actively monetizing. Agency tier serves the operator.</p>
+
+                                    <ul class="cs-list" style="margin-bottom: 16px;">
+                                        <li><strong>Free:</strong> Content Calendar (20 posts), Analytics (30-day
+                                            window), Brand CRM (3 deals). No Gmail inbox. Enough to build habit, not
+                                            enough to run a business.</li>
+                                        <li><strong>Pro &#8377;999/mo:</strong> Unlimited calendar, Full analytics,
+                                            Unlimited CRM, Gmail brand inbox, Auto-republish. Everything a solo creator
+                                            needs.</li>
+                                        <li><strong>Agency &#8377;2,999/mo:</strong> Everything in Pro &times; up to 10
+                                            creator accounts. Multi-creator dashboard, shared CRM pipeline, team access
+                                            controls.</li>
+                                    </ul>
+
+                                    <h4 style="font-size: 14px; color: var(--white-2); margin-bottom: 8px;">Stripe
+                                        Implementation</h4>
+                                    <ul class="cs-list" style="margin-bottom: 16px;">
+                                        <li><strong>Checkout Sessions:</strong> Hosted by Stripe - no PCI scope on
+                                            Sociovox's side.</li>
+                                        <li><strong>Webhook-driven entitlement:</strong> checkout.session.completed and
+                                            customer.subscription.deleted events trigger a Supabase RPC that updates the
+                                            user's tier in real time.</li>
+                                        <li><strong>Upgrade prompts:</strong> Triggered contextually - when a Free user
+                                            hits the 3-deal CRM limit, the upgrade modal appears mid-workflow with the
+                                            exact feature they need highlighted. Not on a separate pricing page.</li>
+                                    </ul>
+
+                                    <p style="font-size: 13px; color: var(--cs-text-muted); font-style: italic;">Pricing
+                                        insight: INR pricing (not USD) was a deliberate call for the India-first launch.
+                                        &#8377;999 vs $12 feels meaningfully different to an Indian creator even though
+                                        the actual conversion is similar. Price anchoring matters more than currency
+                                        math.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </div><!-- /.cs-content -->
+
+            <footer class="cs-footer">
+                <a href="../#Case-studies" class="cs-back-btn">
+                    <ion-icon name="arrow-back-outline"></ion-icon>
+                    Back to Case-studies
+                </a>
+            </footer>
+
+        </div><!-- /.cs-main -->
+
+    </div><!-- /.cs-root -->
+
+    <!-- CONTACT SECTION -->
+    <global-contact></global-contact>
+
+    <global-footer></global-footer>
+
+    <!-- IonIcons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script>
+        // ── Mobile TOC toggle ─────────────────────────────────────────
+        const sidenav = document.getElementById('cs-sidenav');
+        const tocToggle = document.getElementById('cs-toc-toggle');
+
+        if (tocToggle && sidenav) {
+            tocToggle.addEventListener('click', () => {
+                sidenav.classList.toggle('active');
+                sidenav.classList.toggle('open'); // For legacy support
+            });
+        }
+
+        // ── Smooth scroll on TOC click ────────────────────────────────
+        document.querySelectorAll('.cs-toc-link').forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                if (sidenav) {
+                    sidenav.classList.remove('active');
+                    sidenav.classList.remove('open');
+                }
+                const href = link.getAttribute('href');
+                const target = document.querySelector(href);
+                if (target) {
+                    if (typeof lenis !== 'undefined') {
+                        lenis.scrollTo(target, { offset: -100 });
+                    } else {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+
+                    // Auto-open Appendix A if scrolling to #appendices or #prd
+                    if (href === '#appendices' || href === '#prd') {
+                        const appA = document.querySelector('[data-accordion]');
+                        if (appA) {
+                            document.querySelectorAll('[data-accordion]').forEach(el => el.classList.remove('active'));
+                            appA.classList.add('active');
+                        }
+                    }
+                }
+            });
+        });
+
+        // ── Appendix Accordion logic ──────────────────────────────────
+        document.querySelectorAll('[data-accordion-btn]').forEach(btn => {
+            btn.addEventListener('click', function () {
+                const item = this.parentElement;
+                const isActive = item.classList.contains('active');
+
+                if (!isActive) {
+                    // Check for currently active accordion
+                    const activeItem = document.querySelector('[data-accordion].active');
+                    let shiftOffset = 0;
+
+                    if (activeItem && activeItem !== item) {
+                        // If active accordion is ABOVE the clicked one, calculate the height it will lose
+                        if (activeItem.compareDocumentPosition(item) & Node.DOCUMENT_POSITION_FOLLOWING) {
+                            const activeContent = activeItem.querySelector('.cs-accordion-content');
+                            if (activeContent) {
+                                shiftOffset = activeContent.getBoundingClientRect().height;
+                            }
+                        }
+                        // Close the active accordion
+                        activeItem.classList.remove('active');
+                    }
+
+                    item.classList.add('active');
+
+                    // Calculate the precise final scroll position mathematically
+                    const offset = 120; // Navbar height + padding
+                    const finalTop = item.getBoundingClientRect().top + window.scrollY - offset - shiftOffset;
+
+                    // Smooth scroll to the final position concurrently with the CSS transition
+                    if (typeof lenis !== 'undefined') {
+                        lenis.scrollTo(finalTop, { duration: 0.8 });
+                    } else {
+                        window.scrollTo({ top: finalTop, behavior: 'smooth' });
+                    }
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+        });
+
+        // ── Scroll-spy: highlight active section ─────────────────────
+        const sections = document.querySelectorAll('.cs-section[id]');
+        const tocLinks = document.querySelectorAll('.cs-toc-link');
+
+        const updateActiveSection = () => {
+            let current = '';
+            const scrollY = window.scrollY;
+
+            // Find the section that is currently most visible or at the top
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 150; // offset for nav
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            if (current) {
+                tocLinks.forEach(l => l.classList.remove('active'));
+                const active = document.querySelector(`.cs-toc-link[href="#${current}"]`);
+                if (active) active.classList.add('active');
+            }
+        };
+
+        window.addEventListener('scroll', updateActiveSection);
+        // Initial call
+        updateActiveSection();
+
+        // ── Reading Progress Bar & Back to Top ───────────────────────
+        const globalNav = document.querySelector('.global-nav');
+        if (globalNav) {
+            const progressBar = document.createElement('div');
+            progressBar.className = 'reading-progress-bar';
+            globalNav.appendChild(progressBar);
+
+            window.addEventListener('scroll', () => {
+                const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrollPercentage = (scrollTop / scrollHeight) * 100;
+                progressBar.style.width = scrollPercentage + '%';
+            });
+        }
+
+        const backToTopBtn = document.createElement('button');
+        backToTopBtn.className = 'back-to-top';
+        backToTopBtn.setAttribute('aria-label', 'Back to top');
+        backToTopBtn.innerHTML = '<ion-icon name="arrow-up-outline"></ion-icon>';
+        document.body.appendChild(backToTopBtn);
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            if (typeof lenis !== 'undefined') {
+                lenis.scrollTo(0, { duration: 1.2 });
+            } else {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        });
+    </script>
+</body>
+
+</html>

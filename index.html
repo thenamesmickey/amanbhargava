@@ -2,82 +2,338 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aman Bhargava</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aman Bhargava | Product Manager</title>
 
-  <!--
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon" />
-
-  <!--
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css" />
-
-  <!--
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <meta name="description"
+        content="Aman Bhargava - Senior Product Manager with 5+ years of experience in building scalable web and mobile solutions.">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png">
+    <link rel="icon" href="./assets/images/favicon.ico">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/components.js"></script>
 </head>
 
-<body>
-  <!--
-    - #MAIN
-  -->
+<div class="cursor-dot"></div>
 
-  <main>
-    <!--
-      - #SIDEBAR (loaded from partials/sidebar.html)
-    -->
-    <div id="sidebar-container"></div>
+<div class="social-rail">
+    <a href="https://www.linkedin.com/in/itsamanbhargava/" target="_blank" class="social-link" aria-label="LinkedIn">
+        <ion-icon name="logo-linkedin"></ion-icon>
+    </a>
+</div>
 
-    <!--
-      - #main-content
-    -->
+<global-navbar base-path="./"></global-navbar>
 
-    <div class="main-content">
-      <!--
-        - #NAVBAR (loaded from partials/navbar.html)
-      -->
-      <div id="navbar-container"></div>
+<!-- HERO SECTION -->
+<section class="hero" id="hero-pin">
+    <div class="container hero-container">
+        <div class="hero-title-wrapper">
+            <h1 class="hero-title">Product</h1>
+        </div>
 
-      <!--
-        - #ABOUT (loaded from partials/about.html)
-      -->
-      <div id="about-container"></div>
+        <div class="hero-title-wrapper scroller-wrapper" style="text-align: right;">
+            <div class="scroller-inner">
+                <h1 class="hero-title serif word-1">Manager.</h1>
+                <h1 class="hero-title serif word-2">Thinker.</h1>
+                <h1 class="hero-title serif word-3">Builder.</h1>
+            </div>
+        </div>
 
-      <!--
-        - #RESUME (loaded from components/resume.html)
-      -->
-      <div id="resume-container"></div>
+        <div class="hero-subtitle-wrapper">
+            <p class="hero-subtitle subtitle-1">
+                Roadmaps, not guesses. Outcomes, not outputs.
+            </p>
+            <p class="hero-subtitle subtitle-2">
+                First principles over frameworks. Always.
+            </p>
+            <p class="hero-subtitle subtitle-3">
+                5 years of specs. 1 live SaaS. Still shipping.
+            </p>
+        </div>
 
-      <!--
-        - #PORTFOLIO (loaded from components/portfolio.html)
-      -->
-      <div id="portfolio-container"></div>
-
-      <!--
-        - #CONTACT (loaded from components/contact.html)
-      -->
-      <div id="contact-container"></div>
+        <div class="hero-meta">
+            <span class="uppercase text-muted text-sm">Based in Jaipur, India</span>
+            <span class="uppercase text-muted text-sm">Scroll to explore ↓</span>
+        </div>
     </div>
-  </main>
+</section>
 
-  <!--
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
+<!-- ABOUT SECTION -->
+<section id="about" class="section">
+    <div class="container grid-aside">
+        <div class="aside-label">
+            <span class="uppercase text-muted text-xs tracking-tight">01 / Profile</span>
+            <span class="section-name uppercase tracking-tight">Summary & Key Skills</span>
+        </div>
 
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <div class="about-content">
+            <h3 class="about-text" data-speed="1.02">
+                Product Manager with a strong engineering foundation and 5 years of cross-domain product experience
+                across EdTech, D2C E-Commerce, and Enterprise SaaS. Shipped features to 1M+ users globally, drove
+                20% lifts in task-completion for Fortune 500 clients, and scaled a consumer brand to USD 4,800 in
+                revenue within 3 months.Experienced working across distributed async environments.
+            </h3>
+
+            <div class="grid-2" style="margin-top: 4rem;">
+                <div>
+                    <h4 class="uppercase text-muted text-sm tracking-tight" style="margin-bottom: 2rem;">Core
+                        Competencies</h4>
+                    <ul class="experience-details" style="font-size: 1.125rem;">
+                        <li><strong>Strategy & Discovery:</strong> Product Roadmap, OKRs, MVP Scoping,
+                            Jobs-to-be-Done, Competitive Analysis, Go-to-Market</li>
+                        <li><strong>Execution:</strong> Agile, Scrum, Kanban, PRDs, User Stories, Backlog
+                            Prioritization, Sprint Planning, SDLC</li>
+                        <li><strong>Research & Data:</strong> User Interviews, A/B Testing, Funnel Analytics,
+                            Customer Journey Mapping, Usability Testing</li>
+                        <li><strong>PM Tools:</strong> JIRA, Confluence, Figma, Azure DevOps, Miro, Firebase,
+                            Mixpanel, Hotjar, Trello, Notion</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="uppercase text-muted text-sm tracking-tight" style="margin-bottom: 2rem;">Technical
+                        Awareness</h4>
+                    <ul class="experience-details" style="font-size: 1.125rem;">
+                        <li><strong>Frontend:</strong> React.js, Vue.js, Next.js, TypeScript</li>
+                        <li><strong>UI/UX:</strong> Tailwind CSS, Material UI, Modular UI Systems</li>
+                        <li><strong>Cloud/DevOps:</strong> Azure, GCP, GitHub Actions, Vercel</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- EXPERIENCE SECTION -->
+<section id="experience" class="section">
+    <div class="container grid-aside">
+        <div class="aside-label">
+            <span class="uppercase text-muted text-xs tracking-tight">02 / Experience</span>
+            <span class="section-name uppercase tracking-tight">Career Journey</span>
+        </div>
+
+        <div>
+            <ul class="experience-list">
+                <!-- Job 1: Grras -->
+                <li class="experience-item">
+                    <div class="experience-meta">
+                        <span class="uppercase tracking-tight">Aug 2025 – Present</span><br>
+                        <span class="text-dim">Jaipur, India • Remote</span>
+                    </div>
+                    <div class="experience-content">
+                        <h4>Product Manager <span class="serif text-muted">at Grras Solutions</span></h4>
+                        <ul class="experience-details">
+                            <li>Architected a 6-month product roadmap across 3 concurrent workstreams using JIRA and
+                                Azure DevOps; introduced standardised PRD templates that cut requirement-to-sprint time
+                                by 30% and eliminated recurring scope creep.</li>
+                            <li>Slashed UI revision cycles by 40% by running Figma-led design-engineering alignment
+                                sessions, converting wireframes directly into developer-ready specs with zero
+                                back-and-forth.</li>
+                            <li>Instrumented KPI dashboards in Firebase and Mixpanel tracking learner activation and
+                                feature adoption; surfaced 3 drop-off points that directly reshaped Q4 roadmap
+                                priorities.</li>
+                            <li>Facilitated Agile/Scrum ceremonies via JIRA and Confluence across a 6-person team,
+                                maintaining zero sprint carryover across 10 consecutive delivery cycles.</li>
+                            <li>Repositioned platform focus to outcome-driven delivery using OKR frameworks, improving
+                                learner retention by ~15% within the first two quarters.</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- Job 2: Maatie -->
+                <li class="experience-item">
+                    <div class="experience-meta">
+                        <span class="uppercase tracking-tight">Oct 2024 – Aug 2025</span><br>
+                        <span class="text-dim">Remote • Part-Time</span>
+                    </div>
+                    <div class="experience-content">
+                        <h4>Founder & Product Manager <span class="serif text-muted">at Maatie (D2C Skincare)</span>
+                        </h4>
+                        <ul class="experience-details">
+                            <li>Conceived and launched a D2C skincare brand from zero to live in 90 days, owning
+                                discovery, UX design in Figma, SKU strategy, and fulfilment flow entirely solo.</li>
+                            <li>Ran 30+ async customer interviews to validate product-market fit, cutting first-batch
+                                inventory waste by 25% before a single unit shipped.</li>
+                            <li>Iterated on checkout UX using Hotjar heatmaps and session-replay data, driving
+                                cart-to-purchase conversion up 18% within 60 days of launch.</li>
+                            <li>Executed A/B tests on pricing, packaging, and messaging via Google Optimize, compressing
+                                reorder decision time from 4 weeks to 10 days.</li>
+                            <li>Scaled the brand to INR 4L (approx. USD 4,800) in revenue within 3 months via rapid SKU
+                                iteration, organic content, and a conversion-optimised Shopify storefront.</li>
+                        </ul>
+                        <p class="experience-insight">Demonstrated full ownership and zero hand-holding operating
+                            entirely remote. The defining skill in any distributed product role.</p>
+                    </div>
+                </li>
+
+                <!-- Job 3: Zensar -->
+                <li class="experience-item">
+                    <div class="experience-meta">
+                        <span class="uppercase tracking-tight">May 2022 – Oct 2024</span><br>
+                        <span class="text-dim">Pune, India • Hybrid</span>
+                    </div>
+                    <div class="experience-content">
+                        <h4>Agile Product Collaborator (Embedded PM) <span class="serif text-muted">at Zensar
+                                Technologies</span></h4>
+                        <ul class="experience-details">
+                            <li>Co-owned product vision and roadmap in JIRA for enterprise web applications serving
+                                Fortune 500 clients; co-authored epics and acceptance criteria that reduced ambiguous
+                                developer queries by 35%.</li>
+                            <li>Spearheaded delivery of user-facing workflow features using Agile/Scrum, improving
+                                task-completion rates by 20%, validated through pre/post usability benchmarks with
+                                international stakeholders.</li>
+                            <li>Orchestrated story-mapping and MVP scoping workshops in Miro, shipping 4 major releases
+                                on schedule over 2 years across a 12-person engineering team.</li>
+                            <li>Compressed story-clarification lag from 3 days to same-day by acting as technical
+                                translator between PMs and engineering using Confluence documentation and structured
+                                daily syncs.</li>
+                        </ul>
+                        <p class="experience-insight">Shipped 4 major releases coordinating documentation-first and
+                            written-async across multiple time zones. Only developer driving product conversations on a
+                            globally distributed team.</p>
+                    </div>
+                </li>
+
+                <!-- Job 4: Tagbox -->
+                <li class="experience-item">
+                    <div class="experience-meta">
+                        <span class="uppercase tracking-tight">Aug 2021 – Apr 2022</span><br>
+                        <span class="text-dim">Jaipur, India</span>
+                    </div>
+                    <div class="experience-content">
+                        <h4>Product Contributor & Frontend Developer <span class="serif text-muted">at Tagbox</span>
+                        </h4>
+                        <ul class="experience-details">
+                            <li>Shipped customer-facing features on a SaaS platform serving 1M+ users; defined JIRA
+                                acceptance criteria that reduced post-launch bug reports by 22%.</li>
+                            <li>Validated post-release performance using Mixpanel and Google Analytics across 3
+                                consecutive releases, ensuring success metrics were met within 30 days of each go-live.
+                            </li>
+                            <li>Engineered scalable frontend components in React.js and TypeScript, translating
+                                ambiguous business goals into scoped tasks with 100% on-time delivery.</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- Job 5: Socialmeedya -->
+                <li class="experience-item">
+                    <div class="experience-meta">
+                        <span class="uppercase tracking-tight">Jun 2020 – Aug 2021</span><br>
+                        <span class="text-dim">Jaipur, India</span>
+                    </div>
+                    <div class="experience-content">
+                        <h4>Project Coordinator & Frontend Developer <span class="serif text-muted">at
+                                Socialmeedya</span></h4>
+                        <ul class="experience-details">
+                            <li>Facilitated 8 client-facing discovery sessions, converting qualitative feedback into
+                                prioritised JIRA backlogs that reduced post-delivery revision requests by ~30%.</li>
+                            <li>Scoped and delivered 3 product MVPs on time and on budget using Agile practices, each
+                                with clearly defined success metrics agreed upfront with stakeholders.</li>
+                            <li>Crafted client-facing interfaces using React.js, Vue.js, and REST APIs, bridging
+                                technical execution with product requirements across all 3 MVPs.</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Case-studies SECTION -->
+<section id="Case-studies" class="section">
+    <div class="container grid-aside">
+        <div class="aside-label">
+            <span class="uppercase text-muted text-xs tracking-tight">03 / Projects</span>
+            <span class="section-name uppercase tracking-tight">Selected Case Studies</span>
+        </div>
+
+        <div>
+
+            <!-- Case Study 1 -->
+            <a href="./case-studies/Sociovox.html" target="_self" class="project-card">
+                <div class="project-meta">
+                    <span class="project-tag">Generative AI</span>
+                    <span class="project-tag">Viral Distribution</span>
+                </div>
+                <h3 class="project-title serif">Sociovox: Distribution Engine <span class="project-arrow">→</span>
+                </h3>
+                <p class="project-desc">Empowering creators to "Create Once, Go Global Everywhere" through an
+                    AI-native hub.</p>
+            </a>
+
+            <!-- Case Study 2 -->
+            <a href="./case-studies/whatsapp-intelligent-inbox.html" target="_self" class="project-card">
+                <div class="project-meta">
+                    <span class="project-tag">0-to-1 Feature</span>
+                    <span class="project-tag">ML / AI</span>
+                </div>
+                <h3 class="project-title serif">WhatsApp Intelligent Inbox <span class="project-arrow">→</span></h3>
+                <p class="project-desc">Transforming notification overload into intentional connection using
+                    on-device AI.</p>
+            </a>
+
+            <!-- Case Study 3 -->
+            <a href="./case-studies/auditors-toolkit.html" target="_self" class="project-card">
+                <div class="project-meta">
+                    <span class="project-tag">0-to-1 MVP</span>
+                    <span class="project-tag">B2B SaaS</span>
+                </div>
+                <h3 class="project-title serif">Auditor’s Toolkit: AI GRC <span class="project-arrow">→</span></h3>
+                <p class="project-desc">Simplifying global AI governance for startups with actionable compliance
+                    roadmaps.</p>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+<!-- EDUCATION SECTION -->
+<section class="section">
+    <div class="container grid-aside">
+        <div class="aside-label">
+            <span class="uppercase text-muted text-xs tracking-tight">04 / Background</span>
+            <span class="section-name uppercase tracking-tight">Education & Certs</span>
+        </div>
+
+        <div class="grid-2">
+            <div>
+                <h4 class="uppercase text-muted text-sm tracking-tight" style="margin-bottom: 2rem;">Degree</h4>
+                <p style="font-size: 1.25rem;"><strong>B.Tech in Computer Science</strong></p>
+                <p class="text-muted">JK Lakshmipat University, Jaipur</p>
+                <p class="text-dim text-sm">2016 – 2020</p>
+            </div>
+            <div>
+                <h4 class="uppercase text-muted text-sm tracking-tight" style="margin-bottom: 2rem;">Certifications
+                </h4>
+                <ul class="experience-details" style="font-size: 1.125rem;">
+                    <li><a href="https://bcert.me/sskicporw" target="_blank" class="cert-link">Certified Scrum Product
+                            Owner (CSPO) <ion-icon name="arrow-up-outline"></ion-icon></a></li>
+                    <li><a href="https://bcert.me/stwfwndos" target="_blank" class="cert-link">Certified ScrumMaster
+                            (CSM) <ion-icon name="arrow-up-outline"></ion-icon></a></li>
+                    <li><a href="https://www.credly.com/badges/a7641d13-9812-4e89-b82d-e4de92945d3f/public_url"
+                            target="_blank" class="cert-link">Google Professional Project Management <ion-icon
+                                name="arrow-up-outline"></ion-icon></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<global-contact></global-contact>
+
+<global-footer></global-footer>
+
+<!-- Scripts -->
+<!-- IonIcons -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+<script src="./assets/js/script.js"></script>
 </body>
 
 </html>

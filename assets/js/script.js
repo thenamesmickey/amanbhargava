@@ -1,150 +1,137 @@
-'use strict';
+// Initialize Lenis Smooth Scroll
+const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    smooth: true,
+    direction: 'vertical',
+    gestureDirection: 'vertical',
+    smoothTouch: false,
+    touchMultiplier: 2,
+});
 
-// ─── Partial Loader ──────────────────────────────────────────────────────────
-
-/**
- * Fetches an HTML partial and injects it into the target container element.
- * @param {string} url   - path to the partial file
- * @param {string} id    - id of the container element to populate
- */
-async function loadPartial(url, id) {
-  const container = document.getElementById(id);
-  if (!container) return;
-  const response = await fetch(url);
-  container.innerHTML = await response.text();
+function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
 }
 
-// ─── Initialise after all partials are loaded ─────────────────────────────────
+requestAnimationFrame(raf);
 
-async function init() {
-  // Load all sections in parallel
-  await Promise.all([
-    loadPartial('./components/sidebar.html', 'sidebar-container'),
-    loadPartial('./components/navbar.html', 'navbar-container'),
-    loadPartial('./components/about.html', 'about-container'),
-    loadPartial('./components/resume.html', 'resume-container'),
-    loadPartial('./components/portfolio.html', 'portfolio-container'),
-    loadPartial('./components/contact.html', 'contact-container'),
-  ]);
+// Register GSAP ScrollTrigger
+gsap.registerPlugin(ScrollTrigger);
 
-  // ── element toggle helper ─────────────────────────────────────────────────
-  const elementToggleFunc = function (elem) { elem.classList.toggle('active'); };
+// Custom Cursor Follower
+const cursor = document.querySelector('.cursor-dot');
 
-  // ── sidebar ───────────────────────────────────────────────────────────────
-  const sidebar = document.querySelector('[data-sidebar]');
-  const sidebarBtn = document.querySelector('[data-sidebar-btn]');
-
-  if (sidebar && sidebarBtn) {
-    sidebarBtn.addEventListener('click', function () { elementToggleFunc(sidebar); });
-  }
-
-  // ── page navigation ───────────────────────────────────────────────────────
-  const navigationLinks = document.querySelectorAll('[data-nav-link]');
-  const pages = document.querySelectorAll('[data-page]');
-
-  /**
-   * Updates UI state (active classes) based on the provided page name.
-   * @param {string} pageName - The name of the page to navigate to.
-   */
-  function navigateTo(pageName) {
-    let found = false;
-    for (let i = 0; i < pages.length; i++) {
-      if (pages[i].dataset.page === pageName) {
-        pages[i].classList.add('active');
-        navigationLinks[i].classList.add('active');
-        found = true;
-      } else {
-        pages[i].classList.remove('active');
-        navigationLinks[i].classList.remove('active');
-      }
-    }
-    if (found) window.scrollTo(0, 0);
-  }
-
-  // Initial load: handle hash in URL
-  const initialHash = window.location.hash.replace('#', '').toLowerCase();
-  if (initialHash) {
-    navigateTo(initialHash);
-  } else {
-    // Default to the first page if no hash
-    navigateTo('about');
-  }
-
-  // Handle hash changes (back/forward buttons or direct navigation)
-  window.addEventListener('hashchange', () => {
-    const pageName = window.location.hash.replace('#', '').toLowerCase();
-    if (pageName) navigateTo(pageName);
-  });
-
-  // Attach click listeners to update the hash
-  for (let i = 0; i < navigationLinks.length; i++) {
-    navigationLinks[i].addEventListener('click', function () {
-      const pageName = this.innerHTML.toLowerCase().trim();
-      // Skip specialized buttons like "Download CV" if they exist
-      if (pageName !== 'download cv') {
-        window.location.hash = pageName;
-      }
+document.addEventListener('mousemove', (e) => {
+    gsap.to(cursor, {
+        x: e.clientX,
+        y: e.clientY,
+        duration: 0.1,
+        ease: 'power2.out'
     });
-  }
+});
 
-  // ── contact form ──────────────────────────────────────────────────────────
+// Cursor Hover Effects on Links
+const interactiveElements = document.querySelectorAll('a, button, .project-card');
 
-  function isMobileDevice() {
-    return /Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
-  }
+interactiveElements.forEach(el => {
+    el.addEventListener('mouseenter', () => {
+        gsap.to(cursor, {
+            scale: 3,
+            backgroundColor: 'transparent',
+            border: '1px solid var(--text-primary)',
+            duration: 0.3,
+            ease: 'power2.out'
+        });
+    });
+    
+    el.addEventListener('mouseleave', () => {
+        gsap.to(cursor, {
+            scale: 1,
+            backgroundColor: 'var(--text-primary)',
+            border: 'none',
+            duration: 0.3,
+            ease: 'power2.out'
+        });
+    });
+});
 
-  function sendWhatsAppMessage(senderName, message) {
-    const phoneNumber = '+918769018313';
-    window.open(
-      `whatsapp://send?phone=${phoneNumber}&text=${encodeURIComponent('Hello i am ' + senderName + ', and i have a query regarding :- ' + message)}`,
-      '_blank'
-    );
-    setTimeout(function () {
-      if (!document.hidden) { sendWhatsWebMessage(senderName, message); }
-    }, 2000);
-  }
+// Typographic Parallax Effect
+const parallaxElements = document.querySelectorAll('[data-speed]');
 
-  function sendWhatsWebMessage(senderName, message) {
-    const phoneNumber = '+918769018313';
-    window.open(
-      `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent('Hello i am ' + senderName + ', and i have a query regarding :- ' + message)}`,
-      '_blank'
-    );
-  }
+parallaxElements.forEach(el => {
+    const speed = parseFloat(el.getAttribute('data-speed'));
+    const yValue = (1 - speed) * 200; // Calculate translation based on speed diff from 1
+    
+    gsap.to(el, {
+        y: yValue,
+        ease: 'none',
+        scrollTrigger: {
+            trigger: el,
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: true
+        }
+    });
+});
 
-  function sendEmail(senderEmail, senderName, message) {
-    const receiverEmail = 'amanbhargava1998@gmail.com';
-    const subject = `Message from ${senderName}`;
-    const body = `Sender's Email: ${senderEmail}\n\nMessage: ${message}`;
-    const mailtoUrl = `mailto:${receiverEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    const newWindow = window.open(mailtoUrl, 'EmailWindow');
-    if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
-      alert('Error: Unable to send email. Please try again later.');
-    }
-  }
+// Hero Reveal Animation on Load
+window.addEventListener('load', () => {
+    const tl = gsap.timeline();
+    
+    // Initial state for subtitles and words
+    gsap.set('.subtitle-2, .subtitle-3, .word-2, .word-3', { autoAlpha: 0 });
+    
+    tl.from('.hero-title:not(.word-2):not(.word-3)', {
+        yPercent: 100,
+        opacity: 0,
+        duration: 1.5,
+        stagger: 0.2,
+        ease: 'power4.out',
+        delay: 0.2
+    })
+    .from('.subtitle-1', {
+        y: 20,
+        opacity: 0,
+        duration: 1,
+        ease: 'power3.out'
+    }, '-=1')
+    .from('.hero-meta', {
+        opacity: 0,
+        duration: 1,
+        ease: 'power2.out'
+    }, '-=0.5')
+    .from('.global-nav', {
+        y: -20,
+        opacity: 0,
+        duration: 1,
+        ease: 'power2.out'
+    }, '-=1');
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    const senderName = document.getElementById('senderName').value;
-    const senderEmail = document.getElementById('senderEmail').value;
-    const message = document.getElementById('message').value;
+    // Hero Pinning and Word Morphing
+    tl.add(() => {
+        const heroPinTl = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#hero-pin",
+                start: "top top",
+                end: "+=2000",
+                pin: true,
+                scrub: 1,
+            }
+        });
 
-    if (isMobileDevice()) {
-      sendWhatsAppMessage(senderName, message);
-    } else {
-      if (confirm('Would you like to open WhatsApp Web?')) {
-        sendWhatsWebMessage(senderName, message);
-      } else {
-        sendEmail(senderEmail, senderName, message);
-      }
-    }
-  }
+        // Phase 1: Manager -> Thinker
+        heroPinTl.to(".scroller-inner", { yPercent: -100, duration: 1, ease: "power2.inOut" }, 0.1)
+                 .to(".word-1", { autoAlpha: 0, duration: 0.5 }, 0.1)
+                 .to(".word-2", { autoAlpha: 1, duration: 0.5 }, 0.1) // Ensure it's visible
+                 .to(".subtitle-1", { autoAlpha: 0, duration: 0.5 }, 0.1)
+                 .to(".subtitle-2", { autoAlpha: 1, duration: 0.5 }, 0.6);
 
-  const contactForm = document.getElementById('contact-form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', handleSubmit);
-  }
-}
-
-// Kick everything off once the base DOM is ready
-document.addEventListener('DOMContentLoaded', init);
+        // Phase 2: Thinker -> Builder
+        heroPinTl.to(".scroller-inner", { yPercent: -200, duration: 1, ease: "power2.inOut" }, 1.1)
+                 .to(".word-2", { autoAlpha: 0, duration: 0.5 }, 1.1)
+                 .to(".word-3", { autoAlpha: 1, duration: 0.5 }, 1.1)
+                 .to(".subtitle-2", { autoAlpha: 0, duration: 0.5 }, 1.1)
+                 .to(".subtitle-3", { autoAlpha: 1, duration: 0.5 }, 1.6);
+    });
+});

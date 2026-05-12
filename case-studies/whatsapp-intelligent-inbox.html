@@ -9,15 +9,21 @@
     <meta name="description"
         content="Case Study: WhatsApp Intelligent Inbox — Solving Information Overload for 2 Billion Users by Aman Bhargava." />
 
-    <link rel="shortcut icon" href="../assets/images/logo.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+    <link rel="icon" href="../assets/images/favicon.ico">
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/case-study.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <script src="../assets/js/components.js"></script>
 </head>
 
 <body class="cs-body">
+
+    <global-navbar base-path="../"></global-navbar>
 
     <div class="cs-root">
 
@@ -25,9 +31,9 @@
         <aside class="cs-sidenav" id="cs-sidenav">
 
             <!-- Back link -->
-            <a href="../#portfolio" class="cs-back-side">
+            <a href="../#Case-studies" class="cs-back-side">
                 <ion-icon name="arrow-back-outline"></ion-icon>
-                Back to Portfolio
+                Back to Case-studies
             </a>
 
             <!-- Mobile toggle header -->
@@ -414,8 +420,7 @@
                                 <ion-icon name="chevron-down-outline" class="cs-accordion-chevron"></ion-icon>
                             </button>
                             <div class="cs-accordion-content">
-                                <div class="cs-card"
-                                    style="border: none; box-shadow: none; background: transparent; padding: 0;">
+                                <div class="cs-card" style="border: none; box-shadow: none; background: transparent;">
                                     <div class="cs-hero-meta" style="margin-bottom: 20px; margin-top: 20px;">
                                         <span class="cs-tag">Status: Draft / For Review</span>
                                         <span class="cs-tag">Author: Aman Bhargava</span>
@@ -593,8 +598,7 @@
                                 <ion-icon name="chevron-down-outline" class="cs-accordion-chevron"></ion-icon>
                             </button>
                             <div class="cs-accordion-content">
-                                <div class="cs-card"
-                                    style="border: none; box-shadow: none; background: transparent; padding: 0;">
+                                <div class="cs-card" style="border: none; box-shadow: none; background: transparent;">
                                     <div class="cs-hero-meta" style="margin-bottom: 20px; margin-top: 20px;">
                                         <span class="cs-tag">Methodology: Mixed-methods</span>
                                         <span class="cs-tag">12 Interviews</span>
@@ -650,9 +654,7 @@
                                             style="background: hsla(240, 2%, 18%, 0.5); padding: 20px; border-radius: 12px; border: 1px solid var(--jet);">
                                             <div
                                                 style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
-                                                <div
-                                                    style="width: 40px; height: 40px; background: var(--orange-yellow-crayola); border-radius: 50%; display: flex; justify-content: center; align-items: center; color: var(--eerie-black-1); font-weight: bold;">
-                                                    H</div>
+
                                                 <div>
                                                     <h4 style="font-size: 16px; color: var(--white-2);">Freelancer /
                                                         Small Biz</h4>
@@ -747,8 +749,7 @@
                                 <ion-icon name="chevron-down-outline" class="cs-accordion-chevron"></ion-icon>
                             </button>
                             <div class="cs-accordion-content">
-                                <div class="cs-card"
-                                    style="border: none; box-shadow: none; background: transparent; padding: 0;">
+                                <div class="cs-card" style="border: none; box-shadow: none; background: transparent;">
                                     <div class="cs-hero-meta" style="margin-bottom: 20px; margin-top: 20px;">
                                         <span class="cs-tag">Principle: Familiar but Filtered</span>
                                         <span class="cs-tag">Low-Fidelity</span>
@@ -815,8 +816,7 @@
                                         style="background: hsl(240, 2%, 13%); padding: 15px; border-radius: 12px; border: 1px solid var(--jet); margin-bottom: 24px;">
                                         <div class="cs-timeline" style="margin-bottom: 0;">
                                             <div class="cs-tl-item">
-                                                <span class="cs-tl-q"
-                                                    style="background: var(--orange-yellow-crayola); color: var(--eerie-black-1);">Trigger</span>
+                                                <span class="cs-tl-q">Trigger</span>
                                                 <p style="font-size: 12px;"><strong>Incoming Message:</strong> Unknown
                                                     number but contains "Urgent" keywords.</p>
                                             </div>
@@ -877,8 +877,7 @@
                                 <ion-icon name="chevron-down-outline" class="cs-accordion-chevron"></ion-icon>
                             </button>
                             <div class="cs-accordion-content">
-                                <div class="cs-card"
-                                    style="border: none; box-shadow: none; background: transparent; padding: 0;">
+                                <div class="cs-card" style="border: none; box-shadow: none; background: transparent;">
                                     <div class="cs-hero-meta" style="margin-bottom: 20px; margin-top: 20px;">
                                         <span class="cs-tag">Focus: Scalability</span>
                                         <span class="cs-tag">Risk Mitigation</span>
@@ -1020,9 +1019,9 @@
             </div><!-- /.cs-content -->
 
             <footer class="cs-footer">
-                <a href="../#portfolio" class="cs-back-btn">
+                <a href="../#Case-studies" class="cs-back-btn">
                     <ion-icon name="arrow-back-outline"></ion-icon>
-                    Back to Portfolio
+                    Back to Case-studies
                 </a>
             </footer>
 
@@ -1030,27 +1029,51 @@
 
     </div><!-- /.cs-root -->
 
+    <!-- CONTACT SECTION -->
+    <global-contact></global-contact>
+
+    <global-footer></global-footer>
+
+    <!-- IonIcons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="../assets/js/script.js"></script>
     <script>
         // ── Mobile TOC toggle ─────────────────────────────────────────
         const sidenav = document.getElementById('cs-sidenav');
         const tocToggle = document.getElementById('cs-toc-toggle');
 
-        tocToggle.addEventListener('click', () => {
-            sidenav.classList.toggle('open');
-        });
+        if (tocToggle && sidenav) {
+            tocToggle.addEventListener('click', () => {
+                sidenav.classList.toggle('active');
+                sidenav.classList.toggle('open'); // For legacy support
+            });
+        }
 
         // ── Smooth scroll on TOC click ────────────────────────────────
         document.querySelectorAll('.cs-toc-link').forEach(link => {
             link.addEventListener('click', e => {
                 e.preventDefault();
-                sidenav.classList.remove('open'); // close on mobile after click
+                if (sidenav) {
+                    sidenav.classList.remove('active');
+                    sidenav.classList.remove('open');
+                }
                 const href = link.getAttribute('href');
                 const target = document.querySelector(href);
                 if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    if (typeof lenis !== 'undefined') {
+                        lenis.scrollTo(target, { offset: -100 });
+                    } else {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
 
-                    // Auto-open Appendix A if scrolling to #prd
-                    if (href === '#prd') {
+                    // Auto-open Appendix A if scrolling to #appendices or #prd
+                    if (href === '#appendices' || href === '#prd') {
                         const appA = document.querySelector('[data-accordion]');
                         if (appA) {
                             document.querySelectorAll('[data-accordion]').forEach(el => el.classList.remove('active'));
@@ -1067,10 +1090,38 @@
                 const item = this.parentElement;
                 const isActive = item.classList.contains('active');
 
-                // Optional: close other items
-                document.querySelectorAll('[data-accordion]').forEach(el => el.classList.remove('active'));
+                if (!isActive) {
+                    // Check for currently active accordion
+                    const activeItem = document.querySelector('[data-accordion].active');
+                    let shiftOffset = 0;
 
-                if (!isActive) item.classList.add('active');
+                    if (activeItem && activeItem !== item) {
+                        // If active accordion is ABOVE the clicked one, calculate the height it will lose
+                        if (activeItem.compareDocumentPosition(item) & Node.DOCUMENT_POSITION_FOLLOWING) {
+                            const activeContent = activeItem.querySelector('.cs-accordion-content');
+                            if (activeContent) {
+                                shiftOffset = activeContent.getBoundingClientRect().height;
+                            }
+                        }
+                        // Close the active accordion
+                        activeItem.classList.remove('active');
+                    }
+
+                    item.classList.add('active');
+
+                    // Calculate the precise final scroll position mathematically
+                    const offset = 120; // Navbar height + padding
+                    const finalTop = item.getBoundingClientRect().top + window.scrollY - offset - shiftOffset;
+
+                    // Smooth scroll to the final position concurrently with the CSS transition
+                    if (typeof lenis !== 'undefined') {
+                        lenis.scrollTo(finalTop, { duration: 0.8 });
+                    } else {
+                        window.scrollTo({ top: finalTop, behavior: 'smooth' });
+                    }
+                } else {
+                    item.classList.remove('active');
+                }
             });
         });
 
@@ -1078,21 +1129,66 @@
         const sections = document.querySelectorAll('.cs-section[id]');
         const tocLinks = document.querySelectorAll('.cs-toc-link');
 
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    tocLinks.forEach(l => l.classList.remove('active'));
-                    const active = document.querySelector(`.cs-toc-link[href="#${entry.target.id}"]`);
-                    if (active) active.classList.add('active');
+        const updateActiveSection = () => {
+            let current = '';
+            const scrollY = window.scrollY;
+
+            // Find the section that is currently most visible or at the top
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 150; // offset for nav
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
                 }
             });
-        }, { rootMargin: '-20% 0px -70% 0px' });
 
-        sections.forEach(s => observer.observe(s));
+            if (current) {
+                tocLinks.forEach(l => l.classList.remove('active'));
+                const active = document.querySelector(`.cs-toc-link[href="#${current}"]`);
+                if (active) active.classList.add('active');
+            }
+        };
+
+        window.addEventListener('scroll', updateActiveSection);
+        // Initial call
+        updateActiveSection();
+
+        // ── Reading Progress Bar & Back to Top ───────────────────────
+        const globalNav = document.querySelector('.global-nav');
+        if (globalNav) {
+            const progressBar = document.createElement('div');
+            progressBar.className = 'reading-progress-bar';
+            globalNav.appendChild(progressBar);
+
+            window.addEventListener('scroll', () => {
+                const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrollPercentage = (scrollTop / scrollHeight) * 100;
+                progressBar.style.width = scrollPercentage + '%';
+            });
+        }
+
+        const backToTopBtn = document.createElement('button');
+        backToTopBtn.className = 'back-to-top';
+        backToTopBtn.setAttribute('aria-label', 'Back to top');
+        backToTopBtn.innerHTML = '<ion-icon name="arrow-up-outline"></ion-icon>';
+        document.body.appendChild(backToTopBtn);
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            if (typeof lenis !== 'undefined') {
+                lenis.scrollTo(0, { duration: 1.2 });
+            } else {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        });
     </script>
-
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

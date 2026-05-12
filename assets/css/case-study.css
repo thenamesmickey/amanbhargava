@@ -5,22 +5,33 @@
  */
 
 :root {
-  --cs-accent: hsl(45, 100%, 72%);
-  --cs-bg: hsl(240, 2%, 12%);
-  /* same as --eerie-black-2 */
-  --cs-surface: hsl(240, 2%, 12%);
-  --cs-surface-2: hsl(240, 2%, 13%);
-  --cs-border: hsl(0, 0%, 22%);
-  --cs-text: hsl(0, 0%, 84%);
-  --cs-text-muted: hsla(0, 0%, 84%, 0.7);
-  --cs-white: hsl(0, 0%, 100%);
+  /* Editorial Theme Variables mapped to Case Study */
+  --cs-accent: var(--text-primary);
+  --cs-bg: var(--bg-base);
+  --cs-surface: var(--bg-surface);
+  --cs-surface-2: var(--bg-surface);
+  --cs-border: var(--border-color);
+  --cs-text: var(--text-primary);
+  --cs-text-muted: var(--text-muted);
+  --cs-white: var(--text-primary);
+
+  /* Legacy variables used by case studies mapped to editorial theme */
+  --smoky-black: var(--bg-base);
+  --eerie-black-2: var(--bg-surface);
+  --jet: var(--border-color);
+  --shadow-1: none;
+  --shadow-2: none;
+  --orange-yellow-crayola: var(--text-primary);
+  --white-2: var(--text-primary);
+  --border-gradient-onyx: transparent;
+  --bg-gradient-jet: var(--bg-surface);
 }
 
 /* ─── Base ─────────────────────────────────────────────────────── */
 .cs-body {
   background: var(--smoky-black);
   color: var(--cs-text);
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-sans);
   font-size: 15px;
   line-height: 1.7;
   font-weight: 300;
@@ -31,12 +42,12 @@
 .cs-root {
   max-width: 1200px;
   margin-inline: auto;
-  padding: 20px 15px 30px;
+  padding: 120px 15px 30px;
 }
 
 @media (min-width: 580px) {
   .cs-root {
-    padding: 30px 30px 40px;
+    padding: 120px 30px 40px;
   }
 }
 
@@ -45,7 +56,7 @@
     display: flex;
     align-items: flex-start;
     gap: 25px;
-    padding: 40px 30px 50px;
+    padding: 120px 30px 50px;
   }
 }
 
@@ -63,7 +74,7 @@
 @media (min-width: 1250px) {
   .cs-sidenav {
     position: sticky;
-    top: 40px;
+    top: 120px;
     max-height: max-content;
     height: 100%;
     flex-shrink: 0;
@@ -186,10 +197,11 @@
 
 .cs-toc-num {
   flex-shrink: 0;
-  font-size: 9px;
+  font-family: var(--font-primary);
+  font-size: 11px;
   font-weight: 700;
-  opacity: 0.5;
-  width: 18px;
+  opacity: 0.6;
+  width: 20px;
 }
 
 /* ─── Main article card — mirrors article / .main-content ──────── */
@@ -229,7 +241,6 @@
   border: 1px solid hsla(45, 100%, 72%, 0.3);
   border-radius: 8px;
   transition: background 0.25s, border-color 0.25s;
-  margin-bottom: 30px;
 }
 
 .cs-back-btn:hover {
@@ -258,20 +269,22 @@
 
 .cs-tag {
   display: inline-block;
-  font-size: 11px;
+  font-family: var(--font-primary);
+  font-size: 12px;
   font-weight: 500;
   color: var(--orange-yellow-crayola);
   background: hsla(45, 100%, 72%, 0.1);
   border: 1px solid hsla(45, 100%, 72%, 0.25);
-  padding: 3px 10px;
+  padding: 4px 12px;
   border-radius: 20px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
 .cs-title {
-  font-size: clamp(22px, 4vw, 32px);
-  font-weight: 600;
+  font-family: var(--font-secondary);
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 400;
   color: var(--white-2);
   line-height: 1.2;
   margin-bottom: 8px;
@@ -294,8 +307,9 @@
 }
 
 .cs-section-title {
-  font-size: 17px;
-  font-weight: 600;
+  font-family: var(--font-secondary);
+  font-size: 24px;
+  font-weight: 400;
   color: var(--white-2);
   display: flex;
   align-items: center;
@@ -304,34 +318,31 @@
 }
 
 .cs-num {
-  font-size: 10px;
-  font-weight: 700;
-  color: var(--orange-yellow-crayola);
-  background: hsla(45, 100%, 72%, 0.1);
-  border: 1px solid hsla(45, 100%, 72%, 0.25);
-  padding: 2px 8px;
-  border-radius: 6px;
-  letter-spacing: 1px;
+  font-family: var(--font-primary);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  padding: 4px 10px;
+  border-radius: 8px;
+  letter-spacing: 0.5px;
   flex-shrink: 0;
 }
 
 /* ─── Card ─────────────────────────────────────────────────────── */
 .cs-card {
-  background: var(--border-gradient-onyx);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
   border-radius: 14px;
-  padding: 20px;
+  padding: 30px;
   position: relative;
   z-index: 1;
-  box-shadow: var(--shadow-2);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
 }
 
 .cs-card::before {
-  content: "";
-  position: absolute;
-  inset: 1px;
-  background: var(--bg-gradient-jet);
-  border-radius: inherit;
-  z-index: -1;
+  display: none;
 }
 
 .cs-highlight-card {
@@ -359,7 +370,8 @@
 
 /* ─── Card label ────────────────────────────────────────────────── */
 .cs-card-label {
-  font-size: 11px;
+  font-family: var(--font-primary);
+  font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -405,7 +417,7 @@
   margin-bottom: 4px;
 }
 
-@media (min-width: 520px) {
+@media (min-width: 768px) {
   .cs-persona-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -443,31 +455,38 @@
 /* ─── Table ─────────────────────────────────────────────────────── */
 .cs-table-wrap {
   overflow-x: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.02);
 }
 
 .cs-table {
   width: 100%;
-  border-collapse: collapse;
-  font-size: 13px;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 14px;
 }
 
 .cs-table th,
 .cs-table td {
   text-align: left;
-  padding: 9px 11px;
-  border-bottom: 1px solid var(--jet);
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .cs-table th {
-  font-size: 10px;
-  font-weight: 700;
+  font-size: 11px;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.8px;
-  color: var(--orange-yellow-crayola);
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.04);
 }
 
 .cs-table td {
-  color: var(--cs-text);
+  color: var(--text-primary);
 }
 
 .cs-table tr:last-child td {
@@ -605,7 +624,7 @@
   gap: 12px;
 }
 
-@media (min-width: 520px) {
+@media (min-width: 768px) {
 
   .cs-stakeholder-grid,
   .cs-kpi-grid {
@@ -663,6 +682,7 @@
   border-radius: 12px;
   overflow: hidden;
   transition: border-color 0.25s;
+  scroll-margin-top: 120px;
 }
 
 .cs-accordion-item.active {
@@ -726,16 +746,22 @@
   transform: rotate(180deg);
 }
 
+.cs-accordion-item.active .cs-accordion-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
 .cs-accordion-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.4s ease;
+  transition: max-height 0.4s ease;
 }
 
 .cs-accordion-item.active .cs-accordion-content {
   max-height: 3000px;
-  /* high enough to fit PRD */
-  padding: 0 20px 24px;
+}
+
+.cs-accordion-content>.cs-card {
+  padding: 24px 20px 32px !important;
 }
 
 .cs-appendix-link {
@@ -763,4 +789,15 @@
   margin-top: 20px;
   padding-top: 16px;
   border-top: 1px solid var(--jet);
+}
+
+/* ─── Responsive Safeguards ──────────────────────────────────────── */
+.cs-main img,
+.cs-main video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }

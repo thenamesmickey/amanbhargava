@@ -135,3 +135,24 @@ window.addEventListener('load', () => {
                  .to(".subtitle-3", { autoAlpha: 1, duration: 0.5 }, 1.6);
     });
 });
+
+// Case Study TOC Toggle
+document.addEventListener('DOMContentLoaded', () => {
+    const tocToggle = document.getElementById('cs-toc-toggle');
+    const sideNav = document.getElementById('cs-sidenav');
+    if (tocToggle && sideNav) {
+        tocToggle.addEventListener('click', () => {
+            sideNav.classList.toggle('open');
+        });
+        
+        // Close TOC when a link is clicked (on mobile)
+        const tocLinks = document.querySelectorAll('.cs-toc-link');
+        tocLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 1250) {
+                    sideNav.classList.remove('open');
+                }
+            });
+        });
+    }
+});

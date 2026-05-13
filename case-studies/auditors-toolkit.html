@@ -29,11 +29,6 @@
 
         <!-- ═══ TOC SIDEBAR ═══════════════════════════════════════════ -->
         <aside class="cs-sidenav" id="cs-sidenav">
-            <!-- Back link -->
-            <a href="../#Case-studies" class="cs-back-side">
-                <ion-icon name="arrow-back-outline"></ion-icon>
-                Back to Case-studies
-            </a>
 
             <!-- Mobile toggle header -->
             <div class="cs-sidenav-header" id="cs-toc-toggle">
@@ -74,9 +69,11 @@
                     <span class="cs-tag">B2B SaaS</span>
                     <span class="cs-tag">AI Governance</span>
                     <span class="cs-tag">Legal-Tech</span>
+                    <span class="cs-read-time">12 min read</span>
                 </div>
                 <h1 class="cs-title">Auditor’s Toolkit: <span class="cs-accent">AI GRC SaaS</span></h1>
-                <p class="cs-subtitle">Simplifying Global AI Governance for Startups & Compliance Professionals</p>
+                <p class="cs-subtitle">Simplifying Global AI Governance for Startups & Compliance Professionals. <br>
+                    A Product Thinking Exercise</p>
             </header>
 
             <div class="cs-content">
@@ -811,16 +808,7 @@
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
     <script src="../assets/js/script.js"></script>
     <script>
-        // ── Mobile TOC toggle ─────────────────────────────────────────
-        const sidenav = document.getElementById('cs-sidenav');
-        const tocToggle = document.getElementById('cs-toc-toggle');
 
-        if (tocToggle && sidenav) {
-            tocToggle.addEventListener('click', () => {
-                sidenav.classList.toggle('active');
-                sidenav.classList.toggle('open'); // For legacy support
-            });
-        }
 
         // ── Smooth scroll on TOC click ────────────────────────────────
         document.querySelectorAll('.cs-toc-link').forEach(link => {

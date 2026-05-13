@@ -29,11 +29,6 @@
 
         <!-- ═══ TOC SIDEBAR ═══════════════════════════════════════════ -->
         <aside class="cs-sidenav" id="cs-sidenav">
-            <!-- Back link -->
-            <a href="../#Case-studies" class="cs-back-side">
-                <ion-icon name="arrow-back-outline"></ion-icon>
-                Back to Case-studies
-            </a>
 
             <!-- Mobile toggle header -->
             <div class="cs-sidenav-header" id="cs-toc-toggle">
@@ -75,9 +70,10 @@
                     <span class="cs-tag">0-to-1 SaaS</span>
                     <span class="cs-tag">Creator Economy</span>
                     <span class="cs-tag">Next.js 14</span>
+                    <span class="cs-read-time">16 min read</span>
                 </div>
                 <h1 class="cs-title">Sociovox: <span class="cs-accent">Creator Management Platform</span></h1>
-                <p class="cs-subtitle">From a blank repo to a live, billing SaaS in 90 days - solo.</p>
+                <p class="cs-subtitle">From a blank repo to a live, billing SaaS in 60 days - solo.</p>
             </header>
 
             <div class="cs-content">
@@ -409,7 +405,7 @@
                     <div class="cs-card">
                         <div class="cs-stat-row" style="margin-bottom: 24px;">
                             <div class="cs-stat">
-                                <span class="cs-stat-num">90 days</span>
+                                <span class="cs-stat-num">60 days</span>
                                 <span class="cs-stat-desc">Zero to live product - blank repo to deployed SaaS with
                                     billing</span>
                             </div>
@@ -478,7 +474,7 @@
                             <div class="cs-col">
                                 <h3 class="cs-card-label">What this proves</h3>
                                 <p>I can take a product from zero - no team, no funding, no existing codebase - to a
-                                    live, billing, multi-module SaaS with real users in 90 days. Every decision from
+                                    live, billing, multi-module SaaS with real users in 60 days. Every decision from
                                     database schema to upgrade prompt copy was a product decision I owned.</p>
                             </div>
                             <div class="cs-col">
@@ -825,16 +821,7 @@
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
     <script src="../assets/js/script.js"></script>
     <script>
-        // ── Mobile TOC toggle ─────────────────────────────────────────
-        const sidenav = document.getElementById('cs-sidenav');
-        const tocToggle = document.getElementById('cs-toc-toggle');
 
-        if (tocToggle && sidenav) {
-            tocToggle.addEventListener('click', () => {
-                sidenav.classList.toggle('active');
-                sidenav.classList.toggle('open'); // For legacy support
-            });
-        }
 
         // ── Smooth scroll on TOC click ────────────────────────────────
         document.querySelectorAll('.cs-toc-link').forEach(link => {

@@ -30,12 +30,6 @@
         <!-- ═══ TOC SIDEBAR ═══════════════════════════════════════════ -->
         <aside class="cs-sidenav" id="cs-sidenav">
 
-            <!-- Back link -->
-            <a href="../#Case-studies" class="cs-back-side">
-                <ion-icon name="arrow-back-outline"></ion-icon>
-                Back to Case-studies
-            </a>
-
             <!-- Mobile toggle header -->
             <div class="cs-sidenav-header" id="cs-toc-toggle">
                 <span class="cs-sidenav-label">Contents</span>
@@ -75,9 +69,11 @@
                     <span class="cs-tag">On-Device AI</span>
                     <span class="cs-tag">Privacy-First</span>
                     <span class="cs-tag">Agile-Scrumban</span>
+                    <span class="cs-read-time">20 min read</span>
                 </div>
                 <h1 class="cs-title">WhatsApp <span class="cs-accent">"Intelligent Inbox"</span></h1>
-                <p class="cs-subtitle">Solving Information Overload for 2 Billion Users</p>
+                <p class="cs-subtitle">Solving Information Overload for 2 Billion Users <br> A Product Thinking Exercise
+                </p>
             </header>
 
             <div class="cs-content">
@@ -354,16 +350,19 @@
                 <!-- 11. Results -->
                 <section id="results" class="cs-section">
                     <h2 class="cs-section-title"><span class="cs-num">11</span> Results &amp; Impact</h2>
-                    <p class="cs-section-subtitle" style="margin-bottom: 1.5rem;">Target impact based on diary study baseline and prototype testing.</p>
+                    <p class="cs-section-subtitle" style="margin-bottom: 1.5rem;">Target impact based on diary study
+                        baseline and prototype testing.</p>
                     <div class="cs-card">
                         <div class="cs-stat-row">
                             <div class="cs-stat">
                                 <span class="cs-stat-num">14s → 3s</span>
-                                <span class="cs-stat-desc">Targeted avg. scroll time to find an urgent chat — a 78% projected improvement</span>
+                                <span class="cs-stat-desc">Targeted avg. scroll time to find an urgent chat — a 78%
+                                    projected improvement</span>
                             </div>
                             <div class="cs-stat">
                                 <span class="cs-stat-num">+12%</span>
-                                <span class="cs-stat-desc">Projected lift in App Retention for high-volume group users by reducing "Notification Churn"</span>
+                                <span class="cs-stat-desc">Projected lift in App Retention for high-volume group users
+                                    by reducing "Notification Churn"</span>
                             </div>
                         </div>
                     </div>
@@ -1044,16 +1043,7 @@
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
     <script src="../assets/js/script.js"></script>
     <script>
-        // ── Mobile TOC toggle ─────────────────────────────────────────
-        const sidenav = document.getElementById('cs-sidenav');
-        const tocToggle = document.getElementById('cs-toc-toggle');
 
-        if (tocToggle && sidenav) {
-            tocToggle.addEventListener('click', () => {
-                sidenav.classList.toggle('active');
-                sidenav.classList.toggle('open'); // For legacy support
-            });
-        }
 
         // ── Smooth scroll on TOC click ────────────────────────────────
         document.querySelectorAll('.cs-toc-link').forEach(link => {

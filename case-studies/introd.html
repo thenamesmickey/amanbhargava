@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introd: From Alpha to Trusted Network — Aman Bhargava</title>
+    <meta name="description"
+        content="Product Vision and 90-Day Execution Plan for the Founding Product Lead role at Introd by Aman Bhargava." />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+    <link rel="icon" href="../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/case-study.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <script src="../assets/js/components.js"></script>
+</head>
+
+<body class="cs-body">
+
+    <global-navbar base-path="../"></global-navbar>
+
+    <div class="cs-root">
+
+        <!-- ═══ TOC SIDEBAR ═══════════════════════════════════════════ -->
+        <aside class="cs-sidenav" id="cs-sidenav">
+            <!-- Mobile toggle header -->
+            <div class="cs-sidenav-header" id="cs-toc-toggle">
+                <span class="cs-sidenav-label">Contents</span>
+                <ion-icon name="chevron-down-outline" class="cs-sidenav-toggle"></ion-icon>
+            </div>
+
+            <nav>
+                <ol class="cs-toc">
+                    <li><a href="#intro" class="cs-toc-link"><span class="cs-toc-num">01</span>Introduction</a></li>
+                    <li><a href="#problem" class="cs-toc-link"><span class="cs-toc-num">02</span>The Real Problem</a></li>
+                    <li><a href="#market" class="cs-toc-link"><span class="cs-toc-num">03</span>Market Context</a></li>
+                    <li><a href="#vision" class="cs-toc-link"><span class="cs-toc-num">04</span>Product Vision</a></li>
+                    <li><a href="#flow" class="cs-toc-link"><span class="cs-toc-num">05</span>The 3-Hop Intro Flow</a></li>
+                    <li><a href="#trust" class="cs-toc-link"><span class="cs-toc-num">06</span>The Trust Score Model</a></li>
+                    <li><a href="#growth" class="cs-toc-link"><span class="cs-toc-num">07</span>Invite-Gated Growth Loop</a></li>
+                    <li><a href="#metrics" class="cs-toc-link"><span class="cs-toc-num">08</span>North-Star Metrics</a></li>
+                    <li><a href="#plan" class="cs-toc-link"><span class="cs-toc-num">09</span>The 90-Day Plan</a></li>
+                    <li><a href="#fit" class="cs-toc-link"><span class="cs-toc-num">10</span>Why I Am the Right Fit</a></li>
+                    <li><a href="#appendices" class="cs-toc-link"><span class="cs-toc-num">11</span>Appendices</a></li>
+                </ol>
+            </nav>
+        </aside>
+
+        <!-- ═══ MAIN ARTICLE CARD ════════════════════════════════════ -->
+        <div class="cs-main">
+
+            <!-- Hero -->
+            <header class="cs-hero">
+                <div class="cs-hero-meta">
+                    <span class="cs-tag">Founding PM</span>
+                    <span class="cs-tag">Graph Database</span>
+                    <span class="cs-tag">0-to-1 Playbook</span>
+                    <span class="cs-read-time">15 min read</span>
+                </div>
+                <h1 class="cs-title">Introd: <span class="cs-accent">From Alpha to Trusted Network</span></h1>
+                <p class="cs-subtitle">A product vision and 90-day execution plan for the Founding Product Lead role at Introd (getintrod.com).</p>
+            </header>
+
+            <div class="cs-content">
+
+                <!-- 1. Introduction -->
+                <section id="intro" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">01</span> Introduction</h2>
+                    <div class="cs-card">
+                        <div class="cs-row">
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Product Vision</h3>
+                                <p>This case study is my product vision for Introd, not a retrospective. I have not worked there yet. What I have written is what I would actually build if I started tomorrow as Founding Product Lead.</p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">The Opportunity</h3>
+                                <p>Introd is building what LinkedIn never tried to build: a graph-intelligent relationship operating system that maps your LinkedIn, calendar, and email to answer the question every founder and executive quietly obsesses over: <em>Who in my network can get me in?</em></p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Current Status</h3>
+                                <p>The product is at a real inflection point. A production-ready alpha exists, 100+ users are already making live intros, and the decisions made in the next 90 days will set the ceiling for what this product can become.</p>
+                            </div>
+                        </div>
+                        <div class="cs-positioning" style="margin-top: 24px;">
+                            <ion-icon name="compass-outline"></ion-icon>
+                            <p>"LinkedIn optimised for connection count. Introd should optimise for connection quality. A warm intro without trust context is just a cold email with extra steps. The north star is not intros sent. It is intros that land."</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 2. The Real Problem -->
+                <section id="problem" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">02</span> The Real Problem</h2>
+                    <div class="cs-card cs-highlight-card">
+                        <h3 class="cs-card-label">The Core Conflict (JTBD)</h3>
+                        <blockquote class="cs-jtbd">
+                            "When I need to reach a decision-maker at a target company, I want to find the most trusted path through my existing network. But I end up scrolling LinkedIn trying to remember who knows who, making awkward asks from people I barely know, and then getting no reply because the intro had no context and no trust signal behind it."
+                        </blockquote>
+                    </div>
+
+                    <h3 class="cs-card-label" style="margin-top: 30px; margin-bottom: 12px;">Four Layers of the Problem</h3>
+                    <div class="cs-persona-grid">
+                        <div class="cs-persona">
+                            <ion-icon name="eye-off-outline"></ion-icon>
+                            <h4>1. Discovery Failure</h4>
+                            <p class="cs-pain">Most people do not know their own network well enough to know who they should be asking for an intro. The path exists, they just cannot see it.</p>
+                        </div>
+                        <div class="cs-persona">
+                            <ion-icon name="shield-outline"></ion-icon>
+                            <h4>2. Missing Trust Signal</h4>
+                            <p class="cs-pain">Even when you find a path, you have no way to know if the intermediary actually has a real relationship with the target, or if they connected at a conference three years ago and have not spoken since.</p>
+                        </div>
+                        <div class="cs-persona">
+                            <ion-icon name="flash-off-outline"></ion-icon>
+                            <h4>3. Friction Killing Follow-through</h4>
+                            <p class="cs-pain">Asking someone to make an intro takes effort. Without a low-friction double opt-in flow and a pre-drafted message, even willing intermediaries drop the ball. The ask dies in a DM.</p>
+                        </div>
+                        <div class="cs-persona">
+                            <ion-icon name="refresh-circle-outline"></ion-icon>
+                            <h4>4. No Feedback Loop</h4>
+                            <p class="cs-pain">When an intro works and someone gets hired, or a deal closes, or a partnership starts, there is no mechanism to strengthen the relationship signal. The network does not learn. Trust stays invisible and static.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 3. Market Context -->
+                <section id="market" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">03</span> Market Context</h2>
+                    <div class="cs-card">
+                        <h3 class="cs-card-label">Target Personas</h3>
+                        <div class="cs-persona-grid">
+                            <div class="cs-persona">
+                                <ion-icon name="rocket-outline"></ion-icon>
+                                <h4>The Builder/Executive (Primary)</h4>
+                                <p>Founders in the 0-to-1 phase, growth-stage executives, senior operators, and investors. People for whom a single intro to the right person can change the trajectory of their quarter. They live in their inboxes and have long since given up on LinkedIn's algorithmic feed.</p>
+                            </div>
+                            <div class="cs-persona">
+                                <ion-icon name="people-outline"></ion-icon>
+                                <h4>The Power Connector (Secondary)</h4>
+                                <p>The person in every network who makes intros for others constantly but has no system for it. Right now they are doing this from memory, burning goodwill on low-quality asks, and getting no credit for the value they create.</p>
+                            </div>
+                        </div>
+
+                        <h3 class="cs-card-label" style="margin-top: 24px; margin-bottom: 12px;">Competitive Landscape</h3>
+                        <div class="cs-table-wrap">
+                            <table class="cs-table">
+                                <thead>
+                                    <tr>
+                                        <th>Solution</th>
+                                        <th>Gap / Pain Point</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>LinkedIn</strong></td>
+                                        <td>Has the graph and the data, but has never built pathfinding intelligence. Business model is built on ads and recruiter access, not network utility.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Clay / Apollo</strong></td>
+                                        <td>Excellent for outbound at scale, but built for sales teams. They treat connections as records, not relationships.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Lunchclub / Shapr</strong></td>
+                                        <td>Solve discovery for new connections, but do not leverage your existing relationship graph at all.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Classic CRMs (HubSpot)</strong></td>
+                                        <td>Require manual upkeep that nobody does, and have no graph intelligence or intro flow.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="cs-positioning" style="margin-top: 15px;">
+                            <ion-icon name="checkmark-circle-outline"></ion-icon>
+                            <p><strong>The Gap Introd Fills:</strong> A system that takes the network you already have, maps the trust that actually exists within it, and makes the path to any target visible and navigable, with the friction of making an intro reduced to a single tap.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 4. Product Vision -->
+                <section id="vision" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">04</span> Product Vision</h2>
+                    <div class="cs-card">
+                        <p style="margin-bottom: 20px;">Introd is a relationship operating system: a persistent, intelligent layer that sits on top of your existing professional life and makes relationship capital visible, navigable, and actionable. The long-term value is the trust graph itself: the compounding, outcome-informed map of who trusts whom and why.</p>
+                        
+                        <h3 class="cs-card-label">Roadmap Phases</h3>
+                        <div class="cs-timeline">
+                            <div class="cs-tl-item">
+                                <span class="cs-tl-q">Phase 1</span>
+                                <p><strong>Frictionless Intros (Alpha to Beta):</strong> Ship the 3-hop intro flow, trust scoring v1, and invite-gated growth loop. Prove that Introd intros land at a higher rate than the informal alternatives.</p>
+                            </div>
+                            <div class="cs-tl-item">
+                                <span class="cs-tl-q">Phase 2</span>
+                                <p><strong>Intelligent Graph (Beta to Growth):</strong> Trust scores self-update from outcomes. Proactive path suggestions surface before the user even asks. Network health becomes a primary metric.</p>
+                            </div>
+                            <div class="cs-tl-item">
+                                <span class="cs-tl-q">Phase 3</span>
+                                <p><strong>Relationship Capital as Infrastructure (Growth to Platform):</strong> Teams, communities, and investor networks run relationship intelligence through Introd. The platform makes professional trust computable and transferable.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 5. The 3-Hop Intro Flow -->
+                <section id="flow" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">05</span> The 3-Hop Intro Flow</h2>
+                    <div class="cs-card">
+                        <p style="margin-bottom: 24px;">The core activation moment in Introd. The design constraint: the entire flow, from intent to intro delivered, should take under 5 minutes for the requester and under 60 seconds for the intermediary.</p>
+                        
+                        <div class="cs-row">
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Step 1: Signalling Intent</h3>
+                                <p>The user states what they are trying to accomplish in plain language (e.g., <em>"I need a warm path to the Head of Platform at Stripe"</em>). The system understands intent, not keywords.</p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Step 2: Scoring & Surfacing Paths</h3>
+                                <p>The system generates vector embeddings from user profiles and historical interaction context, then runs semantic queries against a graph database to find candidate paths ranked by a composite trust score.</p>
+                            </div>
+                        </div>
+                        <div class="cs-row" style="margin-top: 20px; margin-bottom: 24px;">
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Step 3: Drafting & Double Opt-In</h3>
+                                <p>The AI drafts a context-rich intro message personalised to the shared context. The intermediary receives a double opt-in request and can edit/approve it with one tap.</p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Step 4: Closing the Loop</h3>
+                                <p>Seven days after the intro is sent, Introd follows up with a single prompt asking if the meeting happened or a deal closed. This outcome data feeds directly back into the trust model.</p>
+                            </div>
+                        </div>
+
+                        <div class="cs-card cs-highlight-card">
+                            <h3 class="cs-card-label">What I Would Cut from V1</h3>
+                            <p>Automatic intro sending without intermediary approval (destroys trust), real-time relationship pulse tracking (data quality in V1 is not good enough), and multi-hop simultaneous requests (too much cognitive load).</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 6. The Trust Score Model -->
+                <section id="trust" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">06</span> The Trust Score Model</h2>
+                    <div class="cs-card">
+                        <p style="margin-bottom: 24px;">Trust is the core product concept. The score must feel accurate to the person seeing it. If the score doesn't match the user's intuition, the product loses credibility.</p>
+
+                        <h3 class="cs-card-label">V1 Signal Weights (Hypothesis)</h3>
+                        <div class="cs-stat-row" style="margin-bottom: 28px;">
+                            <div class="cs-stat">
+                                <span class="cs-stat-num">35%</span>
+                                <span class="cs-stat-desc">Interaction Recency</span>
+                            </div>
+                            <div class="cs-stat">
+                                <span class="cs-stat-num">30%</span>
+                                <span class="cs-stat-desc">Mutual Node Overlap</span>
+                            </div>
+                            <div class="cs-stat">
+                                <span class="cs-stat-num">25%</span>
+                                <span class="cs-stat-desc">Historical Intro Acceptance Rate</span>
+                            </div>
+                            <div class="cs-stat">
+                                <span class="cs-stat-num">10%</span>
+                                <span class="cs-stat-desc">Past Outcome History</span>
+                            </div>
+                        </div>
+
+                        <div class="cs-row">
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Cost Discipline (API Caching)</h3>
+                                <p>The LLM call that drafts the personalised intro message is the most expensive operation. We cache the relationship context object (shared connections, interaction recency, mutual history) so it is computed once. The LLM receives a clean pre-processed block, reducing tokens and improving quality.</p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Private Trust Scores</h3>
+                                <p>Trust scores are private to the requester. They are a navigation tool, not a social signal. Public visibility makes them gameable (users would make low-quality intros just to run up their score) which destroys the scoring layer.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 7. Invite-Gated Growth Loop -->
+                <section id="growth" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">07</span> Invite-Gated Growth Loop</h2>
+                    <div class="cs-card">
+                        <p style="margin-bottom: 20px;">Graph quality is the product; a network of random signups is worth almost nothing. The growth strategy must optimise for network density, not signup volume, by spreading along existing trust lines.</p>
+
+                        <div class="cs-persona-grid">
+                            <div class="cs-persona">
+                                <ion-icon name="mail-open-outline"></ion-icon>
+                                <h4>1. Invite-Only Onboarding</h4>
+                                <p>Each new user gets 3 invite tokens. Early users in a tight professional community create a high-density subgraph that makes every intro within that community highly valuable.</p>
+                            </div>
+                            <div class="cs-persona">
+                                <ion-icon name="flash-outline"></ion-icon>
+                                <h4>2. Activation = First Intro Sent</h4>
+                                <p>Onboarding is not complete until the user has sent their first intro request. Every user who finishes onboarding without sending an intro is highly likely to churn within 7 days.</p>
+                            </div>
+                        </div>
+
+                        <div class="cs-row" style="margin-top: 20px;">
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">3. Network Health Score</h3>
+                                <p>A visible score from 0 to 100 that tracks the health of your relationship network. Crucially, the score goes up when you <em>give</em> intros, not when you receive them, creating reciprocity pressure and social norms around giving before taking.</p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">The Core Retention Mechanism</h3>
+                                <p>Active intros in progress. A user with two or three intros currently in flight has a strong reason to check Introd every day. We make the "intros in progress" state visible and prominent on the dashboard to create daily pull.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 8. North-Star Metrics -->
+                <section id="metrics" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">08</span> North-Star Metrics</h2>
+                    <div class="cs-card">
+                        <div class="cs-card cs-highlight-card" style="margin-bottom: 24px;">
+                            <h3 class="cs-card-label">The North Star Metric</h3>
+                            <p style="font-size: 16px; font-weight: 500;">Intros that Land</p>
+                            <p>Sent intros that result in a reply, meeting, or outcome within 14 days. We celebrate quality and landing rate over absolute volume.</p>
+                        </div>
+
+                        <h3 class="cs-card-label">KPI Dashboard (Day-1 Metrics)</h3>
+                        <div class="cs-kpi-grid">
+                            <div class="cs-kpi">
+                                <ion-icon name="paper-plane-outline"></ion-icon>
+                                <h4>Intros that Land</h4>
+                                <p>% of sent intros receiving a reply within 14 days.</p>
+                            </div>
+                            <div class="cs-kpi">
+                                <ion-icon name="time-outline"></ion-icon>
+                                <h4>Time to First Intro</h4>
+                                <p>Target under 5 minutes from onboarding completion.</p>
+                            </div>
+                            <div class="cs-kpi">
+                                <ion-icon name="people-outline"></ion-icon>
+                                <h4>Referral Coefficient</h4>
+                                <p>Target K-factor above 1.2 for organic graph expansion.</p>
+                            </div>
+                        </div>
+                        <div class="cs-kpi-grid" style="margin-top: 12px; margin-bottom: 24px;">
+                            <div class="cs-kpi">
+                                <ion-icon name="hourglass-outline"></ion-icon>
+                                <h4>Day-30 Retention</h4>
+                                <p>Target above 60% of users taking ongoing actions.</p>
+                            </div>
+                            <div class="cs-kpi">
+                                <ion-icon name="checkmark-done-outline"></ion-icon>
+                                <h4>Per-hop Acceptance Rate</h4>
+                                <p>Target above 45% for intermediary tap-to-approve rate.</p>
+                            </div>
+                            <div class="cs-kpi">
+                                <ion-icon name="gift-outline"></ion-icon>
+                                <h4>Give Rate</h4>
+                                <p>Target above 40% of users giving an intro within 14 days.</p>
+                            </div>
+                        </div>
+
+                        <div class="cs-card cs-highlight-card">
+                            <h3 class="cs-card-label">Deliberately Not Tracking in V1</h3>
+                            <p>Total connections imported, total users in graph, messages sent. These activity metrics reward graph size over quality, which is the exact trap LinkedIn fell into.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 9. The 90-Day Plan -->
+                <section id="plan" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">09</span> The 90-Day Plan</h2>
+                    <div class="cs-card">
+                        <div class="cs-timeline">
+                            <div class="cs-tl-item">
+                                <span class="cs-tl-q">Days 1 - 30</span>
+                                <p><strong>Foundation:</strong> Audit alpha journeys, run 10 interviews, and set up the metrics dashboard. Agree on trust score model v1 weights. Ship the 3-hop intro flow to a closed beta of 50 users. <em>Week 1 & 2 are strictly for listening, not shipping new features.</em></p>
+                            </div>
+                            <div class="cs-tl-item">
+                                <span class="cs-tl-q">Days 31 - 60</span>
+                                <p><strong>Beta Launch:</strong> Public beta live with invite-gated onboarding (3 invites per user). Ship Network Health Score to user profiles. Onboard 5-8 high-density communities as clusters (founder networks, VC alumni, accelerators).</p>
+                            </div>
+                            <div class="cs-tl-item">
+                                <span class="cs-tl-q">Days 61 - 90</span>
+                                <p><strong>Growth & Retention:</strong> Confirm Day-30 retention above 60% and iterate on weak segments. Roll out community leaderboards for top givers. Ship proactive path suggestions. Compile trust model quality report for investors.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 10. Why I Am the Right Fit -->
+                <section id="fit" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">10</span> Why I Am the Right Fit</h2>
+                    <div class="cs-card">
+                        <div class="cs-row">
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Solo Execution Experience</h3>
+                                <p>Building <strong>Sociovox</strong> solo, I had no buffer. Every spec error cost me engineering time. I went from a blank repo to a live, billing SaaS with 6 feature-complete modules in 60 days because I specced carefully, cut ruthlessly, and shipped in the right order.</p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Empathy for the Problem</h3>
+                                <p>My entire recent job search has been a direct experience of the problem Introd solves. I have felt the frustration of knowing the right person is two degrees away and having no system to navigate there, or making awkward asks that go nowhere.</p>
+                            </div>
+                            <div class="cs-col">
+                                <h3 class="cs-card-label">Highly Technical Background</h3>
+                                <p>I started as a frontend developer in React.js and TypeScript. I understand OAuth scopes, API rate limits, graph query performance, and webhook state management. I can bridge product UX and graph database optimization without translation overhead.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 11. Appendices -->
+                <section id="appendices" class="cs-section">
+                    <h2 class="cs-section-title"><span class="cs-num">11</span> Appendices — The Evidence</h2>
+                    <div class="cs-accordion">
+
+                        <!-- Appendix A -->
+                        <div class="cs-accordion-item" data-accordion>
+                            <button class="cs-accordion-header" data-accordion-btn>
+                                <div class="cs-accordion-header-content">
+                                    <div class="cs-accordion-icon"><ion-icon name="document-text-outline"></ion-icon></div>
+                                    <div class="cs-accordion-info">
+                                        <h4>Appendix A: Sample Micro-PRD for 3-Hop Intro Flow</h4>
+                                        <p>Specifying the core feature flow</p>
+                                    </div>
+                                </div>
+                                <ion-icon name="chevron-down-outline" class="cs-accordion-chevron"></ion-icon>
+                            </button>
+                            <div class="cs-accordion-content">
+                                <div class="cs-card" style="border: none; box-shadow: none; background: transparent;">
+                                    <h4 style="font-size: 14px; color: var(--white-2); margin-bottom: 8px;">Problem Statement</h4>
+                                    <p style="margin-bottom: 16px; font-size: 13px;">Users know they have a path to a target through their network but have no way to identify, evaluate, or activate that path without manual trawling. The current alternative produces low-quality intros with no context and no trust signal.</p>
+
+                                    <h4 style="font-size: 14px; color: var(--white-2); margin-bottom: 8px;">Acceptance Criteria</h4>
+                                    <ul class="cs-list" style="margin-bottom: 16px;">
+                                        <li>User can state a target in free text or by searching synced connections.</li>
+                                        <li>System generates vector embeddings from the intent and profiles, executes semantic queries, and surfaces ranked paths of 1 to 3 hops within 10 seconds.</li>
+                                        <li>Each path shows a per-hop trust score with a plain-language explanation.</li>
+                                        <li>AI pre-drafts an intro message personalised to the shared context, using a cached relationship context object to keep token costs sustainable. User can edit before sending.</li>
+                                        <li>Intermediary receives a double opt-in request and can accept or decline with one tap.</li>
+                                        <li>Outcome prompt fires 7 days after intro is delivered.</li>
+                                        <li>If no path is found, a plain-language explanation surfaces and alternatives are suggested.</li>
+                                    </ul>
+
+                                    <h4 style="font-size: 14px; color: var(--white-2); margin-bottom: 8px;">Edge Cases to Handle</h4>
+                                    <ul class="cs-list">
+                                        <li><strong>Expired OAuth token:</strong> Surface a reconnect prompt instead of silent failure.</li>
+                                        <li><strong>Intermediary declines:</strong> Automatically offer the next-best path rather than a dead end.</li>
+                                        <li><strong>Target not in graph:</strong> Offer to send them a direct invite, turning a failed search into a growth action.</li>
+                                        <li><strong>Duplicate request:</strong> If the same user-target pair has an active intro in progress, flag it instead of duplicate requests.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Appendix B -->
+                        <div class="cs-accordion-item" data-accordion>
+                            <button class="cs-accordion-header" data-accordion-btn>
+                                <div class="cs-accordion-header-content">
+                                    <div class="cs-accordion-icon"><ion-icon name="git-network-outline"></ion-icon></div>
+                                    <div class="cs-accordion-info">
+                                        <h4>Appendix B: Community Seeding Strategy</h4>
+                                        <p>Solving the sparse graph problem</p>
+                                    </div>
+                                </div>
+                                <ion-icon name="chevron-down-outline" class="cs-accordion-chevron"></ion-icon>
+                            </button>
+                            <div class="cs-accordion-content">
+                                <div class="cs-card" style="border: none; box-shadow: none; background: transparent;">
+                                    <p style="margin-bottom: 16px; font-size: 13px;">If Introd onboards 1000 random users from a ProductHunt launch, those users have sparse connections to each other. The graph has no density. Intro paths are long, trust scores are low, and the product feels broken. The problem is population, not product.</p>
+
+                                    <h4 style="font-size: 14px; color: var(--white-2); margin-bottom: 8px;">Cluster Seeding Solution</h4>
+                                    <p style="margin-bottom: 16px; font-size: 13px;">Identify 5 to 8 high-density professional communities where members already know each other well, then onboard each cluster as a unit. The graph immediately has density, intros immediately work, and word of mouth spreads along existing trust lines.</p>
+
+                                    <h4 style="font-size: 14px; color: var(--white-2); margin-bottom: 8px;">Target Clusters for V1</h4>
+                                    <ul class="cs-list">
+                                        <li>YC alumni (specific batches or verticals)</li>
+                                        <li>Warmest starting networks (e.g., Elloe AI's existing network)</li>
+                                        <li>City-based operator communities in SF, NYC, and London</li>
+                                        <li>Venture-backed founder communities in specific sectors</li>
+                                    </ul>
+                                    <p style="font-size: 13px; color: var(--cs-text-muted); font-style: italic; margin-top: 12px;">The goal in 90 days is not 10,000 users. It is 1,000 users in 5 dense clusters where the product demonstrably works.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Appendix C -->
+                        <div class="cs-accordion-item" data-accordion>
+                            <button class="cs-accordion-header" data-accordion-btn>
+                                <div class="cs-accordion-header-content">
+                                    <div class="cs-accordion-icon"><ion-icon name="map-outline"></ion-icon></div>
+                                    <div class="cs-accordion-info">
+                                        <h4>Appendix C: V2 Roadmap</h4>
+                                        <p>Future features and decision rules</p>
+                                    </div>
+                                </div>
+                                <ion-icon name="chevron-down-outline" class="cs-accordion-chevron"></ion-icon>
+                            </button>
+                            <div class="cs-accordion-content">
+                                <div class="cs-card" style="border: none; box-shadow: none; background: transparent;">
+                                    <h4 style="font-size: 14px; color: var(--white-2); margin-bottom: 8px;">1. Proactive Path Surfacing</h4>
+                                    <p style="margin-bottom: 16px; font-size: 13px;">Instead of waiting for users to search, the product surfaces paths they have not noticed (e.g., <em>"You have a strong path to the Head of Data at Figma through two people you met last month."</em>). This turns Introd from a reactive tool into a genuine relationship intelligence layer.</p>
+
+                                    <h4 style="font-size: 14px; color: var(--white-2); margin-bottom: 8px;">2. Team and Community Layer</h4>
+                                    <p style="margin-bottom: 16px; font-size: 13px;">Shared graphs where the intro network is the team's combined relationship capital. A team layer where members' graphs merge with permission controls multiplies the value and creates strong B2B expansion revenue.</p>
+
+                                    <h4 style="font-size: 14px; color: var(--white-2); margin-bottom: 8px;">3. Relationship Health Reminders</h4>
+                                    <p style="margin-bottom: 16px; font-size: 13px;">Surface dormant relationships before they go cold (e.g., <em>"You have not spoken to Marcus in 8 months. Good time to reconnect?"</em>). Low effort, high perceived value.</p>
+
+                                    <p style="font-size: 13px; color: var(--cs-text-muted); font-style: italic;"><strong>Decision rule for V2 scoping:</strong> Any feature that reduces churn or drives upgrades is in. Any feature that only improves activation for new users is deferred until retention is solved first.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </div><!-- /.cs-content -->
+
+            <footer class="cs-footer">
+                <a href="../#Case-studies" class="cs-back-btn">
+                    <ion-icon name="arrow-back-outline"></ion-icon>
+                    Back to Case-studies
+                </a>
+            </footer>
+
+        </div><!-- /.cs-main -->
+
+    </div><!-- /.cs-root -->
+
+    <!-- CONTACT SECTION -->
+    <global-contact></global-contact>
+
+    <global-footer></global-footer>
+
+    <!-- IonIcons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script>
+        // Sidenav toggle variable
+        const sidenav = document.getElementById('cs-sidenav');
+
+        // ── Smooth scroll on TOC click ────────────────────────────────
+        document.querySelectorAll('.cs-toc-link').forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                if (sidenav) {
+                    sidenav.classList.remove('active');
+                    sidenav.classList.remove('open');
+                }
+                const href = link.getAttribute('href');
+                const target = document.querySelector(href);
+                if (target) {
+                    if (typeof lenis !== 'undefined') {
+                        lenis.scrollTo(target, { offset: -100 });
+                    } else {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+
+                    // Auto-open Appendix A if scrolling to #appendices or #prd
+                    if (href === '#appendices') {
+                        const appA = document.querySelector('[data-accordion]');
+                        if (appA) {
+                            document.querySelectorAll('[data-accordion]').forEach(el => el.classList.remove('active'));
+                            appA.classList.add('active');
+                        }
+                    }
+                }
+            });
+        });
+
+        // ── Appendix Accordion logic ──────────────────────────────────
+        document.querySelectorAll('[data-accordion-btn]').forEach(btn => {
+            btn.addEventListener('click', function () {
+                const item = this.parentElement;
+                const isActive = item.classList.contains('active');
+
+                if (!isActive) {
+                    // Check for currently active accordion
+                    const activeItem = document.querySelector('[data-accordion].active');
+                    let shiftOffset = 0;
+
+                    if (activeItem && activeItem !== item) {
+                        // If active accordion is ABOVE the clicked one, calculate the height it will lose
+                        if (activeItem.compareDocumentPosition(item) & Node.DOCUMENT_POSITION_FOLLOWING) {
+                            const activeContent = activeItem.querySelector('.cs-accordion-content');
+                            if (activeContent) {
+                                shiftOffset = activeContent.getBoundingClientRect().height;
+                            }
+                        }
+                        // Close the active accordion
+                        activeItem.classList.remove('active');
+                    }
+
+                    item.classList.add('active');
+
+                    // Calculate the precise final scroll position mathematically
+                    const offset = 120; // Navbar height + padding
+                    const finalTop = item.getBoundingClientRect().top + window.scrollY - offset - shiftOffset;
+
+                    // Smooth scroll to the final position concurrently with the CSS transition
+                    if (typeof lenis !== 'undefined') {
+                        lenis.scrollTo(finalTop, { duration: 0.8 });
+                    } else {
+                        window.scrollTo({ top: finalTop, behavior: 'smooth' });
+                    }
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+        });
+
+        // ── Scroll-spy: highlight active section ─────────────────────
+        const sections = document.querySelectorAll('.cs-section[id]');
+        const tocLinks = document.querySelectorAll('.cs-toc-link');
+
+        const updateActiveSection = () => {
+            let current = '';
+            const scrollY = window.scrollY;
+
+            // Find the section that is currently most visible or at the top
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 150; // offset for nav
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            if (current) {
+                tocLinks.forEach(l => l.classList.remove('active'));
+                const active = document.querySelector(`.cs-toc-link[href="#${current}"]`);
+                if (active) active.classList.add('active');
+            }
+        };
+
+        window.addEventListener('scroll', updateActiveSection);
+        // Initial call
+        updateActiveSection();
+
+        // ── Reading Progress Bar & Back to Top ───────────────────────
+        const globalNav = document.querySelector('.global-nav');
+        if (globalNav) {
+            const progressBar = document.createElement('div');
+            progressBar.className = 'reading-progress-bar';
+            globalNav.appendChild(progressBar);
+
+            window.addEventListener('scroll', () => {
+                const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrollPercentage = (scrollTop / scrollHeight) * 100;
+                progressBar.style.width = scrollPercentage + '%';
+            });
+        }
+
+        const backToTopBtn = document.createElement('button');
+        backToTopBtn.className = 'back-to-top';
+        backToTopBtn.setAttribute('aria-label', 'Back to top');
+        backToTopBtn.innerHTML = '<ion-icon name="arrow-up-outline"></ion-icon>';
+        document.body.appendChild(backToTopBtn);
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            if (typeof lenis !== 'undefined') {
+                lenis.scrollTo(0, { duration: 1.2 });
+            } else {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        });
+    </script>
+</body>
+
+</html>
